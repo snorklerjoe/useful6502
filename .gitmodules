@@ -1,0 +1,3 @@
+[submodule "emulator/6502"]
+	path = emulator/6502
+	url = https://github.com/redcode/6502.git
