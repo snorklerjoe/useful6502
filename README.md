@@ -9,7 +9,7 @@ running my own operating system.
 
 I want the following end goals to categorize the machine as "useful":
 
-- Virtual memory (at least bank-switched)
+- At least 2 Megabytes of program memory and 2 Megabytes of data memory, of which at least 8k of data can be accessed at one time.
 - Protected memory (kernel and user run modes defined by hardware checking if kernel or user code is being executed)
 - Traps via "BRK" instruction for sys calls
 - Full preemptive multitasking
@@ -24,3 +24,34 @@ I want the following end goals to categorize the machine as "useful":
 Because I am unsure of the feasibility of all of these goals, I will begin this project with only
 simulated hardware.
 
+## Physical Memory Map
+
+### FF00-FFFF
+
+System vectors (kernel/hardware)
+
+### FE00-FEFF
+
+Resident kernel code to load kernel memory
+
+### 8000-FCFF
+
+User TEXT; switched
+
+### 0200-8000
+
+User DATA; switched
+
+### Page One
+
+User hardware stack; switched
+
+### Page Zero
+
+- **00f0-00ff**: User-reserved zp memory; preserved
+- **0010-00ef**: Kernel-owned zp memory
+- **0000-000f**: Reserved for memory-mapped i/o (0000 is a status register)
+
+## Faults
+
+Faults will be detected by hardware and trigger an NMI. The status register will indicate a fault has occurred, and the kernel will immediately abort the process.
