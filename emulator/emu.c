@@ -36,6 +36,9 @@ int main(int argc, char *argv[]) {
     fclose(f);
 
     printf("Running machine for %i cycles...\n", atoi(argv[2]));
+    printf("Machine Output:\n");
+    printf("===============\n");
     machine_reset(ctx);
     run_cycles(ctx, atoi(argv[2]));
+    printf("\n===============\n");
 }

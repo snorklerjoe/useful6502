@@ -10,17 +10,17 @@
 zuint8 cpu_read(void *self, zuint16 address) {
     zuint8 value = ((machine_ctx*) self)->memory[address];
     
-    if(address == 0x0000 || address >= 0xFFF0) {
-        printf("\tread: %x @ %x\n", value, address);
-    }
+    // if(address == 0x0000 || address >= 0xFFF0) {
+    //     printf("\tread: %x @ %x\n", value, address);
+    // }
 
     return value;
 }
 
 
 void cpu_write(void *self, zuint16 address, zuint8 value) {
-    if(address == 0x0000) {
-        printf("Write: %x to %x\n", value, address);
+    if(address == 0x0000) {  // To putch
+        printf("%c", value);
     }
     ((machine_ctx*) self)->memory[address] = value;
 }

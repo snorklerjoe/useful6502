@@ -6,12 +6,21 @@
 ;
 
 .export _main
+.import putchk
 
 .segment "CODE"
 
-.byte "Hello, World!\n"
+message:
+.byte "Hello, World!", 10, 0
 
-_main:       ; Simple program to increment $00
-    inc $00
-    nop
-    jmp _main
+_main:       ; Simple program to print hello world
+    ldx #0
+loop:
+    lda message, x
+    beq doneloop
+    jsr putchk
+    inx
+    jmp loop
+
+doneloop:
+    jmp doneloop
