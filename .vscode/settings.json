@@ -1,6 +1,9 @@
 {
     "files.associations": {
-        "6502.h": "c"
+        "6502.h": "c",
+        "hardware.h": "c",
+        "base.h": "c",
+        "stdio.h": "c"
     },
     "cSpell.words": [
         "CONDES",

@@ -17,7 +17,7 @@ CFLAGS = -t none -O --cpu $(CPU)
 LDFLAGS = 
 
 # Target binary
-# TARGET = build/kernel.bin
+TARGET = build/kernel.bin
 
 # Directories
 BUILD_DIR = build
@@ -39,8 +39,7 @@ $(shell mkdir -p $(BUILD_DIR) $(LIB_BUILD_DIR))
 
 # Build everything
 all: $(OBJS) $(LIBOBJS)
-	$(LD) -C kernel_target.cfg -m $(BUILD_DIR)/main.map $(LIBOBJS) $(OBJS)
-# -o $(TARGET)
+	$(LD) -C kernel_target.cfg -m $(BUILD_DIR)/main.map $(LIBOBJS) $(OBJS) -o $(TARGET)
 
 # # Build the kernel libc
 # .PHONY: lib
@@ -67,4 +66,3 @@ $(BUILD_DIR)/%.o: %.s
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_DIR)
-	rm kernel_ram_image.bin
