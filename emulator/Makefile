@@ -2,7 +2,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Ilib    # Include the library header directory
 LDFLAGS =                        # Add linker flags if needed
-TARGET = useful6502              # Name of the final executable
+TARGET = useful6502emu           # Name of the final executable
 
 # Source files
 SRCS = $(wildcard *.c) $(wildcard lib/*.c)  # Include main and library sources

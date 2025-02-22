@@ -9,17 +9,25 @@ running my own operating system.
 
 I want the following end goals to categorize the machine as "useful":
 
-- At least 2 Megabytes of program memory and 2 Megabytes of data memory, of which at least 8k of data can be accessed at one time.
+## Hardware Goals
+
+- At least 2 Megabytes of program memory and 2 Megabytes of data memory, of which at least 16k of data and 16k of program memory can be accessed by a single process.
 - Protected memory (kernel and user run modes defined by hardware checking if kernel or user code is being executed)
+- ESP32 for i/o -- The idea here is to use pre-existing implementations of an 802.11/TCPIP/USB stack on dedicated hardware to offload i/o headaches and simplify the software.
+  - WiFi, with HTTP/HTTPS, FTP, SSH, SFTP, Telnet / plain TCP/UDP
+  - UART
+  - One-wire
+  - USB Host
+
+## Software Goals
+
 - Traps via "BRK" instruction for sys calls
-- Full preemptive multitasking
-- File handler, compatible with FAT32-formatted SD cards for easy file transfer
-- Kernel-level device drivers, mapping i/o to UNIX-like sockets/files
+- Full preemptive multitasking, round robin scheduler (maybe mlfq eventually)
+- Filesystem: Tree, leaf nodes are devices or drivers.
+- Driver for FAT32-formatted SD cards for easy file storage & transfer
 - Standard library compatible with cc65 for creating high-level programs
-- Command-line shell
 - Basic UNIX-like shell utilities
-- 802.11 WiFi via ESP32, with a driver to enable ssh, sftp, http, and https
-- Simple web browser, with limited but existent javascript capabilities
+- Simple web browser, with limited but existent javascript capabilities?
 
 Because I am unsure of the feasibility of all of these goals, I will begin this project with only
 simulated hardware.
@@ -48,10 +56,25 @@ User hardware stack; switched
 
 ### Page Zero
 
-- **00f0-00ff**: User-reserved zp memory; preserved
-- **0010-00ef**: Kernel-owned zp memory
-- **0000-000f**: Reserved for memory-mapped i/o (0000 is a status register)
+- **00d0-00ff**: User-reserved zp memory; preserved
+- **0010-00cf**: Kernel-owned zp memory
+- **0000-000f**: Reserved for memory-mapped i/o ports
+  - PORT0: Hardware status register
+  - PORT1: General-purpose parallel port
+  - PORT2: RS-232
+  - PORT3: ESP32 Data
+  - PORT4: ESP32 Control
+  - PORT5: 
 
 ## Faults
 
 Faults will be detected by hardware and trigger an NMI. The status register will indicate a fault has occurred, and the kernel will immediately abort the process.
+
+## Hardware Timers
+
+There will be at least two hardware countdown timers that can be set/reset by the kernel.  
+One will trigger an NMI when it reaches zero, and will stop counting when its value is zero. This will be to allow the kernel to allot a specific number of cycles to a given process.  
+Another will be a coarser timer that will trigger a RESET.
+This is to eventually return execution to the kernel in the event that a user process uses an illegal instruction or an STP instruction. Such cases will set the fault flag, and the process will be immediately terminated by the kernel.
+
+The kernel will maintain a global clock for user timing needs.

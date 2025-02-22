@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "6502.h": "c"
+    },
+    "cSpell.words": [
+        "CONDES",
+        "FFFA",
+        "RODATA",
+        "STACKSIZE",
+        "ZEROPAGE"
+    ]
+}
