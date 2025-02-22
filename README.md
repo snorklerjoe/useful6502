@@ -1,5 +1,12 @@
 # Useful 6502 Machine
 
+## Implemented So Far
+
+- Custom 6502 machine emulator based on <https://github.com/redcode/6502.git>
+- CC65 libraries, linker config, etc. for the machine
+
+## Future
+
 This is a repo for a simulation package for a 6502 computer I am envisioning.  
 I am considering developing a 6502 machine with a unique set of quirks and features.
 But, to make the project seem worthwhile, I intend to make it useful.
