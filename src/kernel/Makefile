@@ -39,7 +39,8 @@ $(shell mkdir -p $(BUILD_DIR) $(LIB_BUILD_DIR))
 
 # Build everything
 all: $(OBJS) $(LIBOBJS)
-	$(LD) -C kernel_target.cfg -m $(BUILD_DIR)/main.map $(LIBOBJS) $(OBJS) -o $(TARGET)
+	$(LD) -C kernel_target.cfg -m $(BUILD_DIR)/main.map $(LIBOBJS) $(OBJS)
+# -o $(TARGET)
 
 # # Build the kernel libc
 # .PHONY: lib
