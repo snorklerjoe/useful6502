@@ -29,7 +29,7 @@ I want the following end goals to categorize the machine as "useful":
 ## Software Goals
 
 - Traps via "BRK" instruction for sys calls
-- Full preemptive multitasking, round robin scheduler (maybe mlfq eventually)
+- Full preemptive multitasking with up to 255 processes, round robin scheduler (maybe mlfq eventually)
 - Filesystem: Tree, leaf nodes are devices or drivers.
 - Driver for FAT32-formatted SD cards for easy file storage & transfer
 - Standard library compatible with cc65 for creating high-level programs
