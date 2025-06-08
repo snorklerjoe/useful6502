@@ -1,0 +1,20 @@
+Units' hierarchy:
+
+bench
+  pic_core_sim
+    fadr_mux
+    pic_alu
+    pic_ctrl
+    pic_rom
+    pic_time
+    reg_8rst
+    reg_8t
+    reg_cons
+    reg_file
+    reg_fsr
+    reg_inst
+    reg_io
+    reg_pc
+    reg_s
+    reg_w
+

@@ -1,0 +1,1160 @@
+%!PS-Adobe-2.0
+%%Title: datapath2.fig
+%%Creator: fig2dev Version 3.1 Patchlevel 1.1N
+%%CreationDate: Wed Mar 11 23:35:07 1998
+%%For: root@rocket (Ernesto Romani)
+%%Orientation: Portrait
+%%BoundingBox: 98 136 498 706
+%%Pages: 1
+%%BeginSetup
+%%IncludeFeature: *PageSize A4
+%%EndSetup
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {} def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+-260.5 804.0 translate
+1 -1 scale
+.9 .9 scale % to make patterns same scale as in xfig
+
+% This junk string is used by the show operators
+/PATsstr 1 string def
+/PATawidthshow { 	% cx cy cchar rx ry string
+  % Loop over each character in the string
+  {  % cx cy cchar rx ry char
+    % Show the character
+    dup				% cx cy cchar rx ry char char
+    PATsstr dup 0 4 -1 roll put	% cx cy cchar rx ry char (char)
+    false charpath		% cx cy cchar rx ry char
+    /clip load PATdraw
+    % Move past the character (charpath modified the
+    % current point)
+    currentpoint			% cx cy cchar rx ry char x y
+    newpath
+    moveto			% cx cy cchar rx ry char
+    % Reposition by cx,cy if the character in the string is cchar
+    3 index eq {			% cx cy cchar rx ry
+      4 index 4 index rmoveto
+    } if
+    % Reposition all characters by rx ry
+    2 copy rmoveto		% cx cy cchar rx ry
+  } forall
+  pop pop pop pop pop		% -
+  currentpoint
+  newpath
+  moveto
+} bind def
+/PATcg {
+  7 dict dup begin
+    /lw currentlinewidth def
+    /lc currentlinecap def
+    /lj currentlinejoin def
+    /ml currentmiterlimit def
+    /ds [ currentdash ] def
+    /cc [ currentrgbcolor ] def
+    /cm matrix currentmatrix def
+  end
+} bind def
+% PATdraw - calculates the boundaries of the object and
+% fills it with the current pattern
+/PATdraw {			% proc
+  save exch
+    PATpcalc			% proc nw nh px py
+    5 -1 roll exec		% nw nh px py
+    newpath
+    PATfill			% -
+  restore
+} bind def
+% PATfill - performs the tiling for the shape
+/PATfill { % nw nh px py PATfill -
+  PATDict /CurrentPattern get dup begin
+    setfont
+    % Set the coordinate system to Pattern Space
+    PatternGState PATsg
+    % Set the color for uncolored pattezns
+    PaintType 2 eq { PATDict /PColor get PATsc } if
+    % Create the string for showing
+    3 index string		% nw nh px py str
+    % Loop for each of the pattern sources
+    0 1 Multi 1 sub {		% nw nh px py str source
+	% Move to the starting location
+	3 index 3 index		% nw nh px py str source px py
+	moveto			% nw nh px py str source
+	% For multiple sources, set the appropriate color
+	Multi 1 ne { dup PC exch get PATsc } if
+	% Set the appropriate string for the source
+	0 1 7 index 1 sub { 2 index exch 2 index put } for pop
+	% Loop over the number of vertical cells
+	3 index 		% nw nh px py str nh
+	{			% nw nh px py str
+	  currentpoint		% nw nh px py str cx cy
+	  2 index show		% nw nh px py str cx cy
+	  YStep add moveto	% nw nh px py str
+	} repeat		% nw nh px py str
+    } for
+    5 { pop } repeat
+  end
+} bind def
+
+% PATkshow - kshow with the current pattezn
+/PATkshow {			% proc string
+  exch bind			% string proc
+  1 index 0 get			% string proc char
+  % Loop over all but the last character in the string
+  0 1 4 index length 2 sub {
+				% string proc char idx
+    % Find the n+1th character in the string
+    3 index exch 1 add get	% string proe char char+1
+    exch 2 copy			% strinq proc char+1 char char+1 char
+    % Now show the nth character
+    PATsstr dup 0 4 -1 roll put	% string proc chr+1 chr chr+1 (chr)
+    false charpath		% string proc char+1 char char+1
+    /clip load PATdraw
+    % Move past the character (charpath modified the current point)
+    currentpoint newpath moveto
+    % Execute the user proc (should consume char and char+1)
+    mark 3 1 roll		% string proc char+1 mark char char+1
+    4 index exec		% string proc char+1 mark...
+    cleartomark			% string proc char+1
+  } for
+  % Now display the last character
+  PATsstr dup 0 4 -1 roll put	% string proc (char+1)
+  false charpath		% string proc
+  /clip load PATdraw
+  neewath
+  pop pop			% -
+} bind def
+% PATmp - the makepattern equivalent
+/PATmp {			% patdict patmtx PATmp patinstance
+  exch dup length 7 add		% We will add 6 new entries plus 1 FID
+  dict copy			% Create a new dictionary
+  begin
+    % Matrix to install when painting the pattern
+    TilingType PATtcalc
+    /PatternGState PATcg def
+    PatternGState /cm 3 -1 roll put
+    % Check for multi pattern sources (Level 1 fast color patterns)
+    currentdict /Multi known not { /Multi 1 def } if
+    % Font dictionary definitions
+    /FontType 3 def
+    % Create a dummy encoding vector
+    /Encoding 256 array def
+    3 string 0 1 255 {
+      Encoding exch dup 3 index cvs cvn put } for pop
+    /FontMatrix matrix def
+    /FontBBox BBox def
+    /BuildChar {
+	mark 3 1 roll		% mark dict char
+	exch begin
+	Multi 1 ne {PaintData exch get}{pop} ifelse  % mark [paintdata]
+	  PaintType 2 eq Multi 1 ne or
+	  { XStep 0 FontBBox aload pop setcachedevice }
+	  { XStep 0 setcharwidth } ifelse
+	  currentdict		% mark [paintdata] dict
+	  /PaintProc load	% mark [paintdata] dict paintproc
+	end
+	gsave
+	  false PATredef exec true PATredef
+	grestore
+	cleartomark		% -
+    } bind def
+    currentdict
+  end				% newdict
+  /foo exch			% /foo newlict
+  definefont			% newfont
+} bind def
+% PATpcalc - calculates the starting point and width/height
+% of the tile fill for the shape
+/PATpcalc {	% - PATpcalc nw nh px py
+  PATDict /CurrentPattern get begin
+    gsave
+	% Set up the coordinate system to Pattern Space
+	% and lock down pattern
+	PatternGState /cm get setmatrix
+	BBox aload pop pop pop translate
+	% Determine the bounding box of the shape
+	pathbbox			% llx lly urx ury
+    grestore
+    % Determine (nw, nh) the # of cells to paint width and height
+    PatHeight div ceiling		% llx lly urx qh
+    4 1 roll				% qh llx lly urx
+    PatWidth div ceiling		% qh llx lly qw
+    4 1 roll				% qw qh llx lly
+    PatHeight div floor			% qw qh llx ph
+    4 1 roll				% ph qw qh llx
+    PatWidth div floor			% ph qw qh pw
+    4 1 roll				% pw ph qw qh
+    2 index sub cvi abs			% pw ph qs qh-ph
+    exch 3 index sub cvi abs exch	% pw ph nw=qw-pw nh=qh-ph
+    % Determine the starting point of the pattern fill
+    %(px, py)
+    4 2 roll				% nw nh pw ph
+    PatHeight mul			% nw nh pw py
+    exch				% nw nh py pw
+    PatWidth mul exch			% nw nh px py
+  end
+} bind def
+
+% Save the original routines so that we can use them later on
+/oldfill	/fill load def
+/oldeofill	/eofill load def
+/oldstroke	/stroke load def
+/oldshow	/show load def
+/oldashow	/ashow load def
+/oldwidthshow	/widthshow load def
+/oldawidthshow	/awidthshow load def
+/oldkshow	/kshow load def
+
+% These defs are necessary so that subsequent procs don't bind in
+% the originals
+/fill	   { oldfill } bind def
+/eofill	   { oldeofill } bind def
+/stroke	   { oldstroke } bind def
+/show	   { oldshow } bind def
+/ashow	   { oldashow } bind def
+/widthshow { oldwidthshow } bind def
+/awidthshow { oldawidthshow } bind def
+/kshow 	   { oldkshow } bind def
+/PATredef {
+  userdict begin
+    {
+    /fill { /clip load PATdraw newpath } bind def
+    /eofill { /eoclip load PATdraw newpath } bind def
+    /stroke { PATstroke } bind def
+    /show { 0 0 null 0 0 6 -1 roll PATawidthshow } bind def
+    /ashow { 0 0 null 6 3 roll PATawidthshow }
+    bind def
+    /widthshow { 0 0 3 -1 roll PATawidthshow }
+    bind def
+    /awidthshow { PATawidthshow } bind def
+    /kshow { PATkshow } bind def
+  } {
+    /fill   { oldfill } bind def
+    /eofill { oldeofill } bind def
+    /stroke { oldstroke } bind def
+    /show   { oldshow } bind def
+    /ashow  { oldashow } bind def
+    /widthshow { oldwidthshow } bind def
+    /awidthshow { oldawidthshow } bind def
+    /kshow  { oldkshow } bind def
+    } ifelse
+  end
+} bind def
+false PATredef
+% Conditionally define setcmykcolor if not available
+/setcmykcolor where { pop } {
+  /setcmykcolor {
+    1 sub 4 1 roll
+    3 {
+	3 index add neg dup 0 lt { pop 0 } if 3 1 roll
+    } repeat
+    setrgbcolor - pop
+  } bind def
+} ifelse
+/PATsc {		% colorarray
+  aload length		% c1 ... cn length
+    dup 1 eq { pop setgray } { 3 eq { setrgbcolor } { setcmykcolor
+  } ifelse } ifelse
+} bind def
+/PATsg {		% dict
+  begin
+    lw setlinewidth
+    lc setlinecap
+    lj setlinejoin
+    ml setmiterlimit
+    ds aload pop setdash
+    cc aload pop setrgbcolor
+    cm setmatrix
+  end
+} bind def
+
+/PATDict 3 dict def
+/PATsp {
+  true PATredef
+  PATDict begin
+    /CurrentPattern exch def
+    % If it's an uncolored pattern, save the color
+    CurrentPattern /PaintType get 2 eq {
+      /PColor exch def
+    } if
+    /CColor [ currentrgbcolor ] def
+  end
+} bind def
+% PATstroke - stroke with the current pattern
+/PATstroke {
+  countdictstack
+  save
+  mark
+  {
+    currentpoint strokepath moveto
+    PATpcalc				% proc nw nh px py
+    clip newpath PATfill
+    } stopped {
+	(*** PATstroke Warning: Path is too complex, stroking
+	  with gray) =
+    cleartomark
+    restore
+    countdictstack exch sub dup 0 gt
+	{ { end } repeat } { pop } ifelse
+    gsave 0.5 setgray oldstroke grestore
+  } { pop restore pop } ifelse
+  newpath
+} bind def
+/PATtcalc {		% modmtx tilingtype PATtcalc tilematrix
+  % Note: tiling types 2 and 3 are not supported
+  gsave
+    exch concat					% tilingtype
+    matrix currentmatrix exch			% cmtx tilingtype
+    % Tiling type 1 and 3: constant spacing
+    2 ne {
+	% Distort the pattern so that it occupies
+	% an integral number of device pixels
+	dup 4 get exch dup 5 get exch		% tx ty cmtx
+	XStep 0 dtransform
+	round exch round exch			% tx ty cmtx dx.x dx.y
+	XStep div exch XStep div exch		% tx ty cmtx a b
+	0 YStep dtransform
+	round exch round exch			% tx ty cmtx a b dy.x dy.y
+	YStep div exch YStep div exch		% tx ty cmtx a b c d
+	7 -3 roll astore			% { a b c d tx ty }
+    } if
+  grestore
+} bind def
+/PATusp {
+  false PATredef
+  PATDict begin
+    CColor PATsc
+  end
+} bind def
+
+% right45
+11 dict begin
+/PaintType 1 def
+/PatternType 1 def
+/TilingType 1 def
+/BBox [0 0 1 1] def
+/XStep 1 def
+/YStep 1 def
+/PatWidth 1 def
+/PatHeight 1 def
+/Multi 2 def
+/PaintData [
+  { clippath } bind
+  { 32 32 true [ 32 0 0 -32 0 32 ]
+	{<808080804040404020202020101010100808080804040404
+	020202020101010180808080404040402020202010101010
+	080808080404040402020202010101018080808040404040
+	202020201010101008080808040404040202020201010101
+	808080804040404020202020101010100808080804040404
+	0202020201010101>}
+     imagemask } bind
+] def
+/PaintProc {
+	pop
+	exec fill
+} def
+currentdict
+end
+/P5 exch def
+1.1111 1.1111 scale %restore scale
+
+/clp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+%%EndProlog
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+7.500 slw
+% Polyline
+n 11631 4505 m 11931 4505 l  gs col-1 s gr 
+n 11703.00 4520.00 m 11631.00 4505.00 l 11703.00 4490.00 l  11691.50 4505.50 l 11703.00 4520.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 11631 4805 m 11931 4805 l  gs col-1 s gr 
+n 11703.00 4820.00 m 11631.00 4805.00 l 11703.00 4790.00 l  11691.50 4805.50 l 11703.00 4820.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 10720 4353 m 11621 4353 l  11621 4953 l  10720 4953 l  clp  gs col-1 s gr 
+/Times-Roman findfont 120.00 scalefont setfont
+11996 4503 m
+gs 1 -1 sc (fsr_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11996 4878 m
+gs 1 -1 sc (fsr_oen) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+11173 4580 m
+gs 1 -1 sc (reg_fsr) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11177 4809 m
+gs 1 -1 sc (fsr register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+% Polyline
+n 6376 6976 m 6001 6976 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 7006.00 m 6001.00 6976.00 l 6145.00 6946.00 l  6121.50 6976.50 l 6145.00 7006.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Interp Spline
+n 6376 6976 m
+	6401.31 6919.75 6420.06 6901.00 6451 6901 curveto
+	6481.94 6901.00 6500.69 6919.75 6526 6976 curveto
+ gs col-1 s gr
+
+% Polyline
+n 10653 6304 m 11554 6304 l  11554 6904 l  10653 6904 l  clp  gs col-1 s gr 
+/Times-Roman findfont 210.00 scalefont setfont
+11106 6531 m
+gs 1 -1 sc (pic_rom) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11110 6760 m
+gs 1 -1 sc (program rom) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+% Polyline
+n 6376 8252 m 6001 8252 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 8282.00 m 6001.00 8252.00 l 6145.00 8222.00 l  6121.50 8252.50 l 6145.00 8282.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Interp Spline
+n 6376 8252 m
+	6401.31 8195.75 6420.06 8177.00 6451 8177 curveto
+	6481.94 8177.00 6500.69 8195.75 6526 8252 curveto
+ gs col-1 s gr
+
+7.500 slw
+% Polyline
+n 7800 8032 m 8100 8032 l  gs col-1 s gr 
+n 7872.00 8047.00 m 7800.00 8032.00 l 7872.00 8017.00 l  7860.50 8032.50 l 7872.00 8047.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6902 7960 m 7803 7960 l  7803 8560 l  6902 8560 l  clp  gs col-1 s gr 
+% Polyline
+n 6526 8251 m 6901 8251 l  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 7800 8482 m 8100 8482 l  gs col-1 s gr 
+n 7872.00 8497.00 m 7800.00 8482.00 l 7872.00 8467.00 l  7860.50 8482.50 l 7872.00 8497.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+/Times-Roman findfont 120.00 scalefont setfont
+8175 8032 m
+gs 1 -1 sc (rtcc_oen) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+7355 8187 m
+gs 1 -1 sc (reg_8t) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8175 8557 m
+gs 1 -1 sc (rtcc_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+7359 8416 m
+gs 1 -1 sc (rtcc \(timer0\)) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+30.000 slw
+% Polyline
+n 9901 2251 m 12595 2252 l  12595 4127 l  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 7725 4050 m 12595 4052 l  gs col-1 s gr 
+7.500 slw
+n 7868.99 4080.06 m 7725.00 4050.00 l 7869.01 4020.06 l  7845.50 4050.55 l 7868.99 4080.06 l clp gs 0.00 setgray ef gr gs col-1 s gr
+30.000 slw
+% Polyline
+n 12595 4127 m 12600 11100 l gs /PC [[1.00 1.00 1.00] [0.00 0.00 0.00]] def
+15.00 15.00 sc P5 [16 0 0 -16 839.67 275.13] PATmp PATsp ef gr PATusp  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 11620 4652 m 12596 4653 l  gs col-1 s gr 
+7.500 slw
+n 11763.97 4682.15 m 11620.00 4652.00 l 11764.03 4622.15 l  11740.50 4652.62 l 11763.97 4682.15 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6376 4801 m 6001 4801 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 4831.00 m 6001.00 4801.00 l 6145.00 4771.00 l  6121.50 4801.50 l 6145.00 4831.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9301 5251 m 6451 5251 l  gs col-1 s gr 
+7.500 slw
+n 6595.00 5281.00 m 6451.00 5251.00 l 6595.00 5221.00 l  6571.50 5251.50 l 6595.00 5281.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8851 4426 m 10720 4427 l  gs col-1 s gr 
+n 8922.99 4441.04 m 8851.00 4426.00 l 8923.01 4411.04 l  8911.50 4426.53 l 8922.99 4441.04 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8401 5926 m 12595 5927 l  gs col-1 s gr 
+7.500 slw
+n 8544.99 5956.03 m 8401.00 5926.00 l 8545.01 5896.03 l  8521.50 5926.53 l 8544.99 5956.03 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 10501 5251 m 12001 5251 l  12001 5851 l  gs col-1 s gr 
+7.500 slw
+n 10645.00 5281.00 m 10501.00 5251.00 l 10645.00 5221.00 l  10621.50 5251.50 l 10645.00 5281.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 11551 6601 m 12001 6601 l  12001 6001 l  gs col-1 s gr 
+% Polyline
+n 9001 7201 m 12595 7202 l  gs col-1 s gr 
+7.500 slw
+n 9144.99 7231.04 m 9001.00 7201.00 l 9145.01 7171.04 l  9121.50 7201.53 l 9144.99 7231.04 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9676 3526 m 12596 3527 l  gs col-1 s gr 
+7.500 slw
+n 9819.99 3556.05 m 9676.00 3526.00 l 9820.01 3496.05 l  9796.50 3526.54 l 9819.99 3556.05 l clp gs 0.00 setgray ef gr gs col-1 s gr
+30.000 slw
+% Polyline
+n 6001 1801 m 8776 1801 l  gs col-1 s gr 
+7.500 slw
+n 8632.00 1771.00 m 8776.00 1801.00 l 8632.00 1831.00 l  8656.50 1801.50 l 8632.00 1771.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+30.000 slw
+% Polyline
+n 6451 2701 m 8776 2701 l  gs col-1 s gr 
+7.500 slw
+n 8632.00 2671.00 m 8776.00 2701.00 l 8632.00 2731.00 l  8656.50 2701.50 l 8632.00 2671.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6751 6601 m 10651 6601 l  gs col-1 s gr 
+7.500 slw
+n 10507.00 6571.00 m 10651.00 6601.00 l 10507.00 6631.00 l  10531.50 6601.50 l 10507.00 6571.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7201 6226 m 6751 6226 l  6751 6601 l  gs col-1 s gr 
+% Polyline
+n 6376 5776 m 6001 5776 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 5806.00 m 6001.00 5776.00 l 6145.00 5746.00 l  6121.50 5776.50 l 6145.00 5806.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 10275 7508 m 11623 7508 l  11623 8105 l  10275 8105 l  clp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 11622 7954 m 11922 7954 l  gs col-1 s gr 
+n 11694.00 7969.00 m 11622.00 7954.00 l 11694.00 7939.00 l  11682.50 7954.50 l 11694.00 7969.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 11622 7654 m 11922 7654 l  gs col-1 s gr 
+n 11694.00 7669.00 m 11622.00 7654.00 l 11694.00 7639.00 l  11682.50 7654.50 l 11694.00 7669.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7951 7426 m 6451 7426 l  gs col-1 s gr 
+7.500 slw
+n 6595.00 7456.00 m 6451.00 7426.00 l 6595.00 7396.00 l  6571.50 7426.50 l 6595.00 7456.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 10271 7803 m 6451 7801 l  gs col-1 s gr 
+7.500 slw
+n 6594.98 7831.08 m 6451.00 7801.00 l 6595.02 7771.08 l  6571.50 7801.56 l 6594.98 7831.08 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7801 8251 m 12595 8252 l  gs col-1 s gr 
+7.500 slw
+n 7944.99 8281.03 m 7801.00 8251.00 l 7945.01 8221.03 l  7921.50 8251.53 l 7944.99 8281.03 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 10496 5103 m 10796 5103 l  gs col-1 s gr 
+n 10568.00 5118.00 m 10496.00 5103.00 l 10568.00 5088.00 l  10556.50 5103.50 l 10568.00 5118.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 10496 5403 m 10796 5403 l  gs col-1 s gr 
+n 10568.00 5418.00 m 10496.00 5403.00 l 10568.00 5388.00 l  10556.50 5403.50 l 10568.00 5418.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9297 4954 m 10497 4954 l  10497 5561 l  9297 5561 l  clp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 9146 5253 m 9146 4878 l  gs col-1 s gr 
+% Polyline
+n 8846 4578 m 9146 4578 l  9146 4728 l  gs col-1 s gr 
+n 8918.00 4593.00 m 8846.00 4578.00 l 8918.00 4563.00 l  8906.50 4578.50 l 8918.00 4593.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8546 4428 m 8546 4578 l  8846 4728 l  8846 4278 l  8546 4428 l  gs col-1 s gr 
+% Polyline
+n 6526 6976 m 7951 6976 l  gs col-1 s gr 
+% Polyline
+n 7946 6755 m 8998 6755 l  8998 7653 l  7946 7653 l  clp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 8996 6828 m 9296 6828 l  gs col-1 s gr 
+n 9068.00 6843.00 m 8996.00 6828.00 l 9068.00 6813.00 l  9056.50 6828.50 l 9068.00 6843.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8996 6978 m 9296 6978 l  gs col-1 s gr 
+n 9068.00 6993.00 m 8996.00 6978.00 l 9068.00 6963.00 l  9056.50 6978.50 l 9068.00 6993.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8996 7428 m 9296 7428 l  gs col-1 s gr 
+n 9068.00 7443.00 m 8996.00 7428.00 l 9068.00 7413.00 l  9056.50 7428.50 l 9068.00 7443.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7796 5253 m 7796 5553 l  gs col-1 s gr 
+7.500 slw
+n 7826.00 5409.00 m 7796.00 5553.00 l 7766.00 5409.00 l  7796.50 5433.50 l 7826.00 5409.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7271 5253 m 7271 4878 l  gs col-1 s gr 
+7.500 slw
+n 7241.00 5022.00 m 7271.00 4878.00 l 7301.00 5022.00 l  7271.50 4998.50 l 7241.00 5022.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 7197 5554 m 8396 5554 l  8396 6453 l  7197 6453 l  clp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 8396 5628 m 8696 5628 l  gs col-1 s gr 
+n 8468.00 5643.00 m 8396.00 5628.00 l 8468.00 5613.00 l  8456.50 5628.50 l 8468.00 5643.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8396 5778 m 8696 5778 l  gs col-1 s gr 
+n 8468.00 5793.00 m 8396.00 5778.00 l 8468.00 5763.00 l  8456.50 5778.50 l 8468.00 5793.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8396 6078 m 8696 6078 l  gs col-1 s gr 
+n 8468.00 6093.00 m 8396.00 6078.00 l 8468.00 6063.00 l  8456.50 6078.50 l 8468.00 6093.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8396 6228 m 8696 6228 l  gs col-1 s gr 
+n 8468.00 6243.00 m 8396.00 6228.00 l 8468.00 6213.00 l  8456.50 6228.50 l 8468.00 6243.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8396 6378 m 8696 6378 l  gs col-1 s gr 
+n 8468.00 6393.00 m 8396.00 6378.00 l 8468.00 6363.00 l  8456.50 6378.50 l 8468.00 6393.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+30.000 slw
+% Polyline
+n 6451 2701 m 6450 11100 l gs /PC [[1.00 1.00 1.00] [0.00 0.00 0.00]] def
+15.00 15.00 sc P5 [16 0 0 -16 430.00 180.07] PATmp PATsp ef gr PATusp  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 6376 3526 m 6001 3526 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 3556.00 m 6001.00 3526.00 l 6145.00 3496.00 l  6121.50 3526.50 l 6145.00 3556.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6526 4801 m 10726 4801 l  gs col-1 s gr 
+% Polyline
+n 6526 5776 m 7201 5776 l  gs col-1 s gr 
+% Polyline
+n 6526 3526 m 8776 3526 l  gs col-1 s gr 
+30.000 slw
+% Polyline
+n 6001 1802 m 6000 11100 l gs /PC [[1.00 1.00 1.00] [0.00 0.00 0.00]] def
+15.00 15.00 sc P5 [16 0 0 -16 400.00 120.13] PATmp PATsp ef gr PATusp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 8922 2817 m 8923 3155 l  gs col-1 s gr 
+n 8937.79 3082.96 m 8923.00 3155.00 l 8907.79 3083.04 l  8923.32 3095.50 l 8937.79 3082.96 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9222 2736 m 9223 3155 l  gs col-1 s gr 
+n 9237.83 3082.96 m 9223.00 3155.00 l 9207.83 3083.04 l  9223.36 3095.50 l 9237.83 3082.96 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9523 3155 m 9522 2656 l  gs col-1 s gr 
+n 9507.14 2728.03 m 9522.00 2656.00 l 9537.14 2727.97 l  9522.62 2716.50 l 9507.14 2728.03 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9680 3231 m 9980 3231 l  gs col-1 s gr 
+n 9752.00 3246.00 m 9680.00 3231.00 l 9752.00 3216.00 l  9740.50 3231.50 l 9752.00 3246.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9680 3381 m 9980 3381 l  gs col-1 s gr 
+n 9752.00 3396.00 m 9680.00 3381.00 l 9752.00 3366.00 l  9740.50 3381.50 l 9752.00 3396.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8480 3305 m 8780 3305 l  gs col-1 s gr 
+n 8552.00 3320.00 m 8480.00 3305.00 l 8552.00 3290.00 l  8540.50 3305.50 l 8552.00 3320.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8773 3156 m 9675 3156 l  9675 3905 l  8773 3905 l  clp  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 9680 3830 m 9980 3830 l  gs col-1 s gr 
+n 9752.00 3845.00 m 9680.00 3830.00 l 9752.00 3815.00 l  9740.50 3830.50 l 9752.00 3845.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9680 3680 m 9980 3680 l  gs col-1 s gr 
+n 9752.00 3695.00 m 9680.00 3680.00 l 9752.00 3665.00 l  9740.50 3680.50 l 9752.00 3695.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8774 2856 m 9902 2552 l  9902 1952 l  8774 1656 l  8778 1953 l  9077 2252 l 
+ 8778 2553 l  8774 2856 l  gs col-1 s gr 
+7.500 slw
+% Polyline
+n 9902 2852 m 9752 2852 l  9753 2595 l  gs col-1 s gr 
+n 9737.72 2666.94 m 9753.00 2595.00 l 9767.72 2667.06 l  9753.27 2655.50 l 9737.72 2666.94 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6526 4051 m 6825 4050 l  gs col-1 s gr 
+% Polyline
+n 6376 4051 m 6001 4051 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 4081.00 m 6001.00 4051.00 l 6145.00 4021.00 l  6121.50 4051.50 l 6145.00 4081.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7277 4502 m 7277 4352 l  gs col-1 s gr 
+n 7262.00 4424.00 m 7277.00 4352.00 l 7292.00 4424.00 l  7277.50 4412.50 l 7262.00 4424.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 8550 4500 m 7277 4502 l  gs col-1 s gr 
+% Polyline
+n 6750 4500 m 7277 4502 l  gs col-1 s gr 
+n 6821.94 4515.27 m 6750.00 4500.00 l 6822.06 4485.27 l  6810.50 4500.73 l 6821.94 4515.27 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7731 3905 m 8031 3905 l  gs col-1 s gr 
+n 7803.00 3920.00 m 7731.00 3905.00 l 7803.00 3890.00 l  7791.50 3905.50 l 7803.00 3920.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7731 4204 m 8031 4204 l  gs col-1 s gr 
+n 7803.00 4219.00 m 7731.00 4204.00 l 7803.00 4189.00 l  7791.50 4204.50 l 7803.00 4219.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 6829 3761 m 7730 3761 l  7730 4361 l  6829 4361 l  clp  gs col-1 s gr 
+% Polyline
+n 6527 10502 m 8777 10502 l  gs col-1 s gr 
+% Polyline
+n 6377 10502 m 6002 10502 l  gs col-1 s gr 
+7.500 slw
+n 6146.00 10532.00 m 6002.00 10502.00 l 6146.00 10472.00 l  6122.50 10502.50 l 6146.00 10532.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9678 10503 m 10723 10505 l  gs col-1 s gr 
+7.500 slw
+n 9821.94 10533.28 m 9678.00 10503.00 l 9822.06 10473.28 l  9798.50 10503.73 l 9821.94 10533.28 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 11624 10506 m 12602 10502 l  gs col-1 s gr 
+7.500 slw
+n 11768.12 10535.41 m 11624.00 10506.00 l 11767.88 10475.41 l  11744.50 10506.01 l 11768.12 10535.41 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9674 10656 m 9974 10656 l  gs col-1 s gr 
+n 9746.00 10671.00 m 9674.00 10656.00 l 9746.00 10641.00 l  9734.50 10656.50 l 9746.00 10671.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 11628 10285 m 11928 10285 l  gs col-1 s gr 
+n 11700.00 10300.00 m 11628.00 10285.00 l 11700.00 10270.00 l  11688.50 10285.50 l 11700.00 10300.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9674 10801 m 9974 10801 l  gs col-1 s gr 
+n 9746.00 10816.00 m 9674.00 10801.00 l 9746.00 10786.00 l  9734.50 10801.50 l 9746.00 10816.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9678 10951 m 12602 10950 l  gs col-1 s gr 
+7.500 slw
+n 9822.01 10980.95 m 9678.00 10951.00 l 9821.99 10920.95 l  9798.50 10951.46 l 9822.01 10980.95 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8780 10351 m 9676 10351 l  9676 11101 l  8780 11101 l  clp  gs col-1 s gr 
+% Polyline
+n 8778 10953 m 7728 10953 l  gs col-1 s gr 
+7.500 slw
+n 8634.00 10923.00 m 8778.00 10953.00 l 8634.00 10983.00 l  8658.50 10953.50 l 8634.00 10923.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+n 7872.00 10983.00 m 7728.00 10953.00 l 7872.00 10923.00 l  7848.50 10953.50 l 7872.00 10983.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7724 10956 m 7649 10881 l  7424 10881 l  7424 11031 l  7649 11031 l  7724 10956 l gs 0.50 setgray ef gr  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 6527 9602 m 8777 9602 l  gs col-1 s gr 
+% Polyline
+n 6377 9602 m 6002 9602 l  gs col-1 s gr 
+7.500 slw
+n 6146.00 9632.00 m 6002.00 9602.00 l 6146.00 9572.00 l  6122.50 9602.50 l 6146.00 9632.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9678 9603 m 10723 9605 l  gs col-1 s gr 
+7.500 slw
+n 9821.94 9633.28 m 9678.00 9603.00 l 9822.06 9573.28 l  9798.50 9603.73 l 9821.94 9633.28 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 11624 9606 m 12602 9602 l  gs col-1 s gr 
+7.500 slw
+n 11768.12 9635.41 m 11624.00 9606.00 l 11767.88 9575.41 l  11744.50 9606.01 l 11768.12 9635.41 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9674 9756 m 9974 9756 l  gs col-1 s gr 
+n 9746.00 9771.00 m 9674.00 9756.00 l 9746.00 9741.00 l  9734.50 9756.50 l 9746.00 9771.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 11628 9385 m 11928 9385 l  gs col-1 s gr 
+n 11700.00 9400.00 m 11628.00 9385.00 l 11700.00 9370.00 l  11688.50 9385.50 l 11700.00 9400.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9674 9901 m 9974 9901 l  gs col-1 s gr 
+n 9746.00 9916.00 m 9674.00 9901.00 l 9746.00 9886.00 l  9734.50 9901.50 l 9746.00 9916.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9678 10051 m 12602 10050 l  gs col-1 s gr 
+7.500 slw
+n 9822.01 10080.95 m 9678.00 10051.00 l 9821.99 10020.95 l  9798.50 10051.46 l 9822.01 10080.95 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8780 9451 m 9676 9451 l  9676 10201 l  8780 10201 l  clp  gs col-1 s gr 
+% Polyline
+n 8778 10053 m 7728 10053 l  gs col-1 s gr 
+7.500 slw
+n 8634.00 10023.00 m 8778.00 10053.00 l 8634.00 10083.00 l  8658.50 10053.50 l 8634.00 10023.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+n 7872.00 10083.00 m 7728.00 10053.00 l 7872.00 10023.00 l  7848.50 10053.50 l 7872.00 10083.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7724 10056 m 7649 9981 l  7424 9981 l  7424 10131 l  7649 10131 l  7724 10056 l gs 0.50 setgray ef gr  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 6526 8701 m 8776 8701 l  gs col-1 s gr 
+% Polyline
+n 6376 8701 m 6001 8701 l  gs col-1 s gr 
+7.500 slw
+n 6145.00 8731.00 m 6001.00 8701.00 l 6145.00 8671.00 l  6121.50 8701.50 l 6145.00 8731.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9677 8702 m 10722 8704 l  gs col-1 s gr 
+7.500 slw
+n 9820.94 8732.28 m 9677.00 8702.00 l 9821.06 8672.28 l  9797.50 8702.73 l 9820.94 8732.28 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 11623 8705 m 12601 8701 l  gs col-1 s gr 
+7.500 slw
+n 11767.12 8734.41 m 11623.00 8705.00 l 11766.88 8674.41 l  11743.50 8705.01 l 11767.12 8734.41 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9673 8855 m 9973 8855 l  gs col-1 s gr 
+n 9745.00 8870.00 m 9673.00 8855.00 l 9745.00 8840.00 l  9733.50 8855.50 l 9745.00 8870.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 11627 8484 m 11927 8484 l  gs col-1 s gr 
+n 11699.00 8499.00 m 11627.00 8484.00 l 11699.00 8469.00 l  11687.50 8484.50 l 11699.00 8499.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 9673 9000 m 9973 9000 l  gs col-1 s gr 
+n 9745.00 9015.00 m 9673.00 9000.00 l 9745.00 8985.00 l  9733.50 9000.50 l 9745.00 9015.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 9677 9150 m 12601 9149 l  gs col-1 s gr 
+7.500 slw
+n 9821.01 9179.95 m 9677.00 9150.00 l 9820.99 9119.95 l  9797.50 9150.46 l 9821.01 9179.95 l clp gs 0.00 setgray ef gr gs col-1 s gr
+15.000 slw
+% Polyline
+n 8779 8550 m 9675 8550 l  9675 9300 l  8779 9300 l  clp  gs col-1 s gr 
+% Polyline
+n 8777 9152 m 7727 9152 l  gs col-1 s gr 
+7.500 slw
+n 8633.00 9122.00 m 8777.00 9152.00 l 8633.00 9182.00 l  8657.50 9152.50 l 8633.00 9122.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+n 7871.00 9182.00 m 7727.00 9152.00 l 7871.00 9122.00 l  7847.50 9152.50 l 7871.00 9182.00 l clp gs 0.00 setgray ef gr gs col-1 s gr
+% Polyline
+n 7723 9155 m 7648 9080 l  7423 9080 l  7423 9230 l  7648 9230 l  7723 9155 l gs 0.50 setgray ef gr  gs col-1 s gr 
+15.000 slw
+% Polyline
+n 10730 9313 m 11631 9313 l  11631 9913 l  10730 9913 l  clp  gs col-1 s gr 
+% Polyline
+n 10729 8412 m 11630 8412 l  11630 9012 l  10729 9012 l  clp  gs col-1 s gr 
+% Polyline
+n 10730 10213 m 11631 10213 l  11631 10813 l  10730 10813 l  clp  gs col-1 s gr 
+7.500 slw
+% Interp Spline
+n 9146 4728 m
+	9202.25 4753.31 9221.00 4772.06 9221 4803 curveto
+	9221.00 4833.94 9202.25 4852.69 9146 4878 curveto
+ gs col-1 s gr
+
+15.000 slw
+% Interp Spline
+n 6376 4801 m
+	6401.31 4744.75 6420.06 4726.00 6451 4726 curveto
+	6481.94 4726.00 6500.69 4744.75 6526 4801 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6376 5776 m
+	6401.31 5719.75 6420.06 5701.00 6451 5701 curveto
+	6481.94 5701.00 6500.69 5719.75 6526 5776 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6376 3526 m
+	6401.31 3469.75 6420.06 3451.00 6451 3451 curveto
+	6481.94 3451.00 6500.69 3469.75 6526 3526 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 12001 5851 m
+	12057.25 5876.31 12076.00 5895.06 12076 5926 curveto
+	12076.00 5956.94 12057.25 5975.69 12001 6001 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6376 4051 m
+	6401.31 3994.75 6420.06 3976.00 6451 3976 curveto
+	6481.94 3976.00 6500.69 3994.75 6526 4051 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6377 10502 m
+	6402.31 10445.75 6421.06 10427.00 6452 10427 curveto
+	6482.94 10427.00 6501.69 10445.75 6527 10502 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6377 9602 m
+	6402.31 9545.75 6421.06 9527.00 6452 9527 curveto
+	6482.94 9527.00 6501.69 9545.75 6527 9602 curveto
+ gs col-1 s gr
+
+% Interp Spline
+n 6376 8701 m
+	6401.31 8644.75 6420.06 8626.00 6451 8626 curveto
+	6481.94 8626.00 6500.69 8644.75 6526 8701 curveto
+ gs col-1 s gr
+
+/Times-Roman findfont 180.00 scalefont setfont
+12520 2477 m
+gs 1 -1 sc (bus_out) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+10948 7730 m
+gs 1 -1 sc (reg_cons) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11998 7655 m
+gs 1 -1 sc (const_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11998 8030 m
+gs 1 -1 sc (const_01) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10948 7955 m
+gs 1 -1 sc (constants generator) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10871 5103 m
+gs 1 -1 sc (inst_skip) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10871 5478 m
+gs 1 -1 sc (imm_oen) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9898 5180 m
+gs 1 -1 sc (reg_inst) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9904 5411 m
+gs 1 -1 sc (instruction register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9221 4653 m
+gs 1 -1 sc (inst[4:0]) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9221 4353 m
+gs 1 -1 sc (fsr) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8471 7428 m
+gs 1 -1 sc (working register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+8471 7128 m
+gs 1 -1 sc (reg_w) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9371 6828 m
+gs 1 -1 sc (w_a_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9371 6978 m
+gs 1 -1 sc (w_b_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9371 7503 m
+gs 1 -1 sc (w_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+7871 5403 m
+gs 1 -1 sc (inst[8:0]) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+7346 4953 m
+gs 1 -1 sc (inst[11:0] \(to the controller\)) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+7796 5928 m
+gs 1 -1 sc (reg_pc) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8771 5628 m
+gs 1 -1 sc (pc_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8771 5778 m
+gs 1 -1 sc (pc_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8771 6153 m
+gs 1 -1 sc (pc_pop) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8771 6303 m
+gs 1 -1 sc (pc_load) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8771 6453 m
+gs 1 -1 sc (pc_push) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+7796 6228 m
+gs 1 -1 sc (program counter) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 180.00 scalefont setfont
+6526 2926 m
+gs 1 -1 sc (bus_b) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+6676 5176 m
+gs 1 -1 sc (inst[7:0]) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+6751 4651 m
+gs 1 -1 sc (file addr. \(to the controller\)) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+6676 5701 m
+gs 1 -1 sc (pc[7:0]) col-1 show gr
+/Times-Roman findfont 180.00 scalefont setfont
+6076 2026 m
+gs 1 -1 sc (bus_a) col-1 show gr
+/Times-Roman findfont 360.00 scalefont setfont
+12596 1953 m
+gs 1 -1 sc (PIC datapath) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+12596 2103 m
+gs 1 -1 sc (Ernesto Romani \(romani@ascu.unian.it\)) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9976 6526 m
+gs 1 -1 sc (pc[8:0]) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8397 3304 m
+gs 1 -1 sc (zero \(to the controller\)) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9223 3455 m
+gs 1 -1 sc (reg_s) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9223 3755 m
+gs 1 -1 sc (status register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9453 2328 m
+gs 1 -1 sc (ALU) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8885 3028 m
+gs 1 -1 sc (carry_new) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9267 3035 m
+gs 1 -1 sc (zero) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9568 3043 m
+gs 1 -1 sc (carry_old) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 3231 m
+gs 1 -1 sc (status_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 3381 m
+gs 1 -1 sc (status_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10048 3905 m
+gs 1 -1 sc (zero_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10048 3755 m
+gs 1 -1 sc (carry_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9977 2852 m
+gs 1 -1 sc (alu_op) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8097 3904 m
+gs 1 -1 sc (file_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+8097 4279 m
+gs 1 -1 sc (file_oen) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+7273 3980 m
+gs 1 -1 sc (reg_file) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+7279 4211 m
+gs 1 -1 sc (register file) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9224 10656 m
+gs 1 -1 sc (reg_io) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9224 9756 m
+gs 1 -1 sc (reg_io) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 180.00 scalefont setfont
+7274 10131 m
+gs 1 -1 sc (port_B) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 180.00 scalefont setfont
+7274 11031 m
+gs 1 -1 sc (port_C) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9226 10051 m
+gs 1 -1 sc (port B register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9226 10951 m
+gs 1 -1 sc (port C register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+12003 9385 m
+gs 1 -1 sc (tris_b_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+12003 10285 m
+gs 1 -1 sc (tris_c_wen) col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+9223 8855 m
+gs 1 -1 sc (reg_io) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10048 8855 m
+gs 1 -1 sc (port_a_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10048 8630 m
+gs 1 -1 sc (port_a_tris) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+12002 8484 m
+gs 1 -1 sc (tris_a_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10050 9000 m
+gs 1 -1 sc (port_a_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+9225 9150 m
+gs 1 -1 sc (port A register) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 180.00 scalefont setfont
+7273 9230 m
+gs 1 -1 sc (port_A) dup stringwidth pop neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+11183 9540 m
+gs 1 -1 sc (reg_8rst) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+11182 8639 m
+gs 1 -1 sc (reg_8rst) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11186 8868 m
+gs 1 -1 sc (I/O conf. port A) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 210.00 scalefont setfont
+11183 10440 m
+gs 1 -1 sc (reg_8rst) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11187 9769 m
+gs 1 -1 sc (I/O conf. port B) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+11187 10669 m
+gs 1 -1 sc (I/O conf. port C) dup stringwidth pop 2 div neg 0 rmoveto  col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 9531 m
+gs 1 -1 sc (port_b_tris) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 9756 m
+gs 1 -1 sc (port_b_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10051 9901 m
+gs 1 -1 sc (port_b_wen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 10431 m
+gs 1 -1 sc (port_c_tris) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10049 10656 m
+gs 1 -1 sc (port_c_oen) col-1 show gr
+/Times-Roman findfont 120.00 scalefont setfont
+10051 10801 m
+gs 1 -1 sc (port_c_wen) col-1 show gr
+showpage
+%%Page: 1 1
+$F2psEnd
+restore

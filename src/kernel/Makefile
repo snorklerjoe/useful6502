@@ -27,7 +27,9 @@ LIB_BUILD_DIR = $(BUILD_DIR)/lib
 # LIBSRCS = $(wildcard lib/*.s)      		 	# All library .s files
 # LIBOBJS = $(patsubst lib/%.s, $(LIB_BUILD_DIR)/%.o, $(LIBSRCS))  # Place .o files in build/lib
 
-OBJ_DE_LIB = copydata.o condes.o zerobss.o
+OBJ_DE_LIB = $(shell $(AR) l $(NONE_TARGET_LIB))
+# copydata.o condes.o zerobss.o malloc.o _heap.o _heapadd.o _heapblocksize.o _heapmaxavail.o _heapmemavail.o popa.o
+
 LIBOBJS = $(patsubst %, $(LIB_BUILD_DIR)/%, $(OBJ_DE_LIB))
 
 SRCS = $(wildcard *.c) $(wildcard *.s) $(wildcard lib/*.s)     # Find all .c and .s files
@@ -57,8 +59,8 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS)
 
 # Compile source files into object files
-$(BUILD_DIR)/%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(BUILD_DIR)/%.s: %.c
+	$(CC) $(CFLAGS) $< -o $@
 $(BUILD_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) $< -o $@
 
