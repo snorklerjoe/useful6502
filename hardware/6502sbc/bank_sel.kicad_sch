@@ -2863,16 +2863,6 @@
 		)
 		(uuid "2016e077-bbd4-48f7-8a4e-72c116967c6f")
 	)
-	(text "Should I just get the\nright clock deocder instead\nof using a bunch of inverters?"
-		(exclude_from_sim no)
-		(at 35.306 131.826 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4dac899e-e903-4650-8230-25eb42d72b4c")
-	)
 	(text "8-bit\nData\nBus"
 		(exclude_from_sim no)
 		(at 23.368 90.424 0)
@@ -3278,10 +3268,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd8a94b2-1258-4da2-aa54-9703fb2fe8c3")
-	)
-	(no_connect
-		(at 34.29 162.56)
-		(uuid "426ca49a-2e6f-41a5-bb99-06b4168adcfe")
 	)
 	(no_connect
 		(at 39.37 149.86)
@@ -6844,6 +6830,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 106.68 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "7314607d-af07-46e5-bb50-0036f514835e")
 		)
@@ -6967,6 +6962,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 146.05 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d4a127a0-cdeb-4899-8dfb-87e20c0a08ec")
 		)
@@ -6977,175 +6981,6 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/baede6e3-561b-40e6-87d1-1dae57101f2a"
 					(reference "R36")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74xx:74HC04")
-		(at 26.67 162.56 0)
-		(unit 6)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "17c729b2-de0f-4e92-82eb-5ffd9a9fca91")
-		(property "Reference" "U49"
-			(at 28.194 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74HC04"
-			(at 29.464 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 26.67 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
-			(at 26.67 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Hex Inverter"
-			(at 26.67 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "30883a0a-7d04-4696-b79b-9db295e81209")
-		)
-		(pin "8"
-			(uuid "c04fb540-b9b8-4a99-85cc-90cb502edb2d")
-		)
-		(pin "14"
-			(uuid "fc83b2d3-9ca5-4307-ae5b-aa09748def84")
-		)
-		(pin "13"
-			(uuid "9c05a672-95a8-4aa5-853e-828011a8477f")
-		)
-		(pin "7"
-			(uuid "165419d3-d8cc-4311-9e6b-2af3a35041e3")
-		)
-		(pin "4"
-			(uuid "cf2d9ce0-516e-4bc5-bcca-b5ecb1ab6e1b")
-		)
-		(pin "11"
-			(uuid "36fb6ac8-1853-446c-8a33-b2c0aef9c987")
-		)
-		(pin "10"
-			(uuid "bb14b106-3c21-4787-9f00-bf4e0c839afb")
-		)
-		(pin "2"
-			(uuid "a7fa7927-535f-4bf5-9784-210d0d8c8a88")
-		)
-		(pin "6"
-			(uuid "3944cd4c-8c46-4d72-8f13-136b935aeed6")
-		)
-		(pin "9"
-			(uuid "767b9ddd-1ea1-49d5-8430-59a6ff8a91d8")
-		)
-		(pin "1"
-			(uuid "c290dfde-0123-48e4-bf8c-098f4ffce1ce")
-		)
-		(pin "12"
-			(uuid "f78ac5fd-574a-4983-9534-78ca546be331")
-		)
-		(pin "3"
-			(uuid "7cca6c69-734f-42ed-8cc1-cb98355078ed")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/baede6e3-561b-40e6-87d1-1dae57101f2a"
-					(reference "U49")
-					(unit 6)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 19.05 162.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "20d2cb72-418d-4dcd-bff5-35ac7e3f8028")
-		(property "Reference" "#PWR0206"
-			(at 19.05 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 19.05 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 19.05 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 19.05 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 19.05 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "398a24df-97e2-41df-b457-e9a5cb562c20")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/baede6e3-561b-40e6-87d1-1dae57101f2a"
-					(reference "#PWR0206")
 					(unit 1)
 				)
 			)
@@ -7262,6 +7097,15 @@
 			)
 		)
 		(property "Description" "Dual Decoder 1 of 4, Active low outputs"
+			(at 38.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 38.1 120.65 0)
 			(effects
 				(font
@@ -7445,6 +7289,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 96.52 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "31607682-c4b5-41da-8014-5e46ed615c15")
 		)
@@ -7513,6 +7366,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 189.23 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "31dc9f4d-fdf2-414e-b203-46adcdb69f89")
 		)
@@ -7571,7 +7433,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 50.8 110.49 0)
 			(effects
 				(font
@@ -7580,7 +7442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 50.8 110.49 0)
 			(effects
 				(font
@@ -7590,6 +7452,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 50.8 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 50.8 110.49 0)
 			(effects
 				(font
@@ -7674,7 +7545,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 59.69 110.49 0)
 			(effects
 				(font
@@ -7683,7 +7554,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 59.69 110.49 0)
 			(effects
 				(font
@@ -7693,6 +7564,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 59.69 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 59.69 110.49 0)
 			(effects
 				(font
@@ -7807,6 +7687,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 54.61 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "46f1debf-b324-4821-87ce-d31eb7ea7ccf")
 		)
@@ -7867,6 +7756,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 60.96 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 60.96 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8010,6 +7908,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 226.06 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "16"
 			(uuid "4d4dbabd-6da7-4e64-ac3a-d68ad420a6af")
 		)
@@ -8107,7 +8014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 57.15 44.45 0)
 			(effects
 				(font
@@ -8116,7 +8023,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 57.15 44.45 0)
 			(effects
 				(font
@@ -8126,6 +8033,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 57.15 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 57.15 44.45 0)
 			(effects
 				(font
@@ -8305,6 +8221,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 106.68 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "23f2dcd2-1cd5-4841-9228-9f34fa137ba6")
 		)
@@ -8426,6 +8351,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 101.6 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d92f7c63-12d9-49db-bb51-764c660c421f")
 		)
@@ -8487,6 +8421,15 @@
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated"
 			(at 243.84 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 243.84 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8684,7 +8627,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 31.75 149.86 0)
 			(effects
 				(font
@@ -8693,7 +8636,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 31.75 149.86 0)
 			(effects
 				(font
@@ -8703,6 +8646,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 31.75 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 31.75 149.86 0)
 			(effects
 				(font
@@ -8809,6 +8761,15 @@
 		)
 		(property "Description" "8-bit Register, 3-state outputs"
 			(at 67.31 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 67.31 171.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8938,6 +8899,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 60.96 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "d79a0150-e87a-40e4-ac46-5e9cb0528fdf")
 		)
@@ -9039,6 +9009,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 87.63 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 87.63 175.26 0)
 			(effects
 				(font
@@ -9182,6 +9161,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 191.77 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "cccbd6f2-505f-409c-a5e9-5520ed580520")
 		)
@@ -9297,6 +9285,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 146.05 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 146.05 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9441,6 +9438,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 30.48 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "39a1ae3b-4471-4a50-9a43-88b37e7a4890")
 		)
@@ -9552,6 +9558,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 146.05 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "524155f8-0d20-41e2-8070-55196d449c27")
 		)
@@ -9612,6 +9627,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 34.29 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 34.29 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9753,6 +9777,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 26.67 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ea451d58-a072-47ca-930b-f2a43ccfa7b7")
 		)
@@ -9821,6 +9854,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 232.41 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "da3e6776-228b-4e5d-834d-899274e8f2e9")
 		)
@@ -9861,7 +9903,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 66.04 123.19 0)
 			(effects
 				(font
@@ -9870,7 +9912,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 66.04 123.19 0)
 			(effects
 				(font
@@ -9880,6 +9922,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 66.04 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 66.04 123.19 0)
 			(effects
 				(font
@@ -9986,6 +10037,15 @@
 			)
 		)
 		(property "Description" "8-bit Register, 3-state outputs"
+			(at 106.68 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 106.68 96.52 0)
 			(effects
 				(font
@@ -10115,6 +10175,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 48.26 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bb8fbeec-dad4-4a6b-933a-f88572e3ea4a")
 		)
@@ -10176,6 +10245,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 232.41 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 232.41 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10245,6 +10323,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 146.05 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 146.05 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10445,6 +10532,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 146.05 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 146.05 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10849,6 +10945,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 215.9 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9953d85f-2205-410f-8557-21abf05b0108")
 		)
@@ -10909,6 +11014,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 96.52 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 96.52 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11248,6 +11362,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 146.05 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6c566d3c-b4d8-456f-8e43-34abb5dc56cc")
 		)
@@ -11288,7 +11411,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 59.69 135.89 0)
 			(effects
 				(font
@@ -11297,7 +11420,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 59.69 135.89 0)
 			(effects
 				(font
@@ -11307,6 +11430,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 59.69 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 59.69 135.89 0)
 			(effects
 				(font
@@ -11479,6 +11611,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 146.05 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 146.05 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11680,6 +11821,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 146.05 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 146.05 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -2679,6 +2679,167 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -4036,6 +4197,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "611755e5-4a88-4197-8ec1-4d0e26261171")
+	)
+	(junction
+		(at 172.72 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6508cdc8-183c-4ace-a610-086dfd909151")
 	)
 	(junction
 		(at 172.72 60.96)
@@ -6840,6 +7007,150 @@
 		(uuid "f59dc760-81a7-4e0a-9e78-81b3625f212a")
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 176.53 33.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0212d4d6-d5d5-46e9-9eb7-6442dae8d9b2")
+		(property "Reference" "C77"
+			(at 175.006 30.734 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 175.006 28.194 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 32.0548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 176.53 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 176.53 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 176.53 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9d86d222-5173-441f-b104-4881a54e79c4")
+		)
+		(pin "2"
+			(uuid "c2762bb1-51a8-4ad1-ac8c-1ae070985306")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 260.35 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "025319fa-77a7-4533-a479-113db64d7888")
+		(property "Reference" "#PWR0281"
+			(at 260.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 260.35 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 260.35 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f98a99f5-15d1-4809-9e35-724bf717ea41")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0281")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Potentiometer")
 		(at 39.37 90.17 0)
 		(unit 1)
@@ -6886,6 +7197,15 @@
 			)
 		)
 		(property "Description" "Potentiometer"
+			(at 39.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 39.37 90.17 0)
 			(effects
 				(font
@@ -6965,6 +7285,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 72.39 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3b619d2f-d01b-477a-a797-8dfeac1dd46b")
 		)
@@ -7006,7 +7335,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 182.88 54.61 0)
 			(effects
 				(font
@@ -7015,7 +7344,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 182.88 54.61 0)
 			(effects
 				(font
@@ -7025,6 +7354,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 182.88 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 182.88 54.61 0)
 			(effects
 				(font
@@ -7080,6 +7418,85 @@
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "U37")
 					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 88.9 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a0a90aa-0532-4f01-b2f3-5569d75e8d0f")
+		(property "Reference" "C80"
+			(at 92.71 100.7109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 92.71 103.2509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 89.8652 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 88.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 88.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "40f09e66-2568-4215-a24f-6219e0d9251e")
+		)
+		(pin "2"
+			(uuid "8a33da31-ba6a-4d4a-9951-06ab4efbb0f6")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C80")
+					(unit 1)
 				)
 			)
 		)
@@ -7152,6 +7569,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 260.35 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20f3775c-47ec-4c7e-9079-df5cb6d00922")
+		(property "Reference" "#PWR0279"
+			(at 260.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 260.35 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 260.35 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb923ec2-8aec-43cd-9db9-a4836125f6cb")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0279")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 165.1 40.64 0)
 		(unit 1)
@@ -7205,6 +7688,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 165.1 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f1263009-2449-4bf7-ab62-fee0c1fe4856")
 		)
@@ -7245,7 +7737,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 187.96 149.86 0)
 			(effects
 				(font
@@ -7254,7 +7746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 187.96 149.86 0)
 			(effects
 				(font
@@ -7264,6 +7756,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 187.96 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 187.96 149.86 0)
 			(effects
 				(font
@@ -7443,6 +7944,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 92.71 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "d79a0150-e87a-40e4-ac46-5e9cb0528fdf")
 		)
@@ -7562,6 +8072,72 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR0147")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 88.9 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3457db16-06de-43ff-99a0-fb6f4d6ae8fd")
+		(property "Reference" "#PWR0286"
+			(at 88.9 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 88.9 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 88.9 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "feaae979-177d-4b83-a654-f06692a65719")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0286")
 					(unit 1)
 				)
 			)
@@ -7717,7 +8293,7 @@
 				)
 			)
 		)
-		(property "Value" ".01u"
+		(property "Value" ".1u"
 			(at 200.406 33.528 90)
 			(effects
 				(font
@@ -7745,6 +8321,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 200.66 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 200.66 36.83 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7814,6 +8399,15 @@
 			)
 		)
 		(property "Description" "Potentiometer"
+			(at 39.37 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 39.37 82.55 0)
 			(effects
 				(font
@@ -7961,6 +8555,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 177.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "f5a61b46-382e-4d8e-bec4-0bc2a29004db")
 		)
@@ -8073,7 +8676,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 184.15 115.57 0)
 			(effects
 				(font
@@ -8082,7 +8685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 184.15 115.57 0)
 			(effects
 				(font
@@ -8093,6 +8696,15 @@
 		)
 		(property "Description" "Hex Inverter"
 			(at 184.15 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
+			(at 184.15 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8147,6 +8759,85 @@
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "U37")
 					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 88.9 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f614481-8b65-413d-8540-044fc311ac00")
+		(property "Reference" "C81"
+			(at 92.71 148.9709 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 92.71 151.5109 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 89.8652 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 88.9 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 88.9 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e81a2f50-1baf-45b6-bbcd-140214a20b41")
+		)
+		(pin "2"
+			(uuid "c21533a4-9fa8-41cf-b629-10ad91ee08fc")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C81")
+					(unit 1)
 				)
 			)
 		)
@@ -8338,6 +9029,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 72.39 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "36b103d6-b785-46bf-9681-bf6b56cec854")
 		)
@@ -8400,6 +9100,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 128.27 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 128.27 116.84 0)
 			(effects
 				(font
@@ -8518,6 +9227,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 118.11 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bf8cfb65-bc60-4b36-8f15-0aa3eb947c52")
 		)
@@ -8578,6 +9296,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 35.56 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 35.56 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8646,6 +9373,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 172.72 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 172.72 49.53 0)
 			(effects
 				(font
@@ -8763,7 +9499,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 238.76 121.92 0)
 			(effects
 				(font
@@ -8772,7 +9508,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 238.76 121.92 0)
 			(effects
 				(font
@@ -8783,6 +9519,15 @@
 		)
 		(property "Description" "Hex Inverter"
 			(at 238.76 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
+			(at 238.76 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8895,6 +9640,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 184.15 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "cbd5017e-86ad-4f11-ba92-406287402ec4")
 		)
@@ -8980,6 +9734,72 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
+		(at 88.9 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67b4ec7d-3ade-4716-9b7a-f114beab04e1")
+		(property "Reference" "#PWR0284"
+			(at 88.9 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 88.9 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 88.9 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "94f9ba2a-6b84-4cde-bbfd-7d4e76cfb34d")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0284")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
 		(at 123.19 184.15 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9046,6 +9866,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 137.16 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "696c770e-6b5b-4601-be23-21f9e5f0c4cc")
+		(property "Reference" "C82"
+			(at 140.97 150.2409 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 140.97 152.7809 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.1252 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 137.16 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 137.16 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa9da349-a82e-4297-85d5-050b8a6dbb4b")
+		)
+		(pin "2"
+			(uuid "b08618de-ebad-422a-891a-52c528cf10da")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C82")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:Jumper_2_Bridged")
 		(at 118.11 186.69 0)
 		(unit 1)
@@ -9090,6 +9989,15 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 118.11 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 118.11 186.69 0)
 			(effects
 				(font
@@ -9160,6 +10068,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 128.27 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 128.27 166.37 0)
 			(effects
 				(font
@@ -9309,7 +10226,7 @@
 				)
 			)
 		)
-		(property "Value" ".01u"
+		(property "Value" ".1u"
 			(at 205.74 89.154 90)
 			(effects
 				(font
@@ -9337,6 +10254,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 205.74 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 205.74 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9508,7 +10434,7 @@
 				)
 			)
 		)
-		(property "Value" ".01u"
+		(property "Value" "u"
 			(at 135.382 66.548 90)
 			(effects
 				(font
@@ -9536,6 +10462,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 142.24 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 142.24 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9605,6 +10540,15 @@
 			)
 		)
 		(property "Description" "Synchronous 4-bit Up/Down (2 clk) counter"
+			(at 213.36 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 213.36 115.57 0)
 			(effects
 				(font
@@ -9855,6 +10799,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 142.24 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "f632decc-4654-4296-94ae-4f7bce238201")
 		)
@@ -9975,7 +10928,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 250.19 67.31 0)
 			(effects
 				(font
@@ -9984,7 +10937,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 250.19 67.31 0)
 			(effects
 				(font
@@ -9994,6 +10947,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 250.19 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 250.19 67.31 0)
 			(effects
 				(font
@@ -10049,6 +11011,151 @@
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "U37")
 					(unit 7)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 137.16 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98e1b0e4-72c0-49e3-946d-db9341f177b7")
+		(property "Reference" "C79"
+			(at 140.97 99.4409 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 140.97 101.9809 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.1252 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b895558-8efe-4611-8269-187d83a591e2")
+		)
+		(pin "2"
+			(uuid "332b267f-575a-494c-a994-e28a7f290561")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C79")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d1661a6-347c-4ab0-8457-80152aa2b0a4")
+		(property "Reference" "#PWR0283"
+			(at 137.16 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3553542b-c424-4aae-bb9e-43e6a0b7e5d5")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0283")
+					(unit 1)
 				)
 			)
 		)
@@ -10252,6 +11359,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 88.9 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a459863e-d83d-471d-bfd2-ec3326007cca")
+		(property "Reference" "#PWR0285"
+			(at 88.9 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 88.9 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9e18202-b27e-4fdc-9c7b-e72a8497f54d")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0285")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 113.03 186.69 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10344,7 +11517,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 184.15 100.33 0)
 			(effects
 				(font
@@ -10353,7 +11526,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 184.15 100.33 0)
 			(effects
 				(font
@@ -10364,6 +11537,15 @@
 		)
 		(property "Description" "Hex Inverter"
 			(at 184.15 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
+			(at 184.15 100.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10475,6 +11657,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 27.94 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "07f42c08-a6f6-4f0b-895e-b43310937421")
 		)
@@ -10537,6 +11728,15 @@
 			)
 		)
 		(property "Description" "Potentiometer"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 39.37 74.93 0)
 			(effects
 				(font
@@ -10610,6 +11810,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 82.55 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 82.55 115.57 0)
 			(effects
 				(font
@@ -10796,6 +12005,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 82.55 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "2a0785b6-9775-4c89-8d2e-7aeb0e8ec00f")
 		)
@@ -10964,6 +12182,15 @@
 			)
 		)
 		(property "Description" "Dual Decoder 1 of 4, Active low outputs"
+			(at 92.71 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 92.71 54.61 0)
 			(effects
 				(font
@@ -11288,6 +12515,72 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR0170")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 137.16 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7b410a9-0ec3-451d-b213-930b9f7b96cb")
+		(property "Reference" "#PWR0288"
+			(at 137.16 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 137.16 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 137.16 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0c6738ac-1d6d-4158-8b9d-89418849c2e9")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0288")
 					(unit 1)
 				)
 			)
@@ -11652,7 +12945,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 182.88 44.45 0)
 			(effects
 				(font
@@ -11661,7 +12954,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/sn74hc04"
 			(at 182.88 44.45 0)
 			(effects
 				(font
@@ -11671,6 +12964,15 @@
 			)
 		)
 		(property "Description" "Hex Inverter"
+			(at 182.88 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "19"
 			(at 182.88 44.45 0)
 			(effects
 				(font
@@ -11731,6 +13033,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 88.9 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6864cdb-3ed1-4d9f-affa-5d18d023a1b7")
+		(property "Reference" "#PWR0287"
+			(at 88.9 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 88.9 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c429e2f7-0b39-43e6-850a-86a54de2389a")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0287")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 142.24 59.69 90)
 		(unit 1)
@@ -11775,6 +13143,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 142.24 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 142.24 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11858,6 +13235,72 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR0175")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 180.34 33.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dbde65c9-690f-4086-9f05-0f1fef339391")
+		(property "Reference" "#PWR0280"
+			(at 186.69 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 185.42 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 180.34 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e113abf0-fec1-4c22-93f2-1f52007e734b")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0280")
 					(unit 1)
 				)
 			)
@@ -12051,6 +13494,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 163.83 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d47485a5-71df-4412-b8bd-2a3532ddce8b")
 		)
@@ -12202,6 +13654,72 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
+		(at 137.16 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6ce6d7e-e5fb-46ed-bfcf-686165635eba")
+		(property "Reference" "#PWR0282"
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 137.16 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 137.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9fbf117-410e-4eac-a291-47ee29cafeb8")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0282")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
 		(at 250.19 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12321,6 +13839,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 39.37 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b67a5519-29b4-457b-8dca-34394f3e0112")
 		)
@@ -12396,6 +13923,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 168.91 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "9414bd86-f7b7-4151-897e-9c3569f5085c")
 		)
@@ -12409,6 +13945,72 @@
 			(project ""
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed5a1be5-56d8-4cb9-b78d-f9fe167eb5da")
+		(property "Reference" "#PWR0289"
+			(at 137.16 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de15b865-b6a9-46da-bfb8-e7a4b1f87198")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "#PWR0289")
 					(unit 1)
 				)
 			)
@@ -12535,6 +14137,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 209.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "87fb316e-ea20-48c3-b146-fa7324ced001")
 		)
@@ -12639,6 +14250,15 @@
 			)
 		)
 		(property "Description" "Dual Decoder 1 of 4, Active low outputs"
+			(at 31.75 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
 			(at 31.75 130.81 0)
 			(effects
 				(font
@@ -12766,6 +14386,85 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR0148")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 260.35 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa204489-7e36-4d11-94fb-03684544df4b")
+		(property "Reference" "C78"
+			(at 264.16 63.8809 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ".1u"
+			(at 264.16 66.4209 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.3152 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 260.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 260.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 260.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3bb4cba0-6a2a-4246-97c7-018697e85aaf")
+		)
+		(pin "2"
+			(uuid "1329814f-754f-4e2d-a40d-9e978e62915d")
+		)
+		(instances
+			(project "6502sbc"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "C78")
 					(unit 1)
 				)
 			)

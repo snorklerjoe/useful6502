@@ -4869,6 +4869,16 @@
 		)
 		(uuid "4408f664-de7b-43aa-b061-7c43e1fc8bc1")
 	)
+	(label "~{VPB}"
+		(at 101.6 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b331e30-5aea-42c9-9538-50ec2b0b0ce2")
+	)
 	(label "D0"
 		(at 186.69 125.73 180)
 		(effects
@@ -5029,16 +5039,6 @@
 		)
 		(uuid "a64b978a-6f81-4656-85c9-27bd698ff6fb")
 	)
-	(label "RESPRIV"
-		(at 101.6 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "afc5a16b-32fe-49a0-a698-7357e56c89d7")
-	)
 	(label "~{UMINH}"
 		(at 203.2 60.96 0)
 		(effects
@@ -5058,6 +5058,16 @@
 			(justify left bottom)
 		)
 		(uuid "bfaa530a-3443-430d-878e-eada5e754739")
+	)
+	(label "FAULT"
+		(at 109.22 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7ccc371-62a6-462b-9d8f-7176852cd986")
 	)
 	(label "XLEVEL_KERNEL"
 		(at 260.35 74.93 180)
@@ -5346,7 +5356,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS73"
+		(property "Value" "74HC73D"
 			(at 236.22 64.77 0)
 			(effects
 				(font
@@ -5354,7 +5364,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 236.22 72.39 0)
 			(effects
 				(font
@@ -5363,7 +5373,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS73"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC73.pdf"
 			(at 236.22 72.39 0)
 			(effects
 				(font
@@ -5373,6 +5383,15 @@
 			)
 		)
 		(property "Description" "Dual JK Flip-Flop, reset"
+			(at 236.22 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "clk-q: 30; setup: 16; hold: 3"
 			(at 236.22 72.39 0)
 			(effects
 				(font
@@ -5458,7 +5477,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 66.04 81.28 0)
 			(effects
 				(font
@@ -5467,7 +5486,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 66.04 81.28 0)
 			(effects
 				(font
@@ -5477,6 +5496,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 66.04 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 66.04 81.28 0)
 			(effects
 				(font
@@ -5561,7 +5589,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
 			(at 205.74 77.47 0)
 			(effects
 				(font
@@ -5570,7 +5598,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT2G32.pdf"
 			(at 205.74 77.47 0)
 			(effects
 				(font
@@ -5580,6 +5608,15 @@
 			)
 		)
 		(property "Description" "Dual OR Gate, Low-Voltage CMOS"
+			(at 205.74 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "6.9"
 			(at 205.74 77.47 0)
 			(effects
 				(font
@@ -5647,7 +5684,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 43.18 63.5 0)
 			(effects
 				(font
@@ -5656,7 +5693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 43.18 63.5 0)
 			(effects
 				(font
@@ -5666,6 +5703,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 43.18 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 43.18 63.5 0)
 			(effects
 				(font
@@ -5751,7 +5797,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 71.12 60.96 0)
 			(effects
 				(font
@@ -5760,7 +5806,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 71.12 60.96 0)
 			(effects
 				(font
@@ -5770,6 +5816,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 71.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 71.12 60.96 0)
 			(effects
 				(font
@@ -5881,6 +5936,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 243.84 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8b8c4e61-b6a2-42a0-a583-af6d2f078acd")
 		)
@@ -5958,6 +6022,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 254 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9418b95c-6762-4ff0-b969-b9064c69364f")
 		)
@@ -5998,7 +6071,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 71.12 153.67 0)
 			(effects
 				(font
@@ -6007,7 +6080,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 71.12 153.67 0)
 			(effects
 				(font
@@ -6017,6 +6090,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 71.12 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 71.12 153.67 0)
 			(effects
 				(font
@@ -6102,7 +6184,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 43.18 48.26 0)
 			(effects
 				(font
@@ -6111,7 +6193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 43.18 48.26 0)
 			(effects
 				(font
@@ -6121,6 +6203,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 43.18 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 43.18 48.26 0)
 			(effects
 				(font
@@ -6214,7 +6305,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd54hc4002.pdf"
 			(at 76.2 123.19 0)
 			(effects
 				(font
@@ -6224,6 +6315,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 76.2 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "8"
 			(at 76.2 123.19 0)
 			(effects
 				(font
@@ -6303,7 +6403,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -6312,7 +6412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT2G32.pdf"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -6322,6 +6422,15 @@
 			)
 		)
 		(property "Description" "Dual OR Gate, Low-Voltage CMOS"
+			(at 95.25 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "6.9"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -6389,7 +6498,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 43.18 78.74 0)
 			(effects
 				(font
@@ -6398,7 +6507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 43.18 78.74 0)
 			(effects
 				(font
@@ -6408,6 +6517,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 43.18 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 43.18 78.74 0)
 			(effects
 				(font
@@ -6559,7 +6677,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 134.62 162.56 0)
 			(effects
 				(font
@@ -6568,7 +6686,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.ti.com/lit/ds/symlink/sn74ls07.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74ls07.pdf"
 			(at 134.62 162.56 0)
 			(effects
 				(font
@@ -6578,6 +6696,15 @@
 			)
 		)
 		(property "Description" "Hex Buffers and Drivers With Open Collector High Voltage Outputs"
+			(at 134.62 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "30"
 			(at 134.62 162.56 0)
 			(effects
 				(font
@@ -6655,7 +6782,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS73"
+		(property "Value" "74HC73D"
 			(at 119.38 152.4 0)
 			(effects
 				(font
@@ -6663,7 +6790,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 119.38 160.02 0)
 			(effects
 				(font
@@ -6672,7 +6799,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS73"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC73.pdf"
 			(at 119.38 160.02 0)
 			(effects
 				(font
@@ -6682,6 +6809,15 @@
 			)
 		)
 		(property "Description" "Dual JK Flip-Flop, reset"
+			(at 119.38 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "clk-q: 30; setup: 16; hold: 3"
 			(at 119.38 160.02 0)
 			(effects
 				(font
@@ -6900,7 +7036,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 217.17 63.5 0)
 			(effects
 				(font
@@ -6909,7 +7045,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS08"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT08_Q100.pdf"
 			(at 217.17 63.5 0)
 			(effects
 				(font
@@ -6919,6 +7055,15 @@
 			)
 		)
 		(property "Description" "Quad And2"
+			(at 217.17 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "5.9"
 			(at 217.17 63.5 0)
 			(effects
 				(font
@@ -7004,7 +7149,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 260.35 82.55 0)
 			(effects
 				(font
@@ -7013,7 +7158,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.ti.com/lit/ds/symlink/sn74ls07.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74ls07.pdf"
 			(at 260.35 82.55 0)
 			(effects
 				(font
@@ -7023,6 +7168,15 @@
 			)
 		)
 		(property "Description" "Hex Buffers and Drivers With Open Collector High Voltage Outputs"
+			(at 260.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" "30"
 			(at 260.35 82.55 0)
 			(effects
 				(font
@@ -7137,6 +7291,15 @@
 				(hide yes)
 			)
 		)
+		(property "t_pd (ns)" ""
+			(at 76.2 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fd9c0802-2db0-4da7-99d4-86e50b00301a")
 		)
@@ -7200,6 +7363,15 @@
 		)
 		(property "Description" "Dual NAND Gate, High-speed Si-gate CMOS"
 			(at 80.01 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 80.01 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
