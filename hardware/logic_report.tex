@@ -1,0 +1,142 @@
+\documentclass[12pt,letterpaper,fleqn]{article}
+\author{Joseph R. Freeston}
+\title{65c02 Homebrew Computer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{fancybox}
+\usepackage{xcolor}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% Define colors
+\definecolor{commentgray}{gray}{0.5}
+\definecolor{stringred}{rgb}{0.8,0,0}
+\definecolor{keywordblue}{rgb}{0,0,0.8}
+\definecolor{directivegreen}{rgb}{0,0.5,0}
+
+% 65C02 opcode list (based on datasheet, ignoring undocumented)
+\lstdefinelanguage[65C02]{Assembler}%
+  {morekeywords={
+    ADC, AND, ASL, BBR, BBS, BCC, BCS, BEQ, BIT, BMI, BNE, BPL, BRA, BRK,
+    BVC, BVS, CLC, CLD, CLI, CLV, CMP, CPX, CPY, DEC, DEX, DEY, EOR, INC,
+    INX, INY, JMP, JSR, LDA, LDX, LDY, LSR, NOP, ORA, PHA, PHP, PHX, PHY,
+    PLA, PLP, PLX, PLY, ROL, ROR, RTI, RTS, SBC, SEC, SED, SEI, STA, STX,
+    STY, STZ, TAX, TAY, TRB, TSB, TSX, TXA, TXS, TYA, STP, WAI
+  },
+  morekeywords=[2]{.ORG, .BYTE, .WORD, .DB, .DW, .EQU, .INCLUDE, .MACRO, .ENDM},
+  sensitive=true,
+  morecomment=[l]{;},
+  morestring=[b]"
+}
+
+\lstset{
+  language=[65C02]Assembler,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{keywordblue}\bfseries,
+  keywordstyle=[2]\color{directivegreen}\bfseries,
+  commentstyle=\color{commentgray}\itshape,
+  stringstyle=\color{stringred},
+  showstringspaces=false,
+  numberstyle=\tiny\color{gray},
+  numbers=left,
+  numbersep=5pt,
+  tabsize=4,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible
+}
+
+% \newcommand{\inlinecode}[1]{\mbox{\lstinline[language=[65C02]Assembler]!#1!}}
+
+\begin{document}
+
+
+% TITLE PAGE
+\begin{titlepage}
+\clearpage\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+
+
+\section{Introduction}
+This document aims to document the verification of the boolean operations performed by the logic in my 65c02 homebrew computer design prior to laying out the PCB. In addition, this document will document the propagation delay calculations for timing verification.
+
+For each major component, there will be a logical verification subsection, as well as a timing verification subsection.
+
+\section{Fault Detection and User/Kernel Modes}
+
+The access control hardware has two states: user mode and kernel mode.
+Any interrupt should initiate a switch to kernel mode by the time the interrupt service routine (ISR) begins execution. User mode must be manually initiated, and entered as execution returns from an ISR or begins execution of user-space and/or application code.
+
+No faults should occur when operating under kernel mode. User mode shall be restricted by prohibiting the following actions:
+
+\begin{itemize}
+	\item Executing a STP instruction
+	\item Attempting access of any sort to high-memory
+\end{itemize}
+
+\subsection{Logic Verification}
+
+Execution mode handling is done via a J-K flip-flop that stores a 1 if execution is happening in user mode. All other logic is based around this.
+
+\newcommand{\var}[1]{\texttt{#1}}
+\newcommand{\ovar}[1]{\overline{\var{#1}}}
+
+\begin{table}[ht]
+  \centering
+  \renewcommand{\arraystretch}{1.2} % Increase row height
+  \setlength{\tabcolsep}{8pt} % Adjust column spacing
+  \begin{tabular}{| l | l | p{7cm} |}
+    \hline
+    \textbf{Variable} & \textbf{Type} & \textbf{Description} \\
+    \hline
+    \var{XLEVEL\_USER} & 5V CMOS & In user mode. \\
+    \hline
+    \var{XLEVEL\_KERNEL} & 5V CMOS & In kernel mode. \\
+    \hline
+    \var{HIMEM} & 5V CMOS & Accessing (for read or write) memory in the top 16k of address space. \\
+    \hline
+    \var{FAULTCLK} & 5V CMOS & A phase-shifted \var{PHI2} \\
+    \hline
+    \var{UMINH} & 5V CMOS & User-mode inhibit \\
+    \hline
+  \end{tabular}
+  \caption{Variable Definitions for Execution Modes}
+  \label{tab:variables}
+\end{table}
+
+The unsimplified logic:
+\begin{align}
+\var{XLEVEL\_KERNEL} &= \ovar{XLEVEL\_USER} \\
+\var{XLEVEL\_USER}^+ &:= \ovar{UMINH} \land \ovar{HIMEM} \\
+\ovar{XLEVEL\_USER}^+ &:= \ovar{VPB} \lor \ovar{RESB} \\
+\var{FAULT} = (\var{HIMEM} \land \var{XLEVEL_USER}) \lor \lnot (\var{XLEVEL_KERNEL \lor \var{D[2]} \lor \var{D[5]} \lor \lnot (\var{D[0]} \land \var{D[1]} \land \var{D[3]} \land \var{D[4]} \land \var{D[6]} \land \var{D[7]} \land \var{SYNC})) \\
+\end{align}
+
+\section{High-memory Address Decode}
+
+\section{Delayed Clocks}
+
+\section{General-purpose Memory Bank Selection}
+
+\section{SRAM Interface}
+
+\section{DMA Interface}
+
+\section{Character i/o Interface}
+
+\section{Interrupts}
+
+
+\end{document}
