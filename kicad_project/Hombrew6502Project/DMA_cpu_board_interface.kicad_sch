@@ -9971,7 +9971,7 @@
 			)
 		)
 		(instances
-			(project "6502sbc"
+			(project "Hombrew6502Project"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/5a0be038-7c3c-4556-9482-35a902da59e6"
 					(page "2")
 				)
