@@ -2803,7 +2803,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_Potentiometer"
+		(symbol "Device:R_Potentiometer_Trim_US"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -2819,7 +2819,7 @@
 					)
 				)
 			)
-			(property "Value" "R_Potentiometer"
+			(property "Value" "R_Potentiometer_Trim_US"
 				(at -2.54 0 90)
 				(effects
 					(font
@@ -2845,7 +2845,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Potentiometer"
+			(property "Description" "Trim-potentiometer, US symbol"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2854,7 +2854,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "resistor variable"
+			(property "ki_keywords" "resistor variable trimpot trimmer"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2872,12 +2872,13 @@
 					(hide yes)
 				)
 			)
-			(symbol "R_Potentiometer_0_1"
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
+			(symbol "R_Potentiometer_Trim_US_0_1"
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -2886,14 +2887,62 @@
 				)
 				(polyline
 					(pts
-						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
 					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
@@ -2909,7 +2958,7 @@
 					)
 				)
 			)
-			(symbol "R_Potentiometer_1_1"
+			(symbol "R_Potentiometer_Trim_US_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -4290,6 +4339,12 @@
 		(uuid "ed4ab856-3612-48b0-9a9a-ca49ea12053f")
 	)
 	(junction
+		(at 39.37 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "101341c0-208c-4440-8a3a-4716b6a65452")
+	)
+	(junction
 		(at 198.12 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4306,6 +4361,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32732129-1774-43a0-b362-f899b2c7d634")
+	)
+	(junction
+		(at 39.37 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3377b3c5-fe76-49c2-8570-c3afdc222d72")
+	)
+	(junction
+		(at 39.37 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e899127-3526-4ed9-a0f0-ff629d58b013")
 	)
 	(junction
 		(at 172.72 58.42)
@@ -4386,22 +4453,10 @@
 		(uuid "83dd59d0-2614-499c-8635-661156f4d74b")
 	)
 	(junction
-		(at 39.37 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "88d35e05-2a4b-41b1-addb-bfd7091bd001")
-	)
-	(junction
 		(at 133.35 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e0c97f8-b1cf-455e-9da9-82e9ced9a906")
-	)
-	(junction
-		(at 39.37 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8e8c90db-567d-450a-bb3b-a5d577a58505")
 	)
 	(junction
 		(at 125.73 57.15)
@@ -4444,12 +4499,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca2ca81b-9798-4be4-9247-f3d78e5d4d42")
-	)
-	(junction
-		(at 39.37 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cd7c5a8c-fe6f-4dbc-a742-f545f46dbda5")
 	)
 	(junction
 		(at 209.55 41.91)
@@ -7454,88 +7503,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 39.37 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12d2ced6-0738-430a-a5ec-ef8ae3b47a49")
-		(property "Reference" "RV1004"
-			(at 36.83 88.8999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Contrast"
-			(at 36.83 91.4399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 39.37 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 39.37 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "92f73941-9075-4468-bc3f-a3d967ffd378")
-		)
-		(pin "2"
-			(uuid "7bfd21d5-54d2-4535-8f5b-1a0a523c160b")
-		)
-		(pin "3"
-			(uuid "bfb81570-dac9-4abc-bbea-12450850ef60")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
-					(reference "RV1004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Jumper:Jumper_2_Bridged")
 		(at 72.39 135.89 0)
 		(unit 1)
@@ -8735,88 +8702,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 39.37 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "401503b0-74d6-4fa1-888c-1f1f75960c19")
-		(property "Reference" "RV1003"
-			(at 36.83 81.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Contrast"
-			(at 36.83 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 39.37 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 39.37 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a969591f-6050-42b7-95e5-99d686fcebad")
-		)
-		(pin "2"
-			(uuid "577b5d9e-2af4-4ac1-8b4d-80260dd5a83d")
-		)
-		(pin "3"
-			(uuid "f2e1f15f-24eb-4709-9f84-d34da0ac72f6")
-		)
-		(instances
-			(project ""
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
-					(reference "RV1003")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 67.31 135.89 270)
 		(unit 1)
@@ -9032,6 +8917,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Potentiometer_Trim_US")
+		(at 39.37 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4cb124d6-b00f-4b6f-85db-3b2d8e86206f")
+		(property "Reference" "RV1002"
+			(at 38.354 73.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 37.084 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Trim-potentiometer, US symbol"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "5cd98d2f-564e-431e-833f-d4a17bea7be9")
+		)
+		(pin "1"
+			(uuid "203ee128-16a9-4afb-bb00-3a2166660a49")
+		)
+		(pin "2"
+			(uuid "b3e6d60d-644a-4cdf-a3b9-5023d6886e38")
+		)
+		(instances
+			(project "Hombrew6502Project"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "RV1002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74HC04")
 		(at 184.15 115.57 90)
 		(unit 5)
@@ -9171,7 +9137,7 @@
 				)
 			)
 		)
-		(property "Footprint" "KMDGX6SBS"
+		(property "Footprint" "footprints:KMDGX6SBS"
 			(at 152.4 127.94 0)
 			(effects
 				(font
@@ -9525,7 +9491,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
 			(at 128.27 116.84 0)
 			(effects
 				(font
@@ -10414,7 +10380,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
 			(at 128.27 166.37 0)
 			(effects
 				(font
@@ -11263,6 +11229,87 @@
 			(project ""
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR01003")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer_Trim_US")
+		(at 39.37 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f1b68e8-78ec-4284-82c7-f4934f2d6b23")
+		(property "Reference" "RV1003"
+			(at 38.354 81.534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 37.084 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical"
+			(at 39.37 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Trim-potentiometer, US symbol"
+			(at 39.37 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 39.37 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "66df95d7-c09c-4d96-995f-7cdd262e08d3")
+		)
+		(pin "1"
+			(uuid "df0c8fe3-c314-403c-819e-da7d3a2b250e")
+		)
+		(pin "2"
+			(uuid "ecd541fd-dc8a-4636-b525-064285198c6a")
+		)
+		(instances
+			(project "Hombrew6502Project"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "RV1003")
 					(unit 1)
 				)
 			)
@@ -12128,88 +12175,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 39.37 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab0210f3-9808-449a-9f90-7f39d42b8e45")
-		(property "Reference" "RV1002"
-			(at 36.83 73.6599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Contrast"
-			(at 36.83 76.1999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d771fc35-8795-42ae-9688-64db4d27ce00")
-		)
-		(pin "2"
-			(uuid "67284d5f-847c-4259-b5ab-5798f3b908f9")
-		)
-		(pin "3"
-			(uuid "4c04ac70-288a-49f8-a607-b00ee2edc50f")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
-					(reference "RV1002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x16")
 		(at 82.55 115.57 0)
 		(unit 1)
@@ -12237,7 +12202,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
 			(at 82.55 115.57 0)
 			(effects
 				(font
@@ -12397,6 +12362,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Potentiometer_Trim_US")
+		(at 39.37 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5c14d24-53d0-4300-ba96-8adac22643d1")
+		(property "Reference" "RV1001"
+			(at 38.354 66.294 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 37.084 68.834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical"
+			(at 39.37 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Trim-potentiometer, US symbol"
+			(at 39.37 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 39.37 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "0bffcd21-8a3d-4fb1-918f-680e7814c3d4")
+		)
+		(pin "1"
+			(uuid "154b0dcb-e91c-41e7-91f8-400ec80ca7a6")
+		)
+		(pin "2"
+			(uuid "7083e80a-73d3-4161-a875-40d4481dae90")
+		)
+		(instances
+			(project "Hombrew6502Project"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "RV1001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x16")
 		(at 82.55 165.1 0)
 		(unit 1)
@@ -12424,7 +12470,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
 			(at 82.55 165.1 0)
 			(effects
 				(font
@@ -14377,88 +14423,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 39.37 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea024120-cf1e-4fc7-b526-a344071bd349")
-		(property "Reference" "RV1001"
-			(at 36.83 66.0399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Contrast"
-			(at 36.83 68.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 39.37 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 39.37 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b67a5519-29b4-457b-8dca-34394f3e0112")
-		)
-		(pin "2"
-			(uuid "ecc77758-b221-4fb0-8393-8da3f6ee0569")
-		)
-		(pin "3"
-			(uuid "3cc97dc0-5d4a-41c6-9ab0-7df3e1ec1655")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
-					(reference "RV1001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 156.21 40.64 0)
 		(unit 1)
@@ -15044,6 +15008,87 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
 					(reference "#PWR01013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer_Trim_US")
+		(at 39.37 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f93f387b-dea2-4bc3-95ac-88aad0a7a1d7")
+		(property "Reference" "RV1004"
+			(at 38.354 89.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 37.084 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical"
+			(at 39.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Trim-potentiometer, US symbol"
+			(at 39.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "t_pd (ns)" ""
+			(at 39.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "80bac32b-ed9a-4e99-8250-fbf1a79fa6d1")
+		)
+		(pin "1"
+			(uuid "dd1a5418-e723-4aa0-9ec8-9347a5f13eeb")
+		)
+		(pin "2"
+			(uuid "2dda0f7e-2f63-4262-99ee-5f017954ce86")
+		)
+		(instances
+			(project "Hombrew6502Project"
+				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de/9c2b49e5-39e3-4b31-897b-2b98be8d28a9"
+					(reference "RV1004")
 					(unit 1)
 				)
 			)
