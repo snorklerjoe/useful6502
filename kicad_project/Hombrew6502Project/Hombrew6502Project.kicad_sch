@@ -7482,12 +7482,6 @@
 		(uuid "5b9c1c53-8f9d-4abc-acb1-119ac115f7b5")
 	)
 	(junction
-		(at 124.46 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5c42deec-c599-499d-a4c7-f32808d774b1")
-	)
-	(junction
 		(at 102.87 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8400,16 +8394,6 @@
 			(type default)
 		)
 		(uuid "3432717c-e430-4a9e-aa62-ef56200b91b7")
-	)
-	(wire
-		(pts
-			(xy 124.46 185.42) (xy 133.35 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3432e5a6-ffb0-4405-b64e-da78eaa9b2cc")
 	)
 	(wire
 		(pts
@@ -10193,7 +10177,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 185.42) (xy 119.38 185.42)
+			(xy 119.38 185.42) (xy 133.35 185.42)
 		)
 		(stroke
 			(width 0)
@@ -14503,82 +14487,6 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
 					(reference "R111")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 63.5 176.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0f79b505-ba39-4e9d-9c71-d74be155f573")
-		(property "Reference" "TP104"
-			(at 61.976 170.688 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 66.04 174.4979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 68.58 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 68.58 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 63.5 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 63.5 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "21772edd-2726-4976-b20b-ce30d38d0273")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
-					(reference "TP104")
 					(unit 1)
 				)
 			)
@@ -22471,82 +22379,6 @@
 			(project "6502sbc"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
 					(reference "R131")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 124.46 185.42 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fa88bd3b-e1a5-4ac2-ac63-0730f99b9aec")
-		(property "Reference" "TP107"
-			(at 125.984 191.262 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 121.92 187.4521 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 119.38 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 119.38 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 124.46 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 124.46 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eae79fe1-1937-4cd6-9082-345627faf813")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
-					(reference "TP107")
 					(unit 1)
 				)
 			)
