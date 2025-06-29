@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "65c02 Homebrew")
-		(rev "Prelim")
+		(rev "Rev A")
 		(company "Joseph R. Freeston")
 		(comment 2 "https://github.com/snorklerjoe/useful6502")
 		(comment 4 "A 65c02-based computer with peripheral i/o offloaded to a PIC16 microcontroller.")
@@ -7590,6 +7590,10 @@
 	(no_connect
 		(at 128.27 99.06)
 		(uuid "bb7d757d-c2fb-4f80-beff-49d60c334fd3")
+	)
+	(no_connect
+		(at 52.07 170.18)
+		(uuid "d7a4c5e8-663a-4a1c-989c-5c4f87dc5d77")
 	)
 	(no_connect
 		(at 128.27 101.6)
@@ -19929,82 +19933,6 @@
 			(project "Hombrew6502Project"
 				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
 					(reference "#PWR0124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 52.07 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b47e12b5-c8c3-4606-b164-254637e78c8f")
-		(property "Reference" "TP103"
-			(at 50.546 164.338 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 54.61 168.1479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.5mm"
-			(at 57.15 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 57.15 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 52.07 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "t_pd (ns)" ""
-			(at 52.07 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "289cba91-652b-441a-a2af-6fcd37445901")
-		)
-		(instances
-			(project "6502sbc"
-				(path "/dc8636f6-e59e-4c75-ae27-408ad57a23de"
-					(reference "TP103")
 					(unit 1)
 				)
 			)

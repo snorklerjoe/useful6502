@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "65c02 Homebrew")
-		(rev "Prelim")
+		(rev "Rev A")
 		(company "Joseph R. Freeston")
 		(comment 2 "https://github.com/snorklerjoe/useful6502")
 		(comment 4 "A 65c02-based computer with peripheral i/o offloaded to a PIC16 microcontroller.")

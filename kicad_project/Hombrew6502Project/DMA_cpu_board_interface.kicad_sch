@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "65c02 Homebrew")
-		(rev "Prelim")
+		(rev "Rev A")
 		(company "Joseph R. Freeston")
 		(comment 2 "https://github.com/snorklerjoe/useful6502")
 		(comment 4 "A 65c02-based computer with peripheral i/o offloaded to a PIC16 microcontroller.")
@@ -2625,18 +2625,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(rectangle
-		(start 127 31.75)
-		(end 275.59 100.33)
-		(stroke
-			(width 0)
-			(type dash_dot_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid cfc40f44-d783-46f1-891c-4e76a8647d3d)
-	)
 	(text "SRAM delay"
 		(exclude_from_sim no)
 		(at 94.234 97.282 0)
@@ -2666,18 +2654,6 @@
 			)
 		)
 		(uuid "879d9321-e607-42d2-a085-22b44d9cc4e7")
-	)
-	(text "(Separate Module)"
-		(exclude_from_sim no)
-		(at 136.398 33.782 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-		)
-		(uuid "95a6b391-ffe5-4daa-a28d-97d80904d75f")
 	)
 	(text "~{BUSY}"
 		(exclude_from_sim no)
