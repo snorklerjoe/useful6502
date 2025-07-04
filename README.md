@@ -5,9 +5,13 @@ running my own operating system.
 
 ## Current Status
 
-I am in the process of laying out the PCB.
+The PCB is ordered.
+
+*See the complete implementation plan and progress here: [Implemementation Plan](./IMPLEMENTATION_PLAN.md)*
 
 ## Hardware Goals
+
+*These are some general points; for the full hardware specification, see here: [Hardware Specification](./HARDWARE.md)*
 
 I want the following end goals to categorize the machine as "useful":
 

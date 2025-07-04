@@ -2,6 +2,8 @@
 
 This document provides an overview and detailed description of the hardware for this Useful 6502 Machine project.
 
+*View the full electrical schematic here: [Schematic](./kicad_project/Homebrew6502Project/Homebrew6502Project.pdf)*
+
 ## System Overview
 
 The Useful 6502 Machine is a portable computer based on the WDC 65c02 CPU, featuring protected memory, a PIC16 peripheral coprocessor, dual-port SRAM, and support for external storage via SPI EEPROM and SD card. The system is designed for robust multitasking and expandability.
