@@ -1,70 +1,32 @@
-# Configuration
 
-CPU = 6502
-#CPU = 65sc02  # 65c02
+# Minimal Makefile for Useful6502 Kernel (pure assembly, no C runtime)
 
-# Location of file with CC65 target-nonspecific library
-NONE_TARGET_LIB = /usr/share/cc65/lib/none.lib
-
-# Compiler and flags
-CC = cc65
-ASFLAGS = --cpu $(CPU)
+CPU = 65C02
 AS = ca65
-AR = ar65
 LD = ld65
 
-CFLAGS = -t none -O --cpu $(CPU)
-LDFLAGS = 
-
-# Target binary
-TARGET = build/kernel.bin
-
-# Directories
 BUILD_DIR = build
-LIB_BUILD_DIR = $(BUILD_DIR)/lib
+TARGET = $(BUILD_DIR)/kernel.bin
+MAP = $(BUILD_DIR)/kernel.map
+CFG = kernel_target.cfg
 
-# Source files
-# LIBSRCS = $(wildcard lib/*.s)      		 	# All library .s files
-# LIBOBJS = $(patsubst lib/%.s, $(LIB_BUILD_DIR)/%.o, $(LIBSRCS))  # Place .o files in build/lib
+SRCS = $(wildcard *.s) $(wildcard lib/*.s)
+OBJS = $(patsubst %.s,$(BUILD_DIR)/%.o,$(notdir $(SRCS)))
 
-OBJ_DE_LIB = $(shell $(AR) l $(NONE_TARGET_LIB))
-# copydata.o condes.o zerobss.o malloc.o _heap.o _heapadd.o _heapblocksize.o _heapmaxavail.o _heapmemavail.o popa.o
+all: $(BUILD_DIR) $(TARGET)
 
-LIBOBJS = $(patsubst %, $(LIB_BUILD_DIR)/%, $(OBJ_DE_LIB))
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
-SRCS = $(wildcard *.c) $(wildcard *.s) $(wildcard lib/*.s)     # Find all .c and .s files
-OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(filter %.c, $(SRCS))) \
-       $(patsubst %.s, $(BUILD_DIR)/%.o, $(filter %.s, $(SRCS))) # Place .o files in build
-
-# Ensure build directories exist
-$(shell mkdir -p $(BUILD_DIR) $(LIB_BUILD_DIR))
-
-# Build everything
-all: $(OBJS) $(LIBOBJS)
-	$(LD) -C kernel_target.cfg -m $(BUILD_DIR)/main.map $(LIBOBJS) $(OBJS) -o $(TARGET)
-
-# # Build the kernel libc
-# .PHONY: lib
-# lib: $(BUILD_DIR)/kernel.lib
-
-$(LIBOBJS): $(NONE_TARGET_LIB)
-	ar65 x $< $@
-
-# $(BUILD_DIR)/kernel.lib: $(LIBOBJS)
-# 	cp $(NONE_TARGET_LIB) $@
-# 	$(AR) a $@ $^
-
-# Build the kernel
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS)
+	$(LD) -C $(CFG) -o $@ -m $(MAP) $(OBJS)
 
-# Compile source files into object files
-$(BUILD_DIR)/%.s: %.c
-	$(CC) $(CFLAGS) $< -o $@
-$(BUILD_DIR)/%.o: %.s
-	$(AS) $(ASFLAGS) $< -o $@
+$(BUILD_DIR)/%.o: %.s | $(BUILD_DIR)
+	$(AS) --cpu $(CPU) $< -o $@
 
-# Clean up build artifacts
+$(BUILD_DIR)/%.o: lib/%.s | $(BUILD_DIR)
+	$(AS) --cpu $(CPU) $< -o $@
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_DIR)
