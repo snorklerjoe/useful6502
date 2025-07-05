@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/_build/PICBridge_firmware/default/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
