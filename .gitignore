@@ -60,7 +60,6 @@ out/
 *.sdb
 *.mcp
 *.mcw
-*.hex
 *.cof
 *.elf
 *.map
