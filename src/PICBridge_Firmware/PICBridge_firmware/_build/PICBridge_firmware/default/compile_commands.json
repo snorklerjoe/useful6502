@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/_build/PICBridge_firmware/default",
-  "command": "/opt/microchip/xc8/v3.00/bin/xc8-cc -DXPRJ_default=default -D__16F15385__ -D__DEBUG=1 -c -mcpu=16F15385 -mdfp=/home/joseph/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.27.418/xc8 -fno-short-double -fno-short-float -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mosccal -moscval=0x3400 -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/PICBridge_firmware_default_default_XC8_compile.dir/home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/main.c.p1 -c /home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/main.c",
-  "file": "/home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/main.c",
-  "output": "CMakeFiles/PICBridge_firmware_default_default_XC8_compile.dir/home/joseph/projects/useful6502/src/PICBridge_Firmware/PICBridge_firmware/main.c.p1"
-}
-]

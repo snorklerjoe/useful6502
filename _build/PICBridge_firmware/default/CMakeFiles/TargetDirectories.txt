@@ -1,5 +1,0 @@
-/home/joseph/projects/useful6502/_build/PICBridge_firmware/default/CMakeFiles/PICBridge_firmware_default_default_XC8_assemble.dir
-/home/joseph/projects/useful6502/_build/PICBridge_firmware/default/CMakeFiles/PICBridge_firmware_default_default_XC8_compile.dir
-/home/joseph/projects/useful6502/_build/PICBridge_firmware/default/CMakeFiles/default.elf.dir
-/home/joseph/projects/useful6502/_build/PICBridge_firmware/default/CMakeFiles/edit_cache.dir
-/home/joseph/projects/useful6502/_build/PICBridge_firmware/default/CMakeFiles/rebuild_cache.dir
