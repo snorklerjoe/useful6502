@@ -5,7 +5,7 @@
             "name": "default",
             "id": "conf1",
             "device": "PIC16F15385",
-            "imagePath": "./out/PICBridge_firmware/default.elf",
+            "imagePath": "./out/PICBridge-firmware/default.elf",
             "packs": [
                 {
                     "name": "PIC16F1xxxx_DFP",

@@ -3,7 +3,7 @@
     "configurePresets": [
         {
             "name": "PICBridge_firmware_default_conf",
-            "binaryDir": "${fileDir}/../../../_build/PICBridge_firmware/default",
+            "binaryDir": "${fileDir}/../../../_build/PICBridge-firmware/default",
             "generator": "Ninja",
             "toolchainFile": "${fileDir}/.generated/toolchain.cmake",
             "cacheVariables": {
