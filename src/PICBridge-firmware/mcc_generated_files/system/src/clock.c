@@ -1,15 +1,15 @@
- /*
- * MAIN Generated Driver File
+/**
+ * CLOCK Generated Driver Source File
  * 
- * @file main.c
+ * @file clock.c
  * 
- * @defgroup main MAIN
+ * @ingroup clockdriver 
  * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+ * @brief This file contains the API prototypes for the Clock driver.
  *
- * @version MAIN Driver Version 1.0.2
+ * @version Driver Version 2.0.4
  *
- * @version Package Version: 3.1.2
+ * @version Package Version 4.3.7
 */
 
 /*
@@ -32,33 +32,31 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
+#include <xc.h>
+#include "../clock.h"
 
-int main(void)
+void CLOCK_Initialize(void)
 {
-    SYSTEM_Initialize();
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
-    // Use the following macros to: 
+    // Set the CLOCK CONTROL module to the options selected in the user interface.
+    OSCCON1 = (0 << _OSCCON1_NDIV_POSN)   // NDIV 1
+        | (1 << _OSCCON1_NOSC_POSN);  // NOSC HFINTOSC with 2x PLL
+    OSCCON3 = (0 << _OSCCON3_SOSCPWR_POSN)   // SOSCPWR Low power
+        | (0 << _OSCCON3_CSWHOLD_POSN);  // CSWHOLD may proceed
+    OSCEN = (0 << _OSCEN_EXTOEN_POSN)   // EXTOEN disabled
+        | (0 << _OSCEN_HFOEN_POSN)   // HFOEN disabled
+        | (0 << _OSCEN_MFOEN_POSN)   // MFOEN disabled
+        | (0 << _OSCEN_LFOEN_POSN)   // LFOEN disabled
+        | (0 << _OSCEN_SOSCEN_POSN)   // SOSCEN disabled
+        | (0 << _OSCEN_ADOEN_POSN);  // ADOEN disabled
+    OSCFRQ = (5 << _OSCFRQ_HFFRQ_POSN);  // HFFRQ 16_MHz
+    OSCTUNE = (32 << _OSCTUNE_HFTUN_POSN);  // HFTUN 0x20
 
-    // Enable the Global Interrupts 
-    INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-    // Enable the Peripheral Interrupts 
-    INTERRUPT_PeripheralInterruptEnable(); 
-
-    // Disable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptDisable(); 
-
-
-    while(1)
+    //Wait for PLL to stabilize
+    while( OSCSTATbits.PLLR == 0)
     {
-    }    
+    }
 }
+/**
+ End of File
+*/

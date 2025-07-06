@@ -1,15 +1,15 @@
- /*
- * MAIN Generated Driver File
+/**
+ * System Driver Source File
  * 
- * @file main.c
+ * @file system.c
  * 
- * @defgroup main MAIN
+ * @ingroup systemdriver
  * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+ * @brief This file contains the API implementation for the System driver.
  *
- * @version MAIN Driver Version 1.0.2
+ * @version Driver Version 2.0.3
  *
- * @version Package Version: 3.1.2
+ * @version Package Version 1.0.5
 */
 
 /*
@@ -32,33 +32,17 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
+#include "../system.h"
 
-int main(void)
+
+void SYSTEM_Initialize(void)
 {
-    SYSTEM_Initialize();
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
-    // Use the following macros to: 
-
-    // Enable the Global Interrupts 
-    INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-    // Enable the Peripheral Interrupts 
-    INTERRUPT_PeripheralInterruptEnable(); 
-
-    // Disable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptDisable(); 
-
-
-    while(1)
-    {
-    }    
+    CLOCK_Initialize();
+    PIN_MANAGER_Initialize();
+    EUSART2_Initialize();
+    I2C2_Initialize();
+    SPI1_Initialize();
+    INTERRUPT_Initialize();
 }
+

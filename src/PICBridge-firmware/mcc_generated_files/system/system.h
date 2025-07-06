@@ -1,15 +1,15 @@
- /*
- * MAIN Generated Driver File
+/**
+ * System Driver Header File
  * 
- * @file main.c
+ * @file system.h
  * 
- * @defgroup main MAIN
+ * @defgroup systemdriver System Driver
  * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+ * @brief This file contains the API prototype for the System Driver.
  *
- * @version MAIN Driver Version 1.0.2
+ * @version Driver Version 2.0.3
  *
- * @version Package Version: 3.1.2
+ * @version Package Version 1.0.5
 */
 
 /*
@@ -32,33 +32,31 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
+#ifndef SYSTEM_H
+#define	SYSTEM_H
+
+#include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "config_bits.h"
+#include "../system/pins.h"
+#include "../uart/eusart2.h"
+#include "../i2c_host/mssp2.h"
+#include "../spi/mssp1.h"
+#include "../system/interrupt.h"
+#include "../system/clock.h"
+
+/**
+ * @ingroup systemdriver
+ * @brief Initializes the system module.
+ * This routine is called only once during system initialization, before calling other APIs.
+ * @param None.
+ * @return None.
 */
+void SYSTEM_Initialize(void);
 
-int main(void)
-{
-    SYSTEM_Initialize();
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
-    // Use the following macros to: 
-
-    // Enable the Global Interrupts 
-    INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-    // Enable the Peripheral Interrupts 
-    INTERRUPT_PeripheralInterruptEnable(); 
-
-    // Disable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptDisable(); 
-
-
-    while(1)
-    {
-    }    
-}
+#endif	/* SYSTEM_H */
+/**
+ End of File
+*/
