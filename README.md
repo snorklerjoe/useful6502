@@ -5,9 +5,13 @@ running my own operating system.
 
 ## Current Status
 
-The PCB is ordered.
-
 *See the complete implementation plan and progress here: [Implemementation Plan](./IMPLEMENTATION_PLAN.md)*
+
+The PCBs are ordered.
+
+![Main PCB rendering](./kicad_project/mainboard.png)
+![RAM Daughterboard rendering](./kicad_project/ramboard.png)
+
 
 ## Hardware Goals
 
