@@ -84,3 +84,9 @@ build.ninja
 
 # Debugging files
 *.gdb
+
+# Python binaries
+*.pyc
+
+# Linker object files
+*.o
