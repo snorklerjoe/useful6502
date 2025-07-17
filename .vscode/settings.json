@@ -1,9 +1,12 @@
 {
     "files.associations": {
+        "*.ejs": "html",
         "6502.h": "c",
         "hardware.h": "c",
         "base.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "system.h": "c",
+        "eusart2.h": "c"
     },
     "cSpell.words": [
         "CONDES",

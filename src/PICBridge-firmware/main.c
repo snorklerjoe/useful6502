@@ -13,7 +13,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -33,6 +33,7 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
+#include <string.h>
 
 /*
     Main application
@@ -46,19 +47,36 @@ int main(void)
     // Use the following macros to: 
 
     // Enable the Global Interrupts 
-    INTERRUPT_GlobalInterruptEnable(); 
+    //INTERRUPT_GlobalInterruptEnable(); 
 
     // Disable the Global Interrupts 
     //INTERRUPT_GlobalInterruptDisable(); 
 
     // Enable the Peripheral Interrupts 
-    INTERRUPT_PeripheralInterruptEnable(); 
+    //INTERRUPT_PeripheralInterruptEnable(); 
 
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
 
-
-    while(1)
+    // Configure RA3 as output
+    TRISAbits.TRISA3 = 0;  // Set RA3 as output
+    LATAbits.LATA3 = 0;    // Initialize RA3 low
+    
+    char msg[] = "Hello World\r\n";
+    while (1)
     {
-    }    
+        // Toggle RA3 high
+        LATAbits.LATA3 = 1;
+        __delay_ms(1000); // Wait 1 second before repeating
+        
+        for(uint8_t i = 0; i < strlen(msg); i++)
+        {
+            EUSART2_Write(msg[i]);
+            __delay_ms(10); // Add small delay between characters
+        }
+        
+        // Toggle RA3 low
+        LATAbits.LATA3 = 0;
+        __delay_ms(1000); // Wait 1 second before repeating
+    }
 }

@@ -7,7 +7,7 @@ running my own operating system.
 
 *See the complete implementation plan and progress here: [Implemementation Plan](./IMPLEMENTATION_PLAN.md)*
 
-The PCBs, parts, and stencil have arrived and I will assemble them soon!
+PCB assembled, blinky light on PIC is working.
 
 ![Main PCB rendering](./kicad_project/mainboard.png)
 ![RAM Daughterboard rendering](./kicad_project/ramboard.png)
