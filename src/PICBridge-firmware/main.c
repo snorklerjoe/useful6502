@@ -47,13 +47,13 @@ int main(void)
     // Use the following macros to: 
 
     // Enable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptEnable(); 
+    INTERRUPT_GlobalInterruptEnable(); 
 
     // Disable the Global Interrupts 
     //INTERRUPT_GlobalInterruptDisable(); 
 
     // Enable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptEnable(); 
+    INTERRUPT_PeripheralInterruptEnable(); 
 
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
@@ -69,8 +69,9 @@ int main(void)
         LATAbits.LATA3 = 1;
         __delay_ms(1000); // Wait 1 second before repeating
         
-        for(uint8_t i = 0; i < strlen(msg); i++)
+        for(uint8_t i = 0; i < 13; i++)
         {
+            while(!EUSART2_IsTxReady());
             EUSART2_Write(msg[i]);
             __delay_ms(10); // Add small delay between characters
         }
