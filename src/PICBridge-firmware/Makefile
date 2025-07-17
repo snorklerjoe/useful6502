@@ -29,10 +29,15 @@ main.hex: $(OBJECTS:.o=.p1)
 
 # Flash using pk2cmd
 flash: main.hex
-	pk2cmd $(PK2CMD_FLAGS) $<
+	sudo pk2cmd $(PK2CMD_FLAGS) $<
 
 verify: main.hex
-	pk2cmd -P$(DEVICE) -Y -F $<
+	sudo pk2cmd -P$(DEVICE) -Y -F $<
+
+release:
+	sudo pk2cmd -PPIC16F15385 -R
+
+cycle: clean all flash verify release
 
 # Clean build artifacts
 clean:
