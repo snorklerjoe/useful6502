@@ -33,7 +33,44 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-#include <string.h>
+#include "hardware.h"
+
+void putc(char c) {
+    while(!EUSART2_IsTxReady());
+    EUSART2_Write(c);
+}
+
+void puts(char *s) {
+    while(*s != 0)
+        putc(*(s++));
+}
+// Global buffer for received characters
+volatile char rx_buffer[64];
+volatile uint8_t rx_index = 0;
+volatile bool message_ready = false;
+
+// UART Interrupt Routine - keep it simple and fast!
+void onUartInput(void) {
+    LATAbits.LATA3 = !LATAbits.LATA3;  // Just toggle LED on any RX
+    if(EUSART2_IsRxReady()) {
+        char received = EUSART2_Read();
+        
+        // Store character in buffer
+        if(rx_index < 63) {
+            rx_buffer[rx_index++] = received;
+            
+            // Check for end of message
+            if(received == '\n' || received == '\r') {
+                rx_buffer[rx_index] = '\0';  // Null terminate
+                message_ready = true;
+                rx_index = 0;  // Reset for next message
+            }
+        } else {
+            // Buffer overflow - reset
+            rx_index = 0;
+        }
+    }
+}
 
 /*
     Main application
@@ -42,42 +79,37 @@
 int main(void)
 {
     SYSTEM_Initialize();
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
-    // Use the following macros to: 
-
-    // Enable the Global Interrupts 
     INTERRUPT_GlobalInterruptEnable(); 
-
-    // Disable the Global Interrupts 
-    //INTERRUPT_GlobalInterruptDisable(); 
-
-    // Enable the Peripheral Interrupts 
     INTERRUPT_PeripheralInterruptEnable(); 
+    cpu6502_reset();
+    cpu6502_uninterrupt();
 
-    // Disable the Peripheral Interrupts 
-    //INTERRUPT_PeripheralInterruptDisable(); 
+    EUSART2_RxCompleteCallbackRegister(onUartInput);
+    EUSART2_ReceiveInterruptEnable();
 
     // Configure RA3 as output
     TRISAbits.TRISA3 = 0;  // Set RA3 as output
     LATAbits.LATA3 = 0;    // Initialize RA3 low
-    
+
     char msg[] = "Hello World\r\n";
     while (1)
     {
         // Toggle RA3 high
         LATAbits.LATA3 = 1;
         __delay_ms(1000); // Wait 1 second before repeating
-        
-        for(uint8_t i = 0; i < 13; i++)
-        {
-            while(!EUSART2_IsTxReady());
-            EUSART2_Write(msg[i]);
-            __delay_ms(10); // Add small delay between characters
-        }
-        
+
+        puts(msg);
+
         // Toggle RA3 low
         LATAbits.LATA3 = 0;
         __delay_ms(1000); // Wait 1 second before repeating
+
+        // Check for received UART messages
+        if(message_ready) {
+            puts("Received: ");
+            puts((char*)rx_buffer);
+            puts("\r\n");
+            message_ready = false;  // Clear the flag
+        }
     }
 }
