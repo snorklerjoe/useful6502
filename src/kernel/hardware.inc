@@ -51,10 +51,6 @@
 ;  VIA initialization macro
 ;  Interrupts should be disabled before this, so that it can run atomically.
 ;       DIRTIES A
-
-;  VIA initialization macro
-;  Interrupts should be disabled before this, so that it can run atomically.
-;       DIRTIES A
 .macro via_init
     ; Set PORTA,B initial states
     lda #$00
@@ -83,18 +79,12 @@
 
 ; Macro to start timer rolling to do an NMI after the quantum
 ;       DIRTIES A
-
-; Macro to start timer rolling to do an NMI after the quantum
-;       DIRTIES A
 .macro nmi_timerset
     lda #<k_quantum
     sta VIA_T1CL
     lda #>k_quantum
     sta VIA_T1CH
 .endmacro
-
-; Macro to run before a bank register write
-;       DIRTIES A
 
 ; Macro to run before a bank register write
 ;       DIRTIES A
@@ -109,5 +99,24 @@
 .macro post_bankwrite
     lda VIA_PORTB
     ora #PB_MASK_WRITBANKEN
+    sta VIA_PORTB
+.endmacro
+
+; Macro to inhibit user mode 
+;       DIRTIES A
+.macro uminh
+    lda VIA_PORTB
+    ora #PB_MASK_UMINH
+    sta VIA_PORTB
+.endmacro
+
+; Macro to enable user mode on the next access to userspace memory.
+; Use this macro immediately prior to jumping back to user memory.
+;   Any use of the stack following this call will immediately force user mode,
+;   so the jump vector must be stored in resident kerel memory.
+;       DIRTIES A
+.macro umen
+    lda VIA_PORTB
+    and #($FF ^ PB_MASK_UMINH)
     sta VIA_PORTB
 .endmacro
