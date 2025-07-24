@@ -6,7 +6,9 @@
         "base.h": "c",
         "stdio.h": "c",
         "system.h": "c",
-        "eusart2.h": "c"
+        "eusart2.h": "c",
+        "m95_eeprom.h": "c",
+        "string.h": "c"
     },
     "cSpell.words": [
         "CONDES",

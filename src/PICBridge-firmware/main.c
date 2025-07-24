@@ -34,24 +34,20 @@
 */
 #include "mcc_generated_files/system/system.h"
 #include "hardware.h"
+#include <string.h>
+#include "m95_eeprom.h"
+#include "conio.h"
 
-void putc(char c) {
-    while(!EUSART2_IsTxReady());
-    EUSART2_Write(c);
-}
-
-void puts(char *s) {
-    while(*s != 0)
-        putc(*(s++));
-}
-// Global buffer for received characters
 volatile char rx_buffer[64];
+volatile char cmd_buffer[64];
+volatile char eeprom_read_buffer[64];
 volatile uint8_t rx_index = 0;
 volatile bool message_ready = false;
+static const char hex_char[17] = "0123456789ABCDEF";
 
 // UART Interrupt Routine - keep it simple and fast!
 void onUartInput(void) {
-    LATAbits.LATA3 = !LATAbits.LATA3;  // Just toggle LED on any RX
+    //LATAbits. = !LATAbits.LATA3;  // Just toggle LED on any RX
     if(EUSART2_IsRxReady()) {
         char received = EUSART2_Read();
         
@@ -78,6 +74,8 @@ void onUartInput(void) {
 
 int main(void)
 {
+    //LATAbits.LATA4 = 1;    // Start with CS high for my scope trigger to do what I want...
+
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable(); 
     INTERRUPT_PeripheralInterruptEnable(); 
@@ -89,27 +87,75 @@ int main(void)
 
     // Configure RA3 as output
     TRISAbits.TRISA3 = 0;  // Set RA3 as output
-    LATAbits.LATA3 = 0;    // Initialize RA3 low
+    LATAbits.LATA3 = 1;    // Initialize RA3 high
 
-    char msg[] = "Hello World\r\n";
-    while (1)
-    {
-        // Toggle RA3 high
-        LATAbits.LATA3 = 1;
-        __delay_ms(1000); // Wait 1 second before repeating
+    char status = M95_init();
+    if(status < 0) uart_puts("Err initializing EEPROM... :(\n");
+    uart_puts("EEPROM INIT STATUS ");
+    putch_hex(status);
+    uart_putc('\n');
 
-        puts(msg);
+    char retval = M95_write_bytes(0x0100, 4, hex_char);
+    if(retval < 0) {
+        uart_puts("Err Writing\nM95_write_bytes returned ");
+        putch_hex(retval);
+        uart_puts(".\n");
+    } else {
+        uart_puts("Wrote something: ");
+        putch_hex(retval);
+        uart_puts(" bytes.\n");
+    }
 
-        // Toggle RA3 low
-        LATAbits.LATA3 = 0;
-        __delay_ms(1000); // Wait 1 second before repeating
+    __delay_us(100);
 
+    if( M95_read_bytes(0x0100, 4, eeprom_read_buffer)
+        < 0) {
+        uart_puts("Err Reading\n");
+    } else uart_puts("Read something:\n");
+    puts(eeprom_read_buffer);
+    uart_putc('\n');
+    for(int i = 0; i < 4; i++) {
+        unsigned char byte = eeprom_read_buffer[i];
+        putch_hex(byte);
+        putc(' ');
+    }
+    putc('\n');
+
+    while (1) {
         // Check for received UART messages
         if(message_ready) {
-            puts("Received: ");
-            puts((char*)rx_buffer);
-            puts("\r\n");
+            uart_puts((char*)rx_buffer);
+            uart_puts("\r\n");
+            strcpy(cmd_buffer, rx_buffer);
             message_ready = false;  // Clear the flag
+
+            // Process the command
+            int len = strlen(cmd_buffer);
+            if(cmd_buffer[0] == 'W') {
+                char retval = M95_write_bytes(0x0100, len - 1, cmd_buffer + 1);
+                if(retval < 0) {
+                    uart_puts("Err Writing\nM95_write_bytes returned ");
+                    putch_hex(retval);
+                    uart_puts(".\n");
+                } else {
+                    uart_puts("Wrote something: ");
+                    putch_hex(retval);
+                    uart_puts(" bytes.\n");
+                }
+            } else if(cmd_buffer[0] == 'R') {
+                if( M95_read_bytes(0x0100, len - 1, eeprom_read_buffer)
+                    < 0) {
+                    uart_puts("Err Reading\n");
+                } else uart_puts("Read something:\n");
+                uart_puts(eeprom_read_buffer);
+                uart_putc('\n');
+                for(int i = 0; i < len; i++) {
+                    unsigned char byte = eeprom_read_buffer[i];
+                    putch_hex(byte);
+                    uart_putc(' ');
+                }
+                uart_putc('\n');
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
  */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -61,8 +61,11 @@ static spi_descriptor_t spi1_descriptor = {
 };
 
 static const spi_configuration_t spi1_configuration[] = {
-    { 0x0, 0xa, 0x10, 0x3f },
-    { 0x64, 0x0, 0x10, 0x1 }
+    { 0x0, 0xa, 0x10, 0x3f },    // Config 0: 125kHz, Mode 0 (CPOL=0, CPHA=0)
+    { 0x64, 0x0, 0x10, 0x1 },    // Config 1: 8MHz, Mode 1 (CPOL=0, CPHA=1)
+    { 0x0, 0x0, 0x10, 0x7 },     // Config 2: Mode 0, FOSC/4 (~8MHz)
+    { 0x40, 0x10, 0x10, 0x7 },   // Config 3: Mode 3, FOSC/4 (CPOL=1, CPHA=1)
+    { 0x0, 0x10, 0x10, 0x7 }    // Config 4: Mode 2, FOSC/4 (CPOL=1, CPHA=0) - FIXED
 };
 
 void SPI1_Initialize(void)
