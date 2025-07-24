@@ -1,49 +1,63 @@
- /*
- * MAIN Generated Driver File
+/*  main.c
  * 
- * @file main.c
+ *  This is a simple shell, with one-character commands (executing on \n). It is not meant for humans, but rather for my
+ * programmer python script. But also, since I want to be able to debug stuff manually, here's the rundown:
  * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
- *
- * @version MAIN Driver Version 1.0.2
- *
- * @version Package Version: 3.1.2
-*/
+ * Ex Cmd         Function & use
+ * =======      ===================
+ * !            Panic: throws the 6502 into reset, disables everything
+ * Wdeadabcdef1 Writes 0xabcdef1 to location 0xdead in EEPROM (hex string may be as long as intended, so long as it is a multiple of two chars for 8 bits)
+ * Rdead0006    Reads 0x6 bytes starting at 0xDEAD in EEPROM (reads out hex values)
+ * w0abdeadbeef Writes 0xDEADBEEF into addr 0x0ab in SRAM
+ * r0ab004      Reads 0x004 bytes from SRAM starting at 0x0ab
+ * O            Un-resets the 6502
+ * -            Resets the 6502
+ */
 
-/*
-� [2025] Microchip Technology Inc. and its subsidiaries.
-
-    Subject to your compliance with these terms, you may use Microchip 
-    software and any derivatives exclusively with Microchip products. 
-    You are responsible for complying with 3rd party license terms  
-    applicable to your use of 3rd party software (including open source  
-    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
-    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
-    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
-    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
-    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
-    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
-    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
-    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
-    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
-    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
-    THIS SOFTWARE.
-*/
 #include "mcc_generated_files/system/system.h"
 #include "hardware.h"
 #include <string.h>
 #include "m95_eeprom.h"
 #include "conio.h"
+#include "sram.h"
+
 
 volatile char rx_buffer[64];
 volatile char cmd_buffer[64];
 volatile char eeprom_read_buffer[64];
 volatile uint8_t rx_index = 0;
 volatile bool message_ready = false;
-static const char hex_char[17] = "0123456789ABCDEF";
+
+// Convert a single hex character to its value (0-15), or -1 if invalid
+static int hex2val(char c) {
+    if (c >= '0' && c <= '9') return c - '0';
+    if (c >= 'A' && c <= 'F') return c - 'A';
+    if (c >= 'A' && c <= 'f') return c - 'a';
+    return -1;
+}
+
+// Convert a hex string to a byte array
+static int hexstr_to_bytes(const char* str, int strlen, uint8_t* out, int maxout) {
+    int bytes = 0;
+    for(int i=0; i<strlen && bytes<maxout; i+=2) {
+        int hi = hex2val(str[i]);
+        int lo = (i+1 < strlen) ? hex2val(str[i+1]) : -1;
+        if(hi<0 || lo<0) break;
+        out[bytes++] = (hi<<4) | lo;
+    }
+    return bytes;
+}
+
+// Convert a hex string to an integer (up to 4 digits)
+static unsigned int hexstr_to_uint(const char* str, int digits) {
+    unsigned int val = 0;
+    for(int i=0; i<digits; i++) {
+        int v = hex2val(str[i]);
+        if(v<0) break;
+        val = (val<<4) | v;
+    }
+    return val;
+}
 
 // UART Interrupt Routine - keep it simple and fast!
 void onUartInput(void) {
@@ -129,10 +143,18 @@ int main(void)
             strcpy(cmd_buffer, rx_buffer);
             message_ready = false;  // Clear the flag
 
-            // Process the command
             int len = strlen(cmd_buffer);
+            if(len == 0) continue;
+
+            // EEPROM write: Wdeadabcdef1
             if(cmd_buffer[0] == 'W') {
-                char retval = M95_write_bytes(0x0100, len - 1, cmd_buffer + 1);
+                if(len < 5) { uart_puts("Bad EEPROM write\n"); continue; }
+                unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
+                int datalen = len - 5;
+                if(datalen <= 0) { uart_puts("No data for EEPROM write\n"); continue; }
+                uint8_t data[32];
+                int bytes = hexstr_to_bytes(cmd_buffer+5, datalen, data, sizeof(data));
+                char retval = M95_write_bytes(addr, bytes, data);
                 if(retval < 0) {
                     uart_puts("Err Writing\nM95_write_bytes returned ");
                     putch_hex(retval);
@@ -142,19 +164,76 @@ int main(void)
                     putch_hex(retval);
                     uart_puts(" bytes.\n");
                 }
-            } else if(cmd_buffer[0] == 'R') {
-                if( M95_read_bytes(0x0100, len - 1, eeprom_read_buffer)
-                    < 0) {
+            }
+            // EEPROM read: Rdead0006
+            else if(cmd_buffer[0] == 'R') {
+                if(len < 9) { uart_puts("Bad EEPROM read\n"); continue; }
+                unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
+                unsigned int nbytes = hexstr_to_uint(cmd_buffer+5, 4);
+                if(nbytes > sizeof(eeprom_read_buffer)) nbytes = sizeof(eeprom_read_buffer);
+                if(M95_read_bytes(addr, nbytes, eeprom_read_buffer) < 0) {
                     uart_puts("Err Reading\n");
-                } else uart_puts("Read something:\n");
-                uart_puts(eeprom_read_buffer);
-                uart_putc('\n');
-                for(int i = 0; i < len; i++) {
-                    unsigned char byte = eeprom_read_buffer[i];
-                    putch_hex(byte);
-                    uart_putc(' ');
+                } else {
+                    uart_puts("Read something:\n");
+                    for(int i = 0; i < nbytes; i++) {
+                        putch_hex((unsigned char)eeprom_read_buffer[i]);
+                        uart_putc(' ');
+                    }
+                    uart_putc('\n');
                 }
-                uart_putc('\n');
+            }
+            // SRAM write: w0abdeadbeef
+            else if(cmd_buffer[0] == 'w') {
+                if(len < 4) { uart_puts("Bad SRAM write\n"); continue; }
+                unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
+                int datalen = len - 4;
+                if(datalen <= 0) { uart_puts("No data for SRAM write\n"); continue; }
+                uint8_t data[32];
+                int bytes = hexstr_to_bytes(cmd_buffer+4, datalen, data, sizeof(data));
+                int retval = SRAM_write_bytes(addr, bytes, data);
+                if(retval < 0) {
+                    uart_puts("Err Writing SRAM\n");
+                } else {
+                    uart_puts("SRAM write ok\n");
+                }
+            }
+            // SRAM read: r0ab004
+            else if(cmd_buffer[0] == 'r') {
+                if(len < 7) { uart_puts("Bad SRAM read\n"); continue; }
+                unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
+                unsigned int nbytes = hexstr_to_uint(cmd_buffer+4, 3);
+                uint8_t sram_buf[32];
+                if(nbytes > sizeof(sram_buf)) nbytes = sizeof(sram_buf);
+                if(SRAM_read_bytes(addr, nbytes, sram_buf) < 0) {
+                    uart_puts("Err Reading SRAM\n");
+                } else {
+                    uart_puts("SRAM: ");
+                    for(int i = 0; i < nbytes; i++) {
+                        putch_hex(sram_buf[i]);
+                        uart_putc(' ');
+                    }
+                    uart_putc('\n');
+                }
+            }
+            // 6502 un-reset: O
+            else if(cmd_buffer[0] == 'O') {
+                cpu6502_unreset();
+                uart_puts("6502 un-reset\n");
+            }
+            // 6502 reset: -
+            else if(cmd_buffer[0] == '-') {
+                cpu6502_reset();
+                uart_puts("6502 reset\n");
+            }
+            // 6502 interrupt
+            else if(cmd_buffer[0] == 'I') {
+                cpu6502_interrupt();
+                uart_puts("6502 interrupt\n");
+            }
+            // 6502 un-interrupt
+            else if(cmd_buffer[0] == 'i') {
+                cpu6502_uninterrupt();
+                uart_puts("6502 un-interrupt\n");
             }
         }
     }

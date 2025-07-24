@@ -8,6 +8,8 @@
 #define putc(c) uart_putc(c)
 #define puts(c) uart_puts(c)
 
+const char hex_char[17];
+
 // Function declarations
 void uart_putc(char c);
 void uart_puts(char *s);
