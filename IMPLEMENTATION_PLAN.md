@@ -11,13 +11,13 @@ This is the implementation plan for my homebrew 65c02 machine, from initial hard
   - PCB layout
   - PCB, stencil, and component ordering
 
-- [ ]  **Main board assembly**  
+- [x]  **Main board assembly**  
   - Assembly & reflow
 
-- [ ]  **Initial electrical tests**  
+- [x]  **Initial electrical tests**  
   - Test voltage regulators & check for shorts
 
-- [ ] **PIC16 bring-up: Hello world**
+- [x] **PIC16 bring-up: Hello world**
   - Write and flash a simple test program (UART Hello World) to verify PIC programming and basic operation.
 
 - [ ] **PIC to Dual-port SRAM communication**
