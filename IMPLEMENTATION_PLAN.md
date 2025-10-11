@@ -20,7 +20,7 @@ This is the implementation plan for my homebrew 65c02 machine, from initial hard
 - [x] **PIC16 bring-up: Hello world**
   - Write and flash a simple test program (UART Hello World) to verify PIC programming and basic operation.
 
-- [ ] **PIC to Dual-port SRAM communication**
+- [x] **PIC to Dual-port SRAM communication**
   - Develop subroutines for accessing and verifying the dual-port SRAM from the PIC
 
 - [ ] **PIC programs 65c02 memory**
