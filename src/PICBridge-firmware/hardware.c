@@ -15,13 +15,14 @@ void SRAM_init(void) {
     // Set data bus pins as digital
     ANSELF = 0x00;
     // Set control pins to safe states
-    PORTDbits.RD7 = 1;  // ~OE high (disabled)
-    PORTDbits.RD6 = 1;  // R/~W high (read mode)
-    PORTDbits.RD5 = 1;  // ~CE high (deselected)
+    LATDbits.LATD7 = 1;  // ~OE high (disabled)
+    LATDbits.LATD6 = 1;  // R/~W high (read mode)
+    LATDbits.LATD5 = 1;  // ~CE high (deselected)
     
     // Clear address bus
-    PORTC = 0x00;       // A0-A7
+    LATC = 0x00;       // A0-A7
     PORTE &= 0xF8;      // Clear RE0, RE1, RE2 (A10, A9, A8)
+    __delay_us(1);
 
     // Set address bus pins as outputs
     TRISC = 0x00;       // A0-A7
@@ -42,10 +43,11 @@ static void SRAM_set_address(unsigned int addr) {
     addr &= 0x07FF;
     
     // Set A0-A7 on PORTC
-    PORTC = addr & 0xFF;
+    LATC = addr & 0xFF;
     
     // Set A8-A10 on PORTE (bits 0, 1, 2)
     PORTE = (PORTE & 0xF8) | ((addr >> 8) & 0x07);
+    __delay_us(1);
 }
 
 /**
@@ -57,9 +59,9 @@ unsigned char SRAM_read(unsigned int addr) {
     unsigned char data;
     
     // Set read mode (should already be set)
-    PORTDbits.RD6 = 1;  // R/~W high
+    LATDbits.LATD6 = 1;  // R/~W high
 
-    PORTF = 0xFF;
+    LATF = 0xFF;
     // Ensure data bus is high-Z (input)
     TRISF = 0xFF;
 
@@ -67,11 +69,11 @@ unsigned char SRAM_read(unsigned int addr) {
     SRAM_set_address(addr);
     
     // Select chip
-    PORTDbits.RD5 = 0;  // ~CE low
+    LATDbits.LATD5 = 0;  // ~CE low
     __delay_us(1);
 
     // Enable output
-    PORTDbits.RD7 = 0;  // ~OE low
+    LATDbits.LATD7 = 0;  // ~OE low
     
     // Small delay for access time
     __delay_us(1);
@@ -80,7 +82,7 @@ unsigned char SRAM_read(unsigned int addr) {
     data = PORTF;
     
     // Disable output
-    PORTDbits.RD7 = 1;  // ~OE high
+    LATDbits.LATD7 = 1;  // ~OE high
     __delay_us(1);
     
     // Park just below interrupt vectors
@@ -97,7 +99,8 @@ unsigned char SRAM_read(unsigned int addr) {
  */
 void SRAM_write(unsigned int addr, unsigned char data) {
     // Ensure ~OE is high before changing data direction
-    PORTDbits.RD7 = 1;  // ~OE high
+    LATDbits.LATD7 = 1;  // ~OE high
+    __delay_us(1);
     
     // Set address
     SRAM_set_address(addr);
@@ -109,17 +112,17 @@ void SRAM_write(unsigned int addr, unsigned char data) {
     PORTF = data;
     
     // Select chip
-    PORTDbits.RD5 = 0;  // ~CE low
+    LATDbits.LATD5 = 0;  // ~CE low
     __delay_us(1);
     
     // Set write mode
-    PORTDbits.RD6 = 0;  // R/~W low
+    LATDbits.LATD6 = 0;  // R/~W low
     
     // Write pulse (R/~W already low, just wait for write time)
     __delay_us(1);
 
     // End write cycle
-    PORTDbits.RD6 = 1;  // R/~W high (back to read mode)
+    LATDbits.LATD6 = 1;  // R/~W high (back to read mode)
     __delay_us(1);
     
     // Set data bus back to high-Z
