@@ -11,7 +11,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -144,10 +144,10 @@ void EUSART2_Initialize(void)
     RC2STA = 0x90; 
     //TX9D 0x0; BRGH hi_speed; SENDB sync_break_complete; SYNC asynchronous; TXEN enabled; TX9 8-bit; CSRC client; 
     TX2STA = 0x26; 
-    //SPBRGL 64; 
-    SP2BRGL = 0x40; 
-    //SPBRGH 3; 
-    SP2BRGH = 0x3; 
+    //SPBRGL 68 (115200 baud @ 32MHz); 
+    SP2BRGL = 0x44; 
+    //SPBRGH 0; 
+    SP2BRGH = 0x0; 
 
     EUSART2_FramingErrorCallbackRegister(EUSART2_DefaultFramingErrorCallback);
     EUSART2_OverrunErrorCallbackRegister(EUSART2_DefaultOverrunErrorCallback);

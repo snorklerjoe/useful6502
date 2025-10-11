@@ -86,7 +86,6 @@ void onUartInput(void) {
 /*
     Main application
 */
-
 int main(void)
 {
     //LATAbits.LATA4 = 1;    // Start with CS high for my scope trigger to do what I want...
@@ -126,13 +125,11 @@ int main(void)
     uart_puts("Init success. :)\n\rUSEFUL 6502 COPROCESSOR CONTROL SHELL by JOSEPH R FREESTON");
     uart_puts("\n\rVersion: ");
     uart_puts(COMM_VERSION);
-    uart_puts("\n\r");
+    uart_puts("\n\rREADY\n\r");
 
     while (1) {
         // Check for received UART messages
         if(message_ready) {
-            uart_puts((char*)rx_buffer);
-            uart_puts("\n\r");
             strcpy(cmd_buffer, rx_buffer);
             message_ready = false;  // Clear the flag
 
@@ -141,92 +138,101 @@ int main(void)
 
             // EEPROM write: Wdeadabcdef1
             if(cmd_buffer[0] == 'W') {
-                if(len < 5) { uart_puts("Bad EEPROM write\n\r"); continue; }
+                if(len < 5) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
                 int datalen = len - 5;
-                if(datalen <= 0) { uart_puts("No data for EEPROM write\n\r"); continue; }
+                if(datalen <= 0) { uart_puts("ERR:NO_DATA\n\r"); continue; }
                 int bytes = hexstr_to_bytes(cmd_buffer+5, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
                 char retval = M95_write_bytes(addr, bytes, eeprom_sram_io_buffer);
                 if(retval < 0) {
-                    uart_puts("Err Writing\n\rM95_write_bytes returned ");
+                    uart_puts("ERR:EEPROM_WRITE:");
                     putch_hex(retval);
-                    uart_puts(".\n\r");
+                    uart_puts("\n\r");
                 } else {
-                    uart_puts("Wrote something: ");
+                    uart_puts("OK:EEPROM_WRITE:");
                     putch_hex(retval);
-                    uart_puts(" bytes.\n\r");
+                    uart_puts("\n\r");
                 }
             }
             // EEPROM read: Rdead0006
             else if(cmd_buffer[0] == 'R') {
-                if(len < 9) { uart_puts("Bad EEPROM read\n\r"); continue; }
+                if(len < 9) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
                 unsigned int nbytes = hexstr_to_uint(cmd_buffer+5, 4);
                 if(nbytes > sizeof(eeprom_sram_io_buffer)) nbytes = sizeof(eeprom_sram_io_buffer);
                 if(M95_read_bytes(addr, nbytes, eeprom_sram_io_buffer) < 0) {
-                    uart_puts("Err Reading\n\r");
+                    uart_puts("ERR:EEPROM_READ\n\r");
                 } else {
-                    uart_puts("Read something:\n\r");
+                    uart_puts("OK:EEPROM_READ:");
                     for(int i = 0; i < nbytes; i++) {
                         putch_hex((unsigned char)eeprom_sram_io_buffer[i]);
-                        uart_putc(' ');
                     }
-                    uart_putc('\n\r');
+                    uart_puts("\n\r");
                 }
             }
             // SRAM write: w0abdeadbeef
             else if(cmd_buffer[0] == 'w') {
-                if(len < 3) { uart_puts("Bad SRAM write\n\r"); continue; }
+                if(len < 3) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
-                int datalen = len - 3;
-                if(datalen <= 0) { uart_puts("No data for SRAM write\n\r"); continue; }
-                if(datalen > 64) { uart_puts("SRAM write too long\n\r"); continue; } // Prevent buffer overrun
-                if(datalen % 2 != 1) { uart_puts("Odd number of hex digits\n\r"); continue; } // Prevent odd hex string
+                int datalen = len - 4;
+                if(datalen <= 0) { uart_puts("ERR:NO_DATA\n\r"); continue; }
+                if(datalen > 128) { uart_puts("ERR:TOO_LONG\n\r"); continue; } // Prevent buffer overrun
+                if(datalen % 2 != 1) { uart_puts("ERR:ODD_HEX\n\r"); continue; } // Prevent odd hex string
                 int bytes = hexstr_to_bytes(cmd_buffer+4, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
-                uart_puts("About to write...");
                 int retval = SRAM_write_bytes(addr, bytes, eeprom_sram_io_buffer);
                 if(retval < 0) {
-                    uart_puts("Err Writing SRAM\n\r");
+                    uart_puts("ERR:SRAM_WRITE\n\r");
                 } else {
-                    uart_puts("SRAM write ok\n\r");
+                    uart_puts("OK:SRAM_WRITE:");
+                    putch_hex(retval);
+                    uart_puts("\n\r");
                 }
             }
             // SRAM read: r0ab004
             else if(cmd_buffer[0] == 'r') {
-                if(len < 7) { uart_puts("Bad SRAM read\n\r"); continue; }
+                if(len < 7) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
                 unsigned int nbytes = hexstr_to_uint(cmd_buffer+4, 3);
                 if(nbytes > sizeof(eeprom_sram_io_buffer)) nbytes = sizeof(eeprom_sram_io_buffer);
                 if(SRAM_read_bytes(addr, nbytes, eeprom_sram_io_buffer) < 0) {
-                    uart_puts("Err Reading SRAM\n\r");
+                    uart_puts("ERR:SRAM_READ\n\r");
                 } else {
-                    uart_puts("SRAM: ");
+                    uart_puts("OK:SRAM_READ:");
                     for(int i = 0; i < nbytes; i++) {
                         putch_hex(eeprom_sram_io_buffer[i]);
-                        uart_putc(' ');
                     }
-                    uart_putc('\n\r');
+                    uart_puts("\n\r");
                 }
             }
             // 6502 un-reset: O
             else if(cmd_buffer[0] == 'O') {
                 cpu6502_unreset();
-                uart_puts("6502 un-reset\n\r");
+                uart_puts("OK:CPU_UNRESET\n\r");
             }
             // 6502 reset: -
             else if(cmd_buffer[0] == '-') {
                 cpu6502_reset();
-                uart_puts("6502 reset\n\r");
+                uart_puts("OK:CPU_RESET\n\r");
             }
             // 6502 interrupt
             else if(cmd_buffer[0] == 'I') {
                 cpu6502_interrupt();
-                uart_puts("6502 interrupt\n\r");
+                uart_puts("OK:CPU_IRQ\n\r");
             }
             // 6502 un-interrupt
             else if(cmd_buffer[0] == 'i') {
                 cpu6502_uninterrupt();
-                uart_puts("6502 un-interrupt\n\r");
+                uart_puts("OK:CPU_IRQ_CLEAR\n\r");
+            }
+            // Version/status query: ?
+            else if(cmd_buffer[0] == '?') {
+                uart_puts("OK:VERSION:");
+                uart_puts(COMM_VERSION);
+                uart_puts("\n\r");
+            }
+            // Unknown command
+            else {
+                uart_puts("ERR:UNKNOWN_CMD\n\r");
             }
         }
     }
