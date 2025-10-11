@@ -23,7 +23,8 @@ void SRAM_init(void) {
     // Clear address bus
     LATC = 0x00;       // A0-A7
     LATE &= 0xF8;      // Clear RE0, RE1, RE2 (A10, A9, A8)
-    __delay_us(1);
+    NOP();
+    NOP();  // Small delay for latch to settle
 
     // Set address bus pins as outputs
     TRISC = 0x00;       // A0-A7
@@ -75,27 +76,29 @@ unsigned char SRAM_read(unsigned int addr) {
     ANSELF = 0x00;  // Ensure digital mode
     LATF = 0x00;    // Clear output latch
     TRISF = 0xFF;   // Set as input
-    __delay_us(1);  // Give time for bus to float
+    NOP();          // Give time for bus to float
 
     // Set address
     SRAM_set_address(addr);
     
     // Select chip
     LATDbits.LATD5 = 0;  // ~CE low
-    __delay_us(1);
+    NOP();
+    NOP();  // CE to output delay (~60ns)
 
     // Enable output
     LATDbits.LATD7 = 0;  // ~OE low
     
     // Wait for SRAM to drive bus
-    __delay_us(1);
+    NOP();
+    NOP();  // Output enable delay (~60ns)
     
     // Read data
     data = PORTF;
     
     // Disable output
     LATDbits.LATD7 = 1;  // ~OE high
-    __delay_us(1);
+    NOP();
     
     // Park just below interrupt vectors
     SRAM_set_address(0xFFF3);
@@ -151,67 +154,88 @@ void SRAM_write(unsigned int addr, unsigned char data) {
 
 // Write 'len' bytes from 'data' to SRAM starting at 'addr'
 int SRAM_write_bytes(uint32_t addr, int len, const uint8_t* data) {
-    // Set address
-    SRAM_set_address(addr);
-    
     // Ensure ~OE is high before changing data direction
-    PORTDbits.RD7 = 1;  // ~OE high
+    LATDbits.LATD7 = 1;  // ~OE high
+    LATDbits.LATD6 = 1;  // R/~W high initially
     
     // Set data bus to output
     TRISF = 0x00;
 
-    // Set write mode
-    PORTDbits.RD6 = 0;  // R/~W low
-
-    // Select chip
-    PORTDbits.RD5 = 0;  // ~CE low
-
     int stop = addr+len;
     for(int addri = addr; addri < stop; addri++) {
-        PORTDbits.RD5 = 0;  // ~CE low
+        // Set address
         SRAM_set_address(addri);
+        NOP();  // Address setup time
+        
+        // Select chip
+        LATDbits.LATD5 = 0;  // ~CE low
+        NOP();  // CE setup time
+        
         // Put data on bus
-        PORTF = *data;
-        __delay_us(1);
-        // End write cycle
-        PORTDbits.RD5 = 1;  // ~CE high
-
+        LATF = *data;
+        NOP();  // Data setup time before write pulse
+        
+        // Write pulse: R/~W low then high
+        LATDbits.LATD6 = 0;  // R/~W low (start write)
+        NOP();
+        NOP();  // Write pulse width (~60ns)
+        LATDbits.LATD6 = 1;  // R/~W high (end write)
+        
+        NOP();  // Data hold time
+        
+        // Deselect chip
+        LATDbits.LATD5 = 1;  // ~CE high
+        
         data++;  // Go to the next loc in memory next round
-        __delay_us(10);  // Wait for write time
+        NOP();
+        NOP();  // Inter-write delay (~60ns)
     }    
     // Set data bus back to high-Z
     TRISF = 0xFF;
     
     // Park just below interrupt vectors
     SRAM_set_address(0xFFF3);
+    
+    SRAM_deselect();
+    return len;
 }
 
 // Read 'len' bytes from SRAM starting at 'addr' into 'data'
 int SRAM_read_bytes(uint32_t addr, int len, uint8_t* data) {
-    // Set address
-    SRAM_set_address(addr);
-
-    // Ensure data bus is high-Z (input)
-    TRISF = 0xFF;
-
     // Set read mode (should already be set)
-    PORTDbits.RD6 = 1;  // R/~W high
+    LATDbits.LATD6 = 1;  // R/~W high
+    LATDbits.LATD7 = 1;  // ~OE high
+    LATDbits.LATD5 = 1;  // ~CE high
+
+    // Ensure data bus is TRULY high-Z (input)
+    ANSELF = 0x00;  // Ensure digital mode
+    LATF = 0x00;    // Clear output latch
+    TRISF = 0xFF;   // Set as input
+    NOP();          // Give time for bus to float
 
     // Select chip
-    PORTDbits.RD5 = 0;  // ~CE low
+    LATDbits.LATD5 = 0;  // ~CE low
+    NOP();
+    NOP();  // CE to output delay (~60ns)
 
     // Enable output
-    PORTDbits.RD7 = 0;  // ~OE low
+    LATDbits.LATD7 = 0;  // ~OE low
     
     int stop = addr+len;
     for(int addri = addr; addri < stop; addri++) {
+        // Set address
         SRAM_set_address(addri);
+        NOP();
+        NOP();  // Wait for SRAM to drive bus (~60ns)
+        
+        // Read data
         *data = PORTF;
         data++;  // Go to the next loc in memory next round
     }
 
     // Disable output
-    PORTDbits.RD7 = 1;  // ~OE high
+    LATDbits.LATD7 = 1;  // ~OE high
+    NOP();
     
     // Park just below interrupt vectors
     SRAM_set_address(0xFFF3);

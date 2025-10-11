@@ -16,15 +16,17 @@
 
 #define COMM_VERSION "0.0"
 
+#define assert(val, message) if(!val) {uart_puts(message); while(1);}
+
 #include "mcc_generated_files/system/system.h"
 #include "hardware.h"
 #include <string.h>
 #include "m95_eeprom.h"
 #include "conio.h"
 
-volatile char rx_buffer[64];
-volatile char cmd_buffer[64];
-volatile char eeprom_read_buffer[64];
+volatile char rx_buffer[70];
+volatile char cmd_buffer[70];
+volatile char eeprom_sram_io_buffer[64];
 volatile uint8_t rx_index = 0;
 volatile bool message_ready = false;
 
@@ -99,7 +101,7 @@ int main(void)
     EUSART2_RxCompleteCallbackRegister(onUartInput);
     EUSART2_ReceiveInterruptEnable();
 
-    uart_puts("\n\r\n\r\n\r=================================================\n\rINITIALIZED\n\r");
+    uart_puts("\n\r\n\r\n\r=================================================\n\rBasic i/o INITIALIZED\n\r");
 
     // Configure RA3 as output
     TRISAbits.TRISA3 = 0;  // Set RA3 as output
@@ -110,102 +112,27 @@ int main(void)
         uart_puts("Err initializing EEPROM... :(\n\r");
         while(1);  // Stall forevermore
     }
-
-
-    uart_puts("Success :)\nReading SRAM...\n\r");
     uint8_t sram_buf[16];
-
-    putch_hex(SRAM_read(0xF0));
-    putch_hex(SRAM_read(0xF1));
-    putch_hex(SRAM_read(0xF2));
-    putch_hex(SRAM_read(0xF3));
-
-    uart_puts("Writing 0xDEADBEEF and reading it back...\n\r");
-    SRAM_write(0xF0, 0xDE);
-    SRAM_write(0xF1, 0xAD);
-    SRAM_write(0xF2, 0xBE);
-    SRAM_write(0xF3, 0xEF);
-
-    putch_hex(SRAM_read(0xF0));
-    putch_hex(SRAM_read(0xF1));
-    putch_hex(SRAM_read(0xF2));
-    putch_hex(SRAM_read(0xF3));
-
-    SRAM_write(0x00, 0x12);
-    putch_hex(SRAM_read(0x00));
-
-
-    while(1);
-
-    if(SRAM_read_bytes(0, 16, sram_buf) < 0) {
-        uart_puts("Err reading SRAM\n\r");
-    } else {
-        uart_puts("SRAM[0-0x10]: ");
-        for(int i = 0; i < 16; i++) {
-            putch_hex(sram_buf[i]);
-            uart_putc(' ');
-        }
-        uart_putc('\n');
-    }
-
-    uart_puts("Reading SRAM[0-0x10] with individual reads...\n\r");
-    for(int i = 0; i < 16; i++) {
-        uint8_t val = SRAM_read(i);
-        putch_hex(val);
-        uart_putc(' ');
-    }
-
-    uart_puts("\n\nWriting SRAM[0-0x10] with 0xAA using individual writes...\n\r");
-    for(int i = 0; i < 16; i++) {
-        SRAM_write(i, 0xAA + i);
-    }
-
-    uart_puts("Reading SRAM[0-0x10] again...\n\r");
-    if(SRAM_read_bytes(0, 16, sram_buf) < 0) {
-        uart_puts("Err reading SRAM\n\r");
-    } else {
-        uart_puts("SRAM[0-0x10]: ");
-        for(int i = 0; i < 16; i++) {
-            putch_hex(sram_buf[i]);
-            uart_putc(' ');
-        }
-        uart_putc('\n');
-    }
-
-    uart_puts("Reading SRAM[0-0x10] with individual reads...\n\r");
-    for(int i = 0; i < 16; i++) {
-        uint8_t val = SRAM_read(i);
-        putch_hex(val);
-        uart_putc(' ');
-    }
-
-    uart_puts("Writing SRAM[0] = 0xFF...\n\r");
-    SRAM_write(0, 0xFF);
-    uart_puts("Reading SRAM[0]...\n\r");
-    uint8_t val = SRAM_read(0);
-    uart_puts("SRAM[0] = ");
-    putch_hex(val);
-    uart_putc('\n\r');
-
-    uart_puts("Reading SRAM[0-0x10] with individual reads...\n\r");
-    for(int i = 0; i < 16; i++) {
-        uint8_t val = SRAM_read(i);
-        putch_hex(val);
-        uart_putc(' ');
-    }
-
-    while(1);
+    SRAM_write(0x000, 0x00);
+    assert(SRAM_read(0) == 0x00, "Error writing to 0x000 of SRAM")
+    SRAM_write(0x000, 0xDD);
+    assert(SRAM_read(0) == 0xDD, "Error writing to 0x000 of SRAM")
+    SRAM_write(0xF00, 0x00);
+    assert(SRAM_read(0xF00) == 0x00, "Error writing to 0xF00 of SRAM")
+    SRAM_write(0xF00, 0xAF);
+    assert(SRAM_read(0xF00) == 0xAF, "Error writing to 0xF00 of SRAM")
+    
 
     uart_puts("Init success. :)\n\rUSEFUL 6502 COPROCESSOR CONTROL SHELL by JOSEPH R FREESTON");
     uart_puts("\n\rVersion: ");
     uart_puts(COMM_VERSION);
-    uart_putc('\n\r');
+    uart_puts("\n\r");
 
     while (1) {
         // Check for received UART messages
         if(message_ready) {
             uart_puts((char*)rx_buffer);
-            uart_puts("\r\n\r");
+            uart_puts("\n\r");
             strcpy(cmd_buffer, rx_buffer);
             message_ready = false;  // Clear the flag
 
@@ -218,9 +145,8 @@ int main(void)
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
                 int datalen = len - 5;
                 if(datalen <= 0) { uart_puts("No data for EEPROM write\n\r"); continue; }
-                uint8_t data[32];
-                int bytes = hexstr_to_bytes(cmd_buffer+5, datalen, data, sizeof(data));
-                char retval = M95_write_bytes(addr, bytes, data);
+                int bytes = hexstr_to_bytes(cmd_buffer+5, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
+                char retval = M95_write_bytes(addr, bytes, eeprom_sram_io_buffer);
                 if(retval < 0) {
                     uart_puts("Err Writing\n\rM95_write_bytes returned ");
                     putch_hex(retval);
@@ -236,13 +162,13 @@ int main(void)
                 if(len < 9) { uart_puts("Bad EEPROM read\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 4);
                 unsigned int nbytes = hexstr_to_uint(cmd_buffer+5, 4);
-                if(nbytes > sizeof(eeprom_read_buffer)) nbytes = sizeof(eeprom_read_buffer);
-                if(M95_read_bytes(addr, nbytes, eeprom_read_buffer) < 0) {
+                if(nbytes > sizeof(eeprom_sram_io_buffer)) nbytes = sizeof(eeprom_sram_io_buffer);
+                if(M95_read_bytes(addr, nbytes, eeprom_sram_io_buffer) < 0) {
                     uart_puts("Err Reading\n\r");
                 } else {
                     uart_puts("Read something:\n\r");
                     for(int i = 0; i < nbytes; i++) {
-                        putch_hex((unsigned char)eeprom_read_buffer[i]);
+                        putch_hex((unsigned char)eeprom_sram_io_buffer[i]);
                         uart_putc(' ');
                     }
                     uart_putc('\n\r');
@@ -256,10 +182,9 @@ int main(void)
                 if(datalen <= 0) { uart_puts("No data for SRAM write\n\r"); continue; }
                 if(datalen > 64) { uart_puts("SRAM write too long\n\r"); continue; } // Prevent buffer overrun
                 if(datalen % 2 != 1) { uart_puts("Odd number of hex digits\n\r"); continue; } // Prevent odd hex string
-                uint8_t data[32];
-                int bytes = hexstr_to_bytes(cmd_buffer+3, datalen, data, sizeof(data));
+                int bytes = hexstr_to_bytes(cmd_buffer+4, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
                 uart_puts("About to write...");
-                int retval = SRAM_write_bytes(addr, bytes, data);
+                int retval = SRAM_write_bytes(addr, bytes, eeprom_sram_io_buffer);
                 if(retval < 0) {
                     uart_puts("Err Writing SRAM\n\r");
                 } else {
@@ -271,14 +196,13 @@ int main(void)
                 if(len < 7) { uart_puts("Bad SRAM read\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
                 unsigned int nbytes = hexstr_to_uint(cmd_buffer+4, 3);
-                uint8_t sram_buf[32];
-                if(nbytes > sizeof(sram_buf)) nbytes = sizeof(sram_buf);
-                if(SRAM_read_bytes(addr, nbytes, sram_buf) < 0) {
+                if(nbytes > sizeof(eeprom_sram_io_buffer)) nbytes = sizeof(eeprom_sram_io_buffer);
+                if(SRAM_read_bytes(addr, nbytes, eeprom_sram_io_buffer) < 0) {
                     uart_puts("Err Reading SRAM\n\r");
                 } else {
                     uart_puts("SRAM: ");
                     for(int i = 0; i < nbytes; i++) {
-                        putch_hex(sram_buf[i]);
+                        putch_hex(eeprom_sram_io_buffer[i]);
                         uart_putc(' ');
                     }
                     uart_putc('\n\r');
