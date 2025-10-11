@@ -112,13 +112,27 @@ int main(void)
     }
 
 
-    uart_puts("Success :)\nReading SRAM[0-0x10]...\n\r");
+    uart_puts("Success :)\nReading SRAM...\n\r");
     uint8_t sram_buf[16];
 
-    uart_puts("Writing a single byte, 0x12 at 0x0000]\n\r");
-    SRAM_write(0, 0x12);
-    putch_hex(SRAM_read(0));
-    uart_puts("\n\rRead single byte at 0x0000.\n\r\n\r");
+    putch_hex(SRAM_read(0xF0));
+    putch_hex(SRAM_read(0xF1));
+    putch_hex(SRAM_read(0xF2));
+    putch_hex(SRAM_read(0xF3));
+
+    uart_puts("Writing 0xDEADBEEF and reading it back...\n\r");
+    SRAM_write(0xF0, 0xDE);
+    SRAM_write(0xF1, 0xAD);
+    SRAM_write(0xF2, 0xBE);
+    SRAM_write(0xF3, 0xEF);
+
+    putch_hex(SRAM_read(0xF0));
+    putch_hex(SRAM_read(0xF1));
+    putch_hex(SRAM_read(0xF2));
+    putch_hex(SRAM_read(0xF3));
+
+    SRAM_write(0x00, 0x12);
+    putch_hex(SRAM_read(0x00));
 
 
     while(1);
