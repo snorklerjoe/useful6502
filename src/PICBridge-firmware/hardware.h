@@ -1,5 +1,7 @@
 // Controls hardware functions, including SRAM and resetting the 65c02
 
+#include <stdint.h>
+
 /****************
  *   SRAM I/O   *
  ****************/
@@ -12,6 +14,14 @@ unsigned char SRAM_read(unsigned int addr);
 
 // Write a byte to SRAM
 void SRAM_write(unsigned int addr, unsigned char data);
+
+
+// Write 'len' bytes from 'data' to SRAM starting at 'addr'
+int SRAM_write_bytes(uint32_t addr, int len, const uint8_t* data);
+
+// Read 'len' bytes from SRAM starting at 'addr' into 'data'
+int SRAM_read_bytes(uint32_t addr, int len, uint8_t* data);
+
 
 // Unselect the chip to free things up
 void SRAM_deselect(void);
