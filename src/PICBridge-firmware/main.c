@@ -26,7 +26,7 @@
 
 volatile char rx_buffer[70];
 volatile char cmd_buffer[70];
-volatile char eeprom_sram_io_buffer[64];
+char eeprom_sram_io_buffer[64];
 volatile uint8_t rx_index = 0;
 volatile bool message_ready = false;
 
@@ -66,8 +66,8 @@ void onUartInput(void) {
     if(EUSART2_IsRxReady()) {
         char received = EUSART2_Read();
         
-        // Store character in buffer
-        if(rx_index < 63) {
+        // Store character in buffer (leave room for null terminator)
+        if(rx_index < 69) {
             rx_buffer[rx_index++] = received;
             
             // Check for end of message
@@ -144,7 +144,7 @@ int main(void)
                 if(datalen <= 0) { uart_puts("ERR:NO_DATA\n\r"); continue; }
                 int bytes = hexstr_to_bytes(cmd_buffer+5, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
                 char retval = M95_write_bytes(addr, bytes, eeprom_sram_io_buffer);
-                if(retval < 0) {
+                if(retval < 0 && retval != 0xFF) {
                     uart_puts("ERR:EEPROM_WRITE:");
                     putch_hex(retval);
                     uart_puts("\n\r");
@@ -172,12 +172,13 @@ int main(void)
             }
             // SRAM write: w0abdeadbeef
             else if(cmd_buffer[0] == 'w') {
-                if(len < 3) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
+                if(len < 5) { uart_puts("ERR:BAD_CMD\n\r"); continue; }
                 unsigned int addr = hexstr_to_uint(cmd_buffer+1, 3);
                 int datalen = len - 4;
                 if(datalen <= 0) { uart_puts("ERR:NO_DATA\n\r"); continue; }
                 if(datalen > 128) { uart_puts("ERR:TOO_LONG\n\r"); continue; } // Prevent buffer overrun
                 if(datalen % 2 != 1) { uart_puts("ERR:ODD_HEX\n\r"); continue; } // Prevent odd hex string
+                // if(datalen % 2 != 0) { uart_puts("ERR:ODD_HEX\n\r"); continue; } // Prevent odd hex string
                 int bytes = hexstr_to_bytes(cmd_buffer+4, datalen, eeprom_sram_io_buffer, sizeof(eeprom_sram_io_buffer));
                 int retval = SRAM_write_bytes(addr, bytes, eeprom_sram_io_buffer);
                 if(retval < 0) {

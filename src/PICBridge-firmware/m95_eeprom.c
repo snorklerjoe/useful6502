@@ -119,7 +119,13 @@ int M95_write_bytes(int addr, int num_bytes, void* buf)
         M95_CS_HIGH();
 
         // Wait for write complete (poll WIP bit)
-        while (spi1_byte_exchange_hw(0xff) & 0x01);
+        uint8_t status;
+        do {
+            M95_CS_LOW();
+            spi1_byte_exchange_hw(M95_CMD_RDSR);
+            status = spi1_byte_exchange_hw(0xFF);
+            M95_CS_HIGH();
+        } while (status & 0x01);
 
         current_addr += to_write;
         data += to_write;
