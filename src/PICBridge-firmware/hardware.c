@@ -37,10 +37,14 @@ void SRAM_init(void) {
     TRISDbits.TRISD4 = 0; // BUSY (output from PIC, input to SRAM slave)
     
     // Initialize CPU control pins
+    // Ensure digital mode (clear ANSELA bits 0 and 1)
+    ANSELA &= 0xFC;        // Clear ANSA0 and ANSA1 (bits 0 and 1)
+    
+    // Set outputs before configuring as outputs
+    LATAbits.LATA0 = 1;    // IRQ high (not asserted)
+    LATAbits.LATA1 = 0;    // RESB low (in reset)
     TRISAbits.TRISA0 = 0;  // IRQ as output
     TRISAbits.TRISA1 = 0;  // RESB as output
-    LATAbits.LATA0 = 1;    // IRQ high (not asserted)
-    LATAbits.LATA1 = 1;    // RESB high (not asserted)
 }
 
 /**

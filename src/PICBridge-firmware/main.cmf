@@ -1,0 +1,2400 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$main.o
+cinit CODE 0 69 69 3A 2 1
+idloc IDLOC 5 8000 8000 4 2 1
+text1 CODE 0 BDB BDB 16 2 1
+text2 CODE 0 BB0 BB0 15 2 1
+text3 CODE 0 E6D E6D 45 2 1
+text4 CODE 0 53C 53C 82 2 1
+text5 CODE 0 E2A E2A 43 2 1
+text6 CODE 0 A4A A4A 3 2 1
+text7 CODE 0 A47 A47 3 2 1
+text8 CODE 0 A44 A44 3 2 1
+text9 CODE 0 A41 A41 3 2 1
+text10 CODE 0 B88 B88 13 2 1
+text11 CODE 0 5BE 5BE 7F 2 1
+text12 CODE 0 AF3 AF3 9 2 1
+text13 CODE 0 B2D B2D D 2 1
+text14 CODE 0 A97 A97 6 2 1
+text15 CODE 0 B57 B57 F 2 1
+text16 CODE 0 A71 A71 4 2 1
+text17 CODE 0 7C9 7C9 36 2 1
+text18 CODE 0 B14 B14 C 2 1
+text19 CODE 0 B08 B08 C 2 1
+text20 CODE 0 B3A B3A E 2 1
+text21 CODE 0 FAA FAA 56 2 1
+text22 CODE 0 CFA CFA 29 2 1
+text23 CODE 0 EFF EFF 55 2 1
+text24 CODE 0 D50 D50 2E 2 1
+text25 CODE 0 BF1 BF1 17 2 1
+text26 CODE 0 AB8 AB8 7 2 1
+text27 CODE 0 C94 C94 20 2 1
+text28 CODE 0 486 486 B6 2 1
+text29 CODE 0 F54 F54 56 2 1
+text30 CODE 0 772 772 57 2 1
+text31 CODE 0 C08 C08 19 2 1
+text32 CODE 0 BC5 BC5 16 2 1
+text33 CODE 0 CB4 CB4 22 2 1
+text34 CODE 0 B77 B77 11 2 1
+text35 CODE 0 CD6 CD6 24 2 1
+text36 CODE 0 AEA AEA 9 2 1
+text37 CODE 0 63D 63D 7A 2 1
+text38 CODE 0 C74 C74 20 2 1
+text39 CODE 0 B66 B66 11 2 1
+text40 CODE 0 AE1 AE1 9 2 1
+text41 CODE 0 AFC AFC C 2 1
+text42 CODE 0 A3E A3E 3 2 1
+text44 CODE 0 DEA DEA 40 2 1
+text45 CODE 0 AD8 AD8 9 2 1
+text46 CODE 0 B48 B48 F 2 1
+text47 CODE 0 7FF 7FF 1 2 1
+text48 CODE 0 A91 A91 6 2 1
+text49 CODE 0 B20 B20 D 2 1
+text50 CODE 0 A28 A28 1 2 1
+text51 CODE 0 A6D A6D 4 2 1
+text52 CODE 0 EB2 EB2 4D 2 1
+text53 CODE 0 A8B A8B 6 2 1
+text54 CODE 0 A7A A7A 5 2 1
+text55 CODE 0 AB1 AB1 7 2 1
+text56 CODE 0 A69 A69 4 2 1
+text57 CODE 0 C57 C57 1D 2 1
+text58 CODE 0 AAA AAA 7 2 1
+text59 CODE 0 AC7 AC7 8 2 1
+text60 CODE 0 A85 A85 6 2 1
+text61 CODE 0 A7F A7F 6 2 1
+text62 CODE 0 DB0 DB0 3A 2 1
+text63 CODE 0 AA3 AA3 7 2 1
+text64 CODE 0 ABF ABF 8 2 1
+text65 CODE 0 A65 A65 4 2 1
+text66 CODE 0 D23 D23 2D 2 1
+text67 CODE 0 A3B A3B 3 2 1
+text68 CODE 0 A75 A75 5 2 1
+text69 CODE 0 A38 A38 3 2 1
+text70 CODE 0 A35 A35 3 2 1
+text71 CODE 0 A61 A61 4 2 1
+text72 CODE 0 A5D A5D 4 2 1
+text73 CODE 0 A32 A32 3 2 1
+text74 CODE 0 A59 A59 4 2 1
+text75 CODE 0 A2F A2F 3 2 1
+text76 CODE 0 B9B B9B 15 2 1
+text77 CODE 0 A55 A55 4 2 1
+text78 CODE 0 A2C A2C 3 2 1
+text79 CODE 0 A29 A29 3 2 1
+text80 CODE 0 A51 A51 4 2 1
+text81 CODE 0 C3C C3C 1B 2 1
+text82 CODE 0 719 719 59 2 1
+text83 CODE 0 D7E D7E 32 2 1
+text84 CODE 0 C21 C21 1B 2 1
+text85 CODE 0 ACF ACF 9 2 1
+text86 CODE 0 A4D A4D 4 2 1
+text87 CODE 0 A27 A27 1 2 1
+maintext CODE 0 A3 A3 3E3 2 1
+cstackCOMMON COMMON 1 75 75 5 1 1
+cstackBANK0 BANK0 1 3E 3E 17 1 1
+cstackBANK1 BANK1 1 CE CE 1D 1 1
+stringtext1 STRCODE 0 104D 104D 30 2 1
+stringtext2 STRCODE 0 10DB 10DB 1C 2 1
+stringtext3 STRCODE 0 10F7 10F7 19 2 1
+stringtext4 STRCODE 0 1128 1128 14 2 1
+stringtext5 STRCODE 0 1163 1163 12 2 1
+stringtext6 STRCODE 0 6B7 6B7 62 2 1
+stringtext7 STRCODE 0 1000 1000 4D 2 1
+stringtext8 STRCODE 0 107D 107D 20 2 1
+stringtext9 STRCODE 0 109D 109D 1F 2 1
+intentry CODE 0 4 4 63 2 1
+bssBANK0 BANK0 1 20 20 1E 1 1
+bssBANK1 BANK1 1 A0 A0 2E 1 1
+bssBANK2 BANK2 1 120 120 46 1 1
+bssBANK3 BANK3 1 1A0 1A0 40 1 1
+bssBANK4 BANK4 1 220 220 46 1 1
+idataBANK1 CODE 0 2 2 2 2 1
+dataBANK1 BANK1 1 EB EB 2 1 1
+clrtext CODE 0 A9D A9D 6 2 1
+bssCOMMON COMMON 1 70 70 5 1 1
+stringtext10 STRCODE 0 10BC 10BC 1F 2 1
+stringtext11 STRCODE 0 1110 1110 18 2 1
+stringtext12 STRCODE 0 113C 113C 14 2 1
+stringtext13 STRCODE 0 1150 1150 13 2 1
+stringtext14 STRCODE 0 1175 1175 12 2 1
+stringtext15 STRCODE 0 1187 1187 12 2 1
+stringtext16 STRCODE 0 1199 1199 12 2 1
+stringtext17 STRCODE 0 11AB 11AB 12 2 1
+stringtext18 STRCODE 0 11BD 11BD 11 2 1
+stringtext19 STRCODE 0 11CE 11CE 11 2 1
+stringtext20 STRCODE 0 11DF 11DF 11 2 1
+stringtext21 STRCODE 0 11F0 11F0 10 2 1
+stringtext22 STRCODE 0 1200 1200 10 2 1
+stringtext23 STRCODE 0 1210 1210 F 2 1
+stringtext24 STRCODE 0 121F 121F F 2 1
+stringtext25 STRCODE 0 122E 122E F 2 1
+stringtext26 STRCODE 0 123D 123D E 2 1
+stringtext27 STRCODE 0 124B 124B E 2 1
+stringtext28 STRCODE 0 1259 1259 E 2 1
+stringtext29 STRCODE 0 1267 1267 E 2 1
+stringtext30 STRCODE 0 1275 1275 D 2 1
+stringtext31 STRCODE 0 1282 1282 C 2 1
+stringtext32 STRCODE 0 128E 128E C 2 1
+stringtext33 STRCODE 0 129A 129A A 2 1
+stringtext34 STRCODE 0 12A4 12A4 4 2 1
+config CONFIG 4 8007 8007 5 2 1
+$startup.o
+idloc IDLOC 5 8000 8000 4 2 1
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 67 67 2 2 1
+config CONFIG 4 8007 8007 5 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 55-6F 1
+RAM ED-EF 1
+RAM 166-16F 1
+RAM 1E0-1EF 1
+RAM 266-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 55-6F 1
+BANK1 ED-EF 1
+BANK2 166-16F 1
+BANK3 1E0-1EF 1
+BANK4 266-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 800-A26 2
+CONST 12A8-1FFF 2
+ENTRY 800-A26 2
+ENTRY 12A8-1FFF 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+SFR32 1000-106F 1
+SFR33 1080-10EF 1
+SFR34 1100-116F 1
+SFR35 1180-11EF 1
+SFR36 1200-126F 1
+SFR37 1280-12EF 1
+SFR38 1300-136F 1
+SFR39 1380-13EF 1
+SFR40 1400-146F 1
+SFR41 1480-14EF 1
+SFR42 1500-156F 1
+SFR43 1580-15EF 1
+SFR44 1600-166F 1
+SFR45 1680-16EF 1
+SFR46 1700-176F 1
+SFR47 1780-17EF 1
+SFR48 1800-186F 1
+SFR49 1880-18EF 1
+SFR50 1900-196F 1
+SFR51 1980-19EF 1
+SFR52 1A00-1A6F 1
+SFR53 1A80-1AEF 1
+SFR54 1B00-1B6F 1
+SFR55 1B80-1BEF 1
+SFR56 1C00-1C6F 1
+SFR57 1C80-1CEF 1
+SFR58 1D00-1D6F 1
+SFR59 1D80-1DEF 1
+SFR60 1E00-1E6F 1
+SFR61 1E80-1EEF 1
+SFR62 1F00-1F6F 1
+SFR63 1F80-1FEF 1
+CODE 800-A26 2
+CODE 12A8-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+COMMON 7A-7D 1
+STRCODE 800-A26 2
+STRCODE 12A8-1FFF 2
+STRING 800-A26 2
+STRING 12A8-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$main.o
+69 cinit CODE >10117:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+69 cinit CODE >10120:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+69 cinit CODE >10233:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+6A cinit CODE >10234:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+6D cinit CODE >10235:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+6E cinit CODE >10236:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+71 cinit CODE >10237:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+72 cinit CODE >10254:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+73 cinit CODE >10255:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+74 cinit CODE >10256:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+75 cinit CODE >10257:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+76 cinit CODE >10258:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+77 cinit CODE >10262:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+78 cinit CODE >10263:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+79 cinit CODE >10264:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+7A cinit CODE >10265:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+7B cinit CODE >10266:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+7C cinit CODE >10267:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+7F cinit CODE >10271:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+80 cinit CODE >10272:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+81 cinit CODE >10273:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+82 cinit CODE >10274:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+83 cinit CODE >10275:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+84 cinit CODE >10276:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+87 cinit CODE >10280:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+88 cinit CODE >10281:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+89 cinit CODE >10282:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+8A cinit CODE >10283:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+8B cinit CODE >10284:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+8C cinit CODE >10285:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+8F cinit CODE >10289:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+90 cinit CODE >10290:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+91 cinit CODE >10291:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+92 cinit CODE >10292:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+93 cinit CODE >10293:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+94 cinit CODE >10294:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+97 cinit CODE >10298:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+98 cinit CODE >10299:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+99 cinit CODE >10300:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+9A cinit CODE >10301:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+9B cinit CODE >10302:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+9C cinit CODE >10303:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+9F cinit CODE >10309:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+9F cinit CODE >10311:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A0 cinit CODE >10312:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A1 cinit CODE >10313:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+4 intentry CODE >57:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+6 intentry CODE >60:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+F intentry CODE >62:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+12 intentry CODE >63:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+13 intentry CODE >64:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+1B intentry CODE >66:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+1E intentry CODE >67:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+1F intentry CODE >68:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+23 intentry CODE >70:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+2B intentry CODE >72:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+31 intentry CODE >73:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+32 intentry CODE >74:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+3A intentry CODE >76:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+40 intentry CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+41 intentry CODE >78:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+49 intentry CODE >80:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+4C intentry CODE >81:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+4D intentry CODE >82:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+55 intentry CODE >84:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+58 intentry CODE >85:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+59 intentry CODE >86:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+61 intentry CODE >88:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+64 intentry CODE >89:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+65 intentry CODE >93:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+65 intentry CODE >99:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A27 text87 CODE >400:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A27 text87 CODE >403:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A4D text86 CODE >405:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A4D text86 CODE >408:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A4F text86 CODE >409:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A50 text86 CODE >410:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+ACF text85 CODE >267:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+ACF text85 CODE >269:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AD7 text85 CODE >270:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C21 text84 CODE >288:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C21 text84 CODE >290:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C21 text84 CODE >293:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C28 text84 CODE >295:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C2C text84 CODE >297:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C2E text84 CODE >299:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C30 text84 CODE >300:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C36 text84 CODE >302:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C38 text84 CODE >304:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C3A text84 CODE >305:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C3B text84 CODE >306:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+D7E text83 CODE >65:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D7E text83 CODE >66:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D82 text83 CODE >66:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D86 text83 CODE >67:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D8A text83 CODE >70:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D8D text83 CODE >70:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D91 text83 CODE >71:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D9A text83 CODE >74:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+DA6 text83 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+DAC text83 CODE >76:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+DAE text83 CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+DAF text83 CODE >84:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+719 text82 CODE >308:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+719 text82 CODE >314:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+721 text82 CODE >316:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+726 text82 CODE >318:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+72C text82 CODE >319:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+732 text82 CODE >321:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+737 text82 CODE >324:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+73C text82 CODE >326:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+742 text82 CODE >327:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+748 text82 CODE >329:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+74D text82 CODE >333:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+750 text82 CODE >335:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+755 text82 CODE >336:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+757 text82 CODE >336:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+75C text82 CODE >342:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+762 text82 CODE >343:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+764 text82 CODE >344:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+766 text82 CODE >347:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+76C text82 CODE >349:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+771 text82 CODE >351:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C3C text81 CODE >377:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C3C text81 CODE >381:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C3F text81 CODE >381:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C43 text81 CODE >383:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C4A text81 CODE >384:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C4F text81 CODE >386:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C51 text81 CODE >387:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C53 text81 CODE >388:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C54 text81 CODE >389:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C54 text81 CODE >391:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+C56 text81 CODE >398:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A51 text80 CODE >411:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A51 text80 CODE >413:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A53 text80 CODE >414:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A54 text80 CODE >415:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A29 text79 CODE >491:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A29 text79 CODE >493:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2B text79 CODE >494:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2C text78 CODE >486:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2C text78 CODE >488:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2E text78 CODE >489:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A55 text77 CODE >496:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A55 text77 CODE >498:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A57 text77 CODE >499:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A58 text77 CODE >500:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B9B text76 CODE >242:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B9B text76 CODE >244:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B9D text76 CODE >245:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BA1 text76 CODE >246:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BA3 text76 CODE >247:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BA5 text76 CODE >248:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BA6 text76 CODE >249:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BA9 text76 CODE >250:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BAC text76 CODE >251:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+BAF text76 CODE >252:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2F text75 CODE >437:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A2F text75 CODE >439:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A31 text75 CODE >440:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A59 text74 CODE >442:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A59 text74 CODE >444:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A5B text74 CODE >445:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A5C text74 CODE >446:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A32 text73 CODE >401:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A32 text73 CODE >403:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A34 text73 CODE >404:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A5D text72 CODE >469:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A5D text72 CODE >471:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A60 text72 CODE >472:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A61 text71 CODE >448:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A61 text71 CODE >450:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A63 text71 CODE >451:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A64 text71 CODE >452:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A35 text70 CODE >417:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A35 text70 CODE >419:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A37 text70 CODE >420:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A38 text69 CODE >427:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A38 text69 CODE >429:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A3A text69 CODE >430:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A75 text68 CODE >406:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A76 text68 CODE >408:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A79 text68 CODE >409:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A3B text67 CODE >422:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A3B text67 CODE >424:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A3D text67 CODE >425:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D23 text66 CODE >310:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D23 text66 CODE >312:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D23 text66 CODE >313:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D2A text66 CODE >315:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D2E text66 CODE >316:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D36 text66 CODE >317:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D3B text66 CODE >318:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D3D text66 CODE >319:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D3E text66 CODE >322:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D43 text66 CODE >324:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D44 text66 CODE >325:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D47 text66 CODE >326:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D49 text66 CODE >327:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D4A text66 CODE >330:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D4E text66 CODE >334:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+D4F text66 CODE >335:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A65 text65 CODE >292:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A65 text65 CODE >294:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A67 text65 CODE >295:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A68 text65 CODE >296:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ABF text64 CODE >298:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ABF text64 CODE >300:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AC5 text64 CODE >301:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AC6 text64 CODE >302:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AA3 text63 CODE >304:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AA3 text63 CODE >306:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AA8 text63 CODE >307:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AA9 text63 CODE >308:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DB0 text62 CODE >337:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DB0 text62 CODE >339:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DB2 text62 CODE >341:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DB6 text62 CODE >341:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DBA text62 CODE >343:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DC1 text62 CODE >345:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DC9 text62 CODE >346:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DCE text62 CODE >347:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DD2 text62 CODE >351:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DD8 text62 CODE >353:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DDB text62 CODE >354:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DDC text62 CODE >357:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DDF text62 CODE >358:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DE2 text62 CODE >359:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DE5 text62 CODE >365:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DE8 text62 CODE >367:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+DE9 text62 CODE >368:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7F text61 CODE >370:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7F text61 CODE >372:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7F text61 CODE >373:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A83 text61 CODE >374:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A84 text61 CODE >375:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A85 text60 CODE >377:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A85 text60 CODE >379:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A85 text60 CODE >380:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A89 text60 CODE >381:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A8A text60 CODE >382:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AC7 text59 CODE >384:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AC7 text59 CODE >386:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ACA text59 CODE >387:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ACD text59 CODE >388:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ACE text59 CODE >389:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AAA text58 CODE >391:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AAA text58 CODE >393:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AAD text58 CODE >394:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AAF text58 CODE >395:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AB0 text58 CODE >396:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C57 text57 CODE >282:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C57 text57 CODE >284:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C5A text57 CODE >285:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C5C text57 CODE >286:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C5F text57 CODE >287:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+C73 text57 CODE >289:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A69 text56 CODE >222:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A69 text56 CODE >224:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A6C text56 CODE >225:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AB1 text55 CODE >464:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AB1 text55 CODE >466:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AB4 text55 CODE >466:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+AB7 text55 CODE >467:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7A text54 CODE >459:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7A text54 CODE >461:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A7E text54 CODE >462:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A8B text53 CODE >454:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A8B text53 CODE >456:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A90 text53 CODE >457:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EB2 text52 CODE >254:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EB2 text52 CODE >256:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EB5 text52 CODE >257:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EBA text52 CODE >259:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EBD text52 CODE >260:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EBE text52 CODE >263:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EC2 text52 CODE >263:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ECA text52 CODE >263:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ECE text52 CODE >265:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ED1 text52 CODE >266:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ED3 text52 CODE >267:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ED4 text52 CODE >268:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+ED8 text52 CODE >268:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EE0 text52 CODE >268:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EE4 text52 CODE >270:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EE7 text52 CODE >271:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EE9 text52 CODE >272:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EEA text52 CODE >276:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EEA text52 CODE >279:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+EFE text52 CODE >280:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A6D text51 CODE >217:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A6D text51 CODE >219:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A70 text51 CODE >220:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A28 text50 CODE >123:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A28 text50 CODE >126:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B20 text49 CODE >110:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B20 text49 CODE >113:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B27 text49 CODE >115:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B2C text49 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A91 text48 CODE >101:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A91 text48 CODE >103:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A93 text48 CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A96 text48 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+7FF text47 CODE >185:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+7FF text47 CODE >188:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B48 text46 CODE >163:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B48 text46 CODE >168:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B4F text46 CODE >170:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B54 text46 CODE >172:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B56 text46 CODE >173:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+AD8 text45 CODE >151:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+AD8 text45 CODE >154:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+ADD text45 CODE >156:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+AE0 text45 CODE >158:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+DEA text44 CODE >264:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DEA text44 CODE >266:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DEC text44 CODE >268:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DED text44 CODE >270:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DF3 text44 CODE >272:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DF9 text44 CODE >274:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+DFF text44 CODE >281:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E01 text44 CODE >283:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E06 text44 CODE >285:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E0B text44 CODE >291:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E0F text44 CODE >292:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E12 text44 CODE >293:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E13 text44 CODE >296:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E1F text44 CODE >298:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E25 text44 CODE >303:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E25 text44 CODE >305:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E27 text44 CODE >306:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+E29 text44 CODE >317:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+A3E text42 CODE >258:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A3E text42 CODE >260:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A40 text42 CODE >261:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AFC text41 CODE >428:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AFC text41 CODE >430:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B03 text41 CODE >432:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B07 text41 CODE >434:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AE1 text40 CODE >319:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+AE1 text40 CODE >321:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+AE9 text40 CODE >322:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B66 text39 CODE >71:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B66 text39 CODE >74:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B68 text39 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B69 text39 CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B6B text39 CODE >78:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B6C text39 CODE >79:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B6D text39 CODE >80:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B6E text39 CODE >83:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B75 text39 CODE >85:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+B76 text39 CODE >86:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+C74 text38 CODE >15:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C74 text38 CODE >43:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C77 text38 CODE >45:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C7B text38 CODE >46:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C7F text38 CODE >47:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C84 text38 CODE >48:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C89 text38 CODE >49:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C8F text38 CODE >52:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+C93 text38 CODE >53:/opt/microchip/xc8/v3.00/pic/sources/c99/common/Umul16.c
+63D text37 CODE >99:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+63D text37 CODE >101:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+63D text37 CODE >102:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+642 text37 CODE >104:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+644 text37 CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+65E text37 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+678 text37 CODE >108:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+692 text37 CODE >109:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6AC text37 CODE >111:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6AD text37 CODE >112:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6AF text37 CODE >114:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6B2 text37 CODE >115:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6B3 text37 CODE >118:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6B5 text37 CODE >120:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+6B6 text37 CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/spi/src/mssp1.c
+AEA text36 CODE >272:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AEA text36 CODE >274:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+AF2 text36 CODE >275:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CD6 text35 CODE >353:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CD6 text35 CODE >357:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CDB text35 CODE >359:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CDF text35 CODE >360:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CE0 text35 CODE >361:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CE6 text35 CODE >363:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CEC text35 CODE >364:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF0 text35 CODE >366:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF2 text35 CODE >367:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF4 text35 CODE >368:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF7 text35 CODE >373:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF7 text35 CODE >374:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+CF9 text35 CODE >375:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B77 text34 CODE >5:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+B79 text34 CODE >6:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+B7D text34 CODE >6:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+B81 text34 CODE >7:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+B87 text34 CODE >8:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CB4 text33 CODE >15:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CB6 text33 CODE >16:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CC1 text33 CODE >16:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CC8 text33 CODE >17:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CCE text33 CODE >17:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+CD5 text33 CODE >18:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+BC5 text32 CODE >22:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BC7 text32 CODE >25:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BC9 text32 CODE >27:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BCD text32 CODE >29:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BD2 text32 CODE >31:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BD6 text32 CODE >33:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BD8 text32 CODE >34:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+BDA text32 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+C08 text31 CODE >10:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+C08 text31 CODE >11:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+C09 text31 CODE >12:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+C16 text31 CODE >11:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+C20 text31 CODE >13:/home/joseph/projects/useful6502/src/PICBridge-firmware/conio.c
+772 text30 CODE >43:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+772 text30 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+775 text30 CODE >47:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+777 text30 CODE >48:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+778 text30 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+779 text30 CODE >52:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+77F text30 CODE >52:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+783 text30 CODE >53:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+78B text30 CODE >54:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+791 text30 CODE >57:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+799 text30 CODE >60:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+79B text30 CODE >61:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+79F text30 CODE >62:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7A3 text30 CODE >63:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7AE text30 CODE >64:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7AF text30 CODE >66:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7B6 text30 CODE >67:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7BB text30 CODE >68:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7C3 text30 CODE >70:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+7C8 text30 CODE >71:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F54 text29 CODE >73:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F54 text29 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F63 text29 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F67 text29 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F71 text29 CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F73 text29 CODE >78:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F77 text29 CODE >79:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F7C text29 CODE >80:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F81 text29 CODE >82:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F84 text29 CODE >83:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F87 text29 CODE >84:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+F9D text29 CODE >84:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+FA1 text29 CODE >84:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+FA5 text29 CODE >86:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+FA7 text29 CODE >87:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+FA9 text29 CODE >88:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+486 text28 CODE >90:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+486 text28 CODE >92:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+495 text28 CODE >92:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+499 text28 CODE >92:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4A3 text28 CODE >94:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4A6 text28 CODE >95:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4AA text28 CODE >96:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4AE text28 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4AF text28 CODE >100:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4B1 text28 CODE >101:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4B5 text28 CODE >102:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4B7 text28 CODE >105:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4BD text28 CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4C3 text28 CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4C6 text28 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4CC text28 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4D0 text28 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4DF text28 CODE >110:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4E0 text28 CODE >111:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4E4 text28 CODE >112:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4E9 text28 CODE >113:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4EE text28 CODE >116:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+4F2 text28 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+507 text28 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+50B text28 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+50F text28 CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+511 text28 CODE >123:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+511 text28 CODE >124:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+512 text28 CODE >125:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+516 text28 CODE >126:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+51C text28 CODE >127:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+51D text28 CODE >128:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+521 text28 CODE >130:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+525 text28 CODE >131:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+527 text28 CODE >132:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+52B text28 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+530 text28 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+534 text28 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+538 text28 CODE >135:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+53B text28 CODE >136:/home/joseph/projects/useful6502/src/PICBridge-firmware/m95_eeprom.c
+C94 text27 CODE >12:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C94 text27 CODE >14:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C97 text27 CODE >16:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C99 text27 CODE >18:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C9B text27 CODE >19:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C9C text27 CODE >20:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C9D text27 CODE >21:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C9E text27 CODE >24:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C9F text27 CODE >25:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA1 text27 CODE >26:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA2 text27 CODE >27:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA3 text27 CODE >30:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA5 text27 CODE >31:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA7 text27 CODE >34:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA8 text27 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CA9 text27 CODE >36:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CAA text27 CODE >37:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CAB text27 CODE >41:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CAE text27 CODE >44:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CB0 text27 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CB1 text27 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CB2 text27 CODE >47:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CB3 text27 CODE >48:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+AB8 text26 CODE >254:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+AB8 text26 CODE >255:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+ABA text26 CODE >258:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+ABC text26 CODE >261:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+ABD text26 CODE >262:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+ABE text26 CODE >263:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+BF1 text25 CODE >54:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+BF1 text25 CODE >56:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+BF6 text25 CODE >59:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+BF8 text25 CODE >62:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C06 text25 CODE >63:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+C07 text25 CODE >64:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D50 text24 CODE >71:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D50 text24 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D52 text24 CODE >76:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D53 text24 CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D54 text24 CODE >80:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D56 text24 CODE >81:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D58 text24 CODE >82:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D5A text24 CODE >83:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D5B text24 CODE >86:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D63 text24 CODE >89:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D65 text24 CODE >90:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D66 text24 CODE >91:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D67 text24 CODE >94:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D69 text24 CODE >97:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D6A text24 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D6B text24 CODE >101:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D6E text24 CODE >104:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D6F text24 CODE >105:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D70 text24 CODE >108:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D78 text24 CODE >110:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D7B text24 CODE >111:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D7D text24 CODE >112:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+EFF text23 CODE >208:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+EFF text23 CODE >210:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F01 text23 CODE >211:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F02 text23 CODE >212:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F03 text23 CODE >215:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F05 text23 CODE >216:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F07 text23 CODE >217:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F09 text23 CODE >218:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F0A text23 CODE >221:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F0C text23 CODE >222:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F0D text23 CODE >223:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F0E text23 CODE >226:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F10 text23 CODE >228:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F16 text23 CODE >229:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F1B text23 CODE >231:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F23 text23 CODE >232:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F24 text23 CODE >233:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F25 text23 CODE >236:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F2C text23 CODE >237:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F2E text23 CODE >238:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F38 text23 CODE >238:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F3C text23 CODE >238:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F40 text23 CODE >241:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F42 text23 CODE >242:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F43 text23 CODE >245:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F4B text23 CODE >247:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F4E text23 CODE >248:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+F53 text23 CODE >249:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CFA text22 CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CFA text22 CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CFC text22 CODE >122:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+CFD text22 CODE >125:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D04 text22 CODE >126:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D05 text22 CODE >129:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D07 text22 CODE >130:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D08 text22 CODE >133:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D0A text22 CODE >136:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D0C text22 CODE >137:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D0D text22 CODE >140:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D0F text22 CODE >141:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D10 text22 CODE >142:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D11 text22 CODE >143:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D13 text22 CODE >145:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D14 text22 CODE >148:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D16 text22 CODE >151:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D18 text22 CODE >154:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D1F text22 CODE >156:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+D22 text22 CODE >157:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FAA text21 CODE >160:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FAA text21 CODE >162:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FAC text21 CODE >163:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FAD text21 CODE >166:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FAE text21 CODE >168:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FB4 text21 CODE >169:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FB9 text21 CODE >171:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FC1 text21 CODE >172:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FC2 text21 CODE >175:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FC4 text21 CODE >176:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FC5 text21 CODE >179:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FCC text21 CODE >180:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FCD text21 CODE >183:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FCF text21 CODE >184:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD0 text21 CODE >185:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD1 text21 CODE >186:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD3 text21 CODE >188:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD4 text21 CODE >191:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD6 text21 CODE >193:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD8 text21 CODE >194:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FD9 text21 CODE >195:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FDA text21 CODE >196:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FE5 text21 CODE >196:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FE9 text21 CODE >196:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FED text21 CODE >198:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FF0 text21 CODE >201:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FF7 text21 CODE >203:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FFA text21 CODE >204:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+FFF text21 CODE >205:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+B3A text20 CODE >39:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B3A text20 CODE >42:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B3D text20 CODE >44:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B3E text20 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B3F text20 CODE >52:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B41 text20 CODE >53:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B43 text20 CODE >56:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B43 text20 CODE >58:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B47 text20 CODE >59:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/clock.c
+B08 text19 CODE >412:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B08 text19 CODE >414:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B0F text19 CODE >416:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B13 text19 CODE >418:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B14 text18 CODE >420:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B14 text18 CODE >422:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B1B text18 CODE >424:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+B1F text18 CODE >426:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7C9 text17 CODE >131:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7C9 text17 CODE >133:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7CB text17 CODE >134:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7D0 text17 CODE >136:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7D2 text17 CODE >137:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7D7 text17 CODE >142:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7DA text17 CODE >144:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7DC text17 CODE >146:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7DE text17 CODE >148:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7E0 text17 CODE >150:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7E1 text17 CODE >152:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7E9 text17 CODE >153:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7F1 text17 CODE >154:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7F4 text17 CODE >156:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7F6 text17 CODE >157:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7F7 text17 CODE >158:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7F9 text17 CODE >160:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7FA text17 CODE >161:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7FB text17 CODE >162:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7FC text17 CODE >164:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+7FE text17 CODE >165:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/uart/src/eusart2.c
+A71 text16 CODE >474:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A71 text16 CODE >476:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A73 text16 CODE >477:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A74 text16 CODE >478:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B57 text15 CODE >114:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B57 text15 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B5A text15 CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B5C text15 CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B5D text15 CODE >123:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B5E text15 CODE >125:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B60 text15 CODE >126:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B63 text15 CODE >127:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+B65 text15 CODE >128:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/i2c_host/src/mssp2.c
+A97 text14 CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A97 text14 CODE >120:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+A9C text14 CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B2D text13 CODE >40:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B2D text13 CODE >43:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B2F text13 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B37 text13 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+B39 text13 CODE >48:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/interrupt.c
+AF3 text12 CODE >178:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+AF3 text12 CODE >179:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+AFB text12 CODE >180:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5BE text11 CODE >39:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5BE text11 CODE >44:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C0 text11 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C2 text11 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C3 text11 CODE >47:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C4 text11 CODE >48:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C5 text11 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C6 text11 CODE >54:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5C8 text11 CODE >55:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5CA text11 CODE >56:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5CB text11 CODE >57:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5CC text11 CODE >58:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5CE text11 CODE >59:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D0 text11 CODE >64:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D3 text11 CODE >65:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D5 text11 CODE >66:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D6 text11 CODE >67:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D7 text11 CODE >68:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5D8 text11 CODE >69:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5DA text11 CODE >74:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5DD text11 CODE >75:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5DE text11 CODE >76:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5DF text11 CODE >77:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E0 text11 CODE >78:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E1 text11 CODE >79:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E3 text11 CODE >85:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E5 text11 CODE >86:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E6 text11 CODE >87:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E7 text11 CODE >88:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E8 text11 CODE >89:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5E9 text11 CODE >90:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5EB text11 CODE >94:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5EE text11 CODE >95:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5F0 text11 CODE >96:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5F2 text11 CODE >97:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5F4 text11 CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5F6 text11 CODE >99:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5F9 text11 CODE >103:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5FC text11 CODE >104:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+5FE text11 CODE >105:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+600 text11 CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+602 text11 CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+604 text11 CODE >108:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+607 text11 CODE >113:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+60A text11 CODE >114:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+60C text11 CODE >115:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+60E text11 CODE >116:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+611 text11 CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+613 text11 CODE >118:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+616 text11 CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+619 text11 CODE >120:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+61C text11 CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+61F text11 CODE >122:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+622 text11 CODE >123:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+625 text11 CODE >132:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+626 text11 CODE >133:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+628 text11 CODE >134:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+629 text11 CODE >135:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62A text11 CODE >136:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62B text11 CODE >137:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62C text11 CODE >138:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62D text11 CODE >139:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62E text11 CODE >140:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+62F text11 CODE >141:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+630 text11 CODE >142:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+631 text11 CODE >143:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+632 text11 CODE >145:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+63A text11 CODE >148:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+63C text11 CODE >149:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/pins.c
+B88 text10 CODE >39:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B88 text10 CODE >41:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B8B text10 CODE >42:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B8E text10 CODE >43:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B91 text10 CODE >44:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B94 text10 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B97 text10 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+B9A text10 CODE >47:/home/joseph/projects/useful6502/src/PICBridge-firmware/mcc_generated_files/system/src/system.c
+A41 text9 CODE >286:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A41 text9 CODE >287:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A43 text9 CODE >288:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A44 text8 CODE >272:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A44 text8 CODE >273:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A46 text8 CODE >274:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A47 text7 CODE >293:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A47 text7 CODE >294:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A49 text7 CODE >295:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A4A text6 CODE >279:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A4A text6 CODE >280:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+A4C text6 CODE >281:/home/joseph/projects/useful6502/src/PICBridge-firmware/hardware.c
+E2A text5 CODE >34:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E2C text5 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E2E text5 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E34 text5 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E3C text5 CODE >35:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E40 text5 CODE >36:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E42 text5 CODE >36:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E48 text5 CODE >36:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E50 text5 CODE >36:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E54 text5 CODE >37:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E56 text5 CODE >37:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E5C text5 CODE >37:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E64 text5 CODE >37:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E68 text5 CODE >38:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E6C text5 CODE >39:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+53C text4 CODE >42:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+53C text4 CODE >43:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+53F text4 CODE >44:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+542 text4 CODE >45:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+551 text4 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+55D text4 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+561 text4 CODE >46:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+57C text4 CODE >47:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+585 text4 CODE >48:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+597 text4 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5A1 text4 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5A5 text4 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5B0 text4 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5B4 text4 CODE >49:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5B8 text4 CODE >50:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+5BD text4 CODE >51:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E6D text3 CODE >54:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E6D text3 CODE >55:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E70 text3 CODE >56:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E73 text3 CODE >57:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E82 text3 CODE >58:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E87 text3 CODE >59:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E9A text3 CODE >60:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+EA4 text3 CODE >60:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+EA8 text3 CODE >60:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+EAC text3 CODE >61:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+EB1 text3 CODE >62:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+BB0 text2 CODE >3:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strcpy.c
+BB0 text2 CODE >5:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strcpy.c
+BB3 text2 CODE >6:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strcpy.c
+BC4 text2 CODE >8:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strcpy.c
+BDB text1 CODE >5:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BDB text1 CODE >7:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BDE text1 CODE >8:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BDF text1 CODE >9:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BE1 text1 CODE >8:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BEA text1 CODE >11:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+BF0 text1 CODE >12:/opt/microchip/xc8/v3.00/pic/sources/c99/common/strlen.c
+A3 maintext CODE >89:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+A3 maintext CODE >93:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+A6 maintext CODE >94:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+A9 maintext CODE >95:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+AA maintext CODE >96:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+AB maintext CODE >97:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+AE maintext CODE >98:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+B1 maintext CODE >100:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+B9 maintext CODE >101:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+BC maintext CODE >103:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+C4 maintext CODE >106:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+C6 maintext CODE >107:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+C7 maintext CODE >109:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+CA maintext CODE >115:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+D2 maintext CODE >116:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+DA maintext CODE >116:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+E7 maintext CODE >117:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+F0 maintext CODE >118:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+F7 maintext CODE >119:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+100 maintext CODE >120:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+109 maintext CODE >120:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+116 maintext CODE >121:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+120 maintext CODE >122:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+128 maintext CODE >125:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+130 maintext CODE >126:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+138 maintext CODE >127:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+140 maintext CODE >128:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+148 maintext CODE >132:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+14E maintext CODE >133:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+155 maintext CODE >134:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+157 maintext CODE >136:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+164 maintext CODE >137:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+16B maintext CODE >140:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+172 maintext CODE >141:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+179 maintext CODE >141:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+17E maintext CODE >141:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+18B maintext CODE >142:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+19D maintext CODE >143:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1A3 maintext CODE >144:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1A9 maintext CODE >144:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1AE maintext CODE >144:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1BB maintext CODE >145:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1D7 maintext CODE >146:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1EF maintext CODE >152:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1F7 maintext CODE >153:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+1FC maintext CODE >154:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+205 maintext CODE >158:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+20B maintext CODE >159:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+212 maintext CODE >159:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+217 maintext CODE >159:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+224 maintext CODE >160:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+236 maintext CODE >161:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+248 maintext CODE >162:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+24B maintext CODE >162:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+24D maintext CODE >162:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+255 maintext CODE >163:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+26E maintext CODE >164:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+275 maintext CODE >165:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+276 maintext CODE >166:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+27D maintext CODE >167:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+281 maintext CODE >168:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+28A maintext CODE >169:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+291 maintext CODE >169:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+295 maintext CODE >169:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+299 maintext CODE >170:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2A2 maintext CODE >174:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2A8 maintext CODE >175:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2AF maintext CODE >175:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2B4 maintext CODE >175:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2C1 maintext CODE >176:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2D3 maintext CODE >177:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2D9 maintext CODE >178:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2DF maintext CODE >178:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2E4 maintext CODE >178:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2F1 maintext CODE >179:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2F8 maintext CODE >179:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+2FD maintext CODE >179:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+30A maintext CODE >180:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+318 maintext CODE >182:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+334 maintext CODE >183:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+352 maintext CODE >184:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+356 maintext CODE >185:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+35E maintext CODE >186:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+35F maintext CODE >187:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+367 maintext CODE >188:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+36C maintext CODE >189:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+375 maintext CODE >193:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+37B maintext CODE >194:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+382 maintext CODE >194:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+387 maintext CODE >194:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+394 maintext CODE >195:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3A6 maintext CODE >196:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3B8 maintext CODE >197:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3BB maintext CODE >197:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3BD maintext CODE >197:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3C5 maintext CODE >198:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3E0 maintext CODE >199:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3E7 maintext CODE >200:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3E8 maintext CODE >201:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3EF maintext CODE >202:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3F3 maintext CODE >203:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+3FC maintext CODE >204:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+403 maintext CODE >204:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+407 maintext CODE >204:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+40B maintext CODE >205:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+414 maintext CODE >209:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+41A maintext CODE >210:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+41D maintext CODE >211:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+425 maintext CODE >212:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+426 maintext CODE >214:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+42C maintext CODE >215:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+42F maintext CODE >216:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+437 maintext CODE >217:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+438 maintext CODE >219:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+43E maintext CODE >220:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+441 maintext CODE >221:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+449 maintext CODE >222:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+44A maintext CODE >224:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+450 maintext CODE >225:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+453 maintext CODE >226:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+45B maintext CODE >227:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+45C maintext CODE >229:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+462 maintext CODE >230:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+46A maintext CODE >231:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+472 maintext CODE >232:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+47A maintext CODE >233:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+47B maintext CODE >236:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.c
+A9D clrtext CODE >10243:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A9D clrtext CODE >10244:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A9E clrtext CODE >10245:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A9E clrtext CODE >10246:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+A9F clrtext CODE >10247:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+AA0 clrtext CODE >10248:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+AA1 clrtext CODE >10249:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+AA2 clrtext CODE >10250:/home/joseph/projects/useful6502/src/PICBridge-firmware/main.s
+$startup.o
+67 end_init CODE >111:/home/joseph/projects/useful6502/src/PICBridge-firmware/startup.s
+0 reset_vec CODE >78:/home/joseph/projects/useful6502/src/PICBridge-firmware/startup.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - main.o
+_IO_RA5_DefaultInterruptHandler FFE 0 CODE 0 text47 main.o
+__end_of_I2C2_ReceiveEnable 1470 0 CODE 0 text70 main.o
+__end_of_I2C2_AckSend 14BA 0 CODE 0 text74 main.o
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+_i2c2Status 20 0 BANK0 1 bssBANK0 main.o
+__Hspace_0 12A8 0 ABS 0 - -
+__Hspace_1 266 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10013 0 ABS 0 - -
+_SPI1_RxCompleteCallbackRegister 15C2 0 CODE 0 text40 main.o
+_EUSART2_ReceiveInterruptEnable 147C 0 CODE 0 text42 main.o
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__end_of_hex2val 1CDA 0 CODE 0 text5 main.o
+__end_of_onUartInput 1B60 0 CODE 0 text83 main.o
+_EUSART2_IsTxDone 0 0 ABS 0 - main.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_I2C2_ErrorEventHandler 18AE 0 CODE 0 text57 main.o
+__end_of_INTERRUPT_Initialize 1674 0 CODE 0 text13 main.o
+__end_of_I2C2_ErrorInterruptClear 1458 0 CODE 0 text79 main.o
+_INT_CallBack 1640 0 CODE 0 text49 main.o
+__end_of_PIN_MANAGER_IOC 15C2 0 CODE 0 text45 main.o
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+_cpu6502_uninterrupt 148E 0 CODE 0 text7 main.o
+hex2val@c 40 0 BANK0 1 cstackBANK0 main.o
+main@i DF 0 BANK1 1 cstackBANK1 main.o
+__Hstrings 0 0 ABS 0 strings -
+__end_of_spi1_byte_exchange_hw 17B6 0 CODE 0 text32 main.o
+_LATA 18 0 ABS 0 - main.o
+_LATB 19 0 ABS 0 - main.o
+_LATC 1A 0 ABS 0 - main.o
+_LATD 1B 0 ABS 0 - main.o
+_LATE 1C 0 ABS 0 - main.o
+_LATF 1D 0 ABS 0 - main.o
+_WPUA 1F39 0 ABS 0 - main.o
+_WPUB 1F44 0 ABS 0 - main.o
+_WPUC 1F4F 0 ABS 0 - main.o
+_WPUD 1F5A 0 ABS 0 - main.o
+_WPUE 1F65 0 ABS 0 - main.o
+_WPUF 1E51 0 ABS 0 - main.o
+___sp 0 0 STACK 2 stack startup.o
+_main 146 0 CODE 0 maintext main.o
+btemp 7E 0 ABS 0 - main.o
+___stack_hi 0 0 STACK 2 stack startup.o
+___stack_lo 0 0 STACK 2 stack startup.o
+_M95_write_bytes 90C 0 CODE 0 text28 main.o
+start CE 0 CODE 0 init startup.o
+_EUSART2_TransmitISR 1878 0 CODE 0 text81 main.o
+_I2C2_Close 1736 0 CODE 0 text76 main.o
+__end_of_EUSART2_FramingErrorCallbackRegister 1628 0 CODE 0 text19 main.o
+_I2C2_Write 0 0 ABS 0 - main.o
+__Hstringtext10 0 0 ABS 0 stringtext10 -
+__Hstringtext11 0 0 ABS 0 stringtext11 -
+__Hstringtext12 0 0 ABS 0 stringtext12 -
+__Hstringtext13 0 0 ABS 0 stringtext13 -
+__Hstringtext14 0 0 ABS 0 stringtext14 -
+__Hstringtext15 0 0 ABS 0 stringtext15 -
+__Hstringtext16 0 0 ABS 0 stringtext16 -
+__Hstringtext17 0 0 ABS 0 stringtext17 -
+__Hstringtext18 0 0 ABS 0 stringtext18 -
+__Hstringtext19 0 0 ABS 0 stringtext19 -
+__Hstringtext20 0 0 ABS 0 stringtext20 -
+__Hstringtext21 0 0 ABS 0 stringtext21 -
+__Hstringtext22 0 0 ABS 0 stringtext22 -
+__Hstringtext23 0 0 ABS 0 stringtext23 -
+__Hstringtext24 0 0 ABS 0 stringtext24 -
+__Hstringtext25 0 0 ABS 0 stringtext25 -
+__Hstringtext26 0 0 ABS 0 stringtext26 -
+__Hstringtext27 0 0 ABS 0 stringtext27 -
+__Hstringtext28 0 0 ABS 0 stringtext28 -
+__Hstringtext29 0 0 ABS 0 stringtext29 -
+__Hstringtext30 0 0 ABS 0 stringtext30 -
+__Hstringtext31 0 0 ABS 0 stringtext31 -
+__Hstringtext32 0 0 ABS 0 stringtext32 -
+__Hstringtext33 0 0 ABS 0 stringtext33 -
+__Hstringtext34 0 0 ABS 0 stringtext34 -
+__Hstringtext35 0 0 ABS 0 stringtext35 -
+_SRAM_write 19F4 0 CODE 0 text22 main.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_SPI1_Initialize 16EE 0 CODE 0 text39 main.o
+__end_of_cpu6502_interrupt 1488 0 CODE 0 text9 main.o
+_RC2STAbits A1D 0 ABS 0 - main.o
+?___wmul 3E 0 BANK0 1 cstackBANK0 main.o
+__end_of_I2C2_Initialize 16CC 0 CODE 0 text15 main.o
+_I2C2_ReceiveEnable 146A 0 CODE 0 text70 main.o
+M95_init@status 4C 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_IsTxReady 15D4 0 CODE 0 text36 main.o
+__end_of_i2c2_eventTable 22EA 0 STRCODE 0 stringtext5 main.o
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+onUartInput@received 77 0 COMMON 1 cstackCOMMON main.o
+_spi1_byte_exchange_hw 178A 0 CODE 0 text32 main.o
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of_spi1_configuration 2220 0 STRCODE 0 stringtext3 main.o
+_SPI1_Close 0 0 ABS 0 - main.o
+EUSART2_RxCompleteCallbackRegister@callbackHandler 3E 0 BANK0 1 cstackBANK0 main.o
+intlevel0 0 0 ENTRY 0 functab startup.o
+intlevel1 0 0 ENTRY 0 functab startup.o
+intlevel2 0 0 ENTRY 0 functab startup.o
+intlevel3 0 0 ENTRY 0 functab startup.o
+intlevel4 0 0 ENTRY 0 functab startup.o
+intlevel5 0 0 ENTRY 0 functab startup.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_EUSART2_Initialize FFE 0 CODE 0 text17 main.o
+SPI1_RxCompleteCallbackRegister@CallbackHandler 3E 0 BANK0 1 cstackBANK0 main.o
+__end_of_EUSART2_ReceiveISR EE4 0 CODE 0 text82 main.o
+?_M95_init 48 0 BANK0 1 cstackBANK0 main.o
+wtemp0 7E 0 ABS 0 - main.o
+__end_of_I2C2_InterruptClear 145E 0 CODE 0 text78 main.o
+__Hfunctab 0 0 ENTRY 0 functab -
+_PIN_MANAGER_IOC 15B0 0 CODE 0 text45 main.o
+_I2C2_Callback CA 0 BANK1 1 bssBANK1 main.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_I2C2_InterruptsEnable 14EA 0 CODE 0 text16 main.o
+_I2C2_ErrorGet 0 0 ABS 0 - main.o
+_eusart2TxBuffer B8 0 BANK1 1 bssBANK1 main.o
+M95_read_bytes@num_bytes 42 0 BANK0 1 cstackBANK0 main.o
+___wmul@multiplicand 40 0 BANK0 1 cstackBANK0 main.o
+_SRAM_write_bytes 1F54 0 CODE 0 text21 main.o
+_SPI1_Initialize 16CC 0 CODE 0 text39 main.o
+_spi1_configuration 21EE 0 STRCODE 0 stringtext3 main.o
+_ANSELA 1F38 0 ABS 0 - main.o
+_ANSELB 1F43 0 ABS 0 - main.o
+_ANSELC 1F4E 0 ABS 0 - main.o
+_ANSELD 1F59 0 ABS 0 - main.o
+_ANSELE 1F64 0 ABS 0 - main.o
+_ANSELF 1E50 0 ABS 0 - main.o
+_IO_RA5_InterruptHandler C0 0 BANK1 1 bssBANK1 main.o
+__end_of_I2C2_Close 1760 0 CODE 0 text76 main.o
+_I2C2_Initialize 16AE 0 CODE 0 text15 main.o
+__end_of_INT_CallBack 165A 0 CODE 0 text49 main.o
+_I2C2_ISR 14DA 0 CODE 0 text51 main.o
+__end_of_SRAM_write 1A46 0 CODE 0 text22 main.o
+M95_read_bytes@addr 40 0 BANK0 1 cstackBANK0 main.o
+M95_read_bytes@data 46 0 BANK0 1 cstackBANK0 main.o
+SRAM_set_address@addr 3E 0 BANK0 1 cstackBANK0 main.o
+_I2C2_CallbackRegister 0 0 ABS 0 - main.o
+EUSART2_ReceiveISR@tempRxHead 79 0 COMMON 1 cstackCOMMON main.o
+__end_of_INTERRUPT_InterruptManager CE 0 CODE 0 intentry main.o
+M95_read_bytes@i 47 0 BANK0 1 cstackBANK0 main.o
+_i2c2_eventTable 22C6 0 STRCODE 0 stringtext5 main.o
+__end_of___wmul 1928 0 CODE 0 text38 main.o
+_EUSART2_Initialize F92 0 CODE 0 text17 main.o
+_I2C2_InterruptsEnable 14E2 0 CODE 0 text16 main.o
+_I2C2_IsAddr 1562 0 CODE 0 text55 main.o
+_I2C2_IsBusy 0 0 ABS 0 - main.o
+_I2C2_IsData 14F4 0 CODE 0 text54 main.o
+_I2C2_IsNack 1516 0 CODE 0 text53 main.o
+_EUSART2_ReceiveISR E32 0 CODE 0 text82 main.o
+__end_of_I2C2_ISR 14E2 0 CODE 0 text51 main.o
+main@len E9 0 BANK1 1 cstackBANK1 main.o
+_I2C2_NackSend 14C2 0 CODE 0 text71 main.o
+__Lmaintext 0 0 ABS 0 maintext -
+_EUSART2_TransmitDisable 0 0 ABS 0 - main.o
+__end_of_cpu6502_uninterrupt 1494 0 CODE 0 text7 main.o
+EUSART2_TransmitISR@tempTxTail 75 0 COMMON 1 cstackCOMMON main.o
+_SPI1_BufferRead 0 0 ABS 0 - main.o
+__end_of_I2C2_EVENT_IDLE 14D2 0 CODE 0 text65 main.o
+__end_of_I2C2_EVENT_NACK 150A 0 CODE 0 text61 main.o
+__end_of_I2C2_EVENT_STOP 159E 0 CODE 0 text59 main.o
+_cpu6502_interrupt 1482 0 CODE 0 text9 main.o
+__end_of_EUSART2_TransmitISR 18AE 0 CODE 0 text81 main.o
+_INLVLA 1F3C 0 ABS 0 - main.o
+_INLVLB 1F47 0 ABS 0 - main.o
+_INLVLC 1F52 0 ABS 0 - main.o
+_INLVLD 1F5D 0 ABS 0 - main.o
+_INLVLE 1F68 0 ABS 0 - main.o
+_INLVLF 1E54 0 ABS 0 - main.o
+_INTPPS 1E90 0 ABS 0 - main.o
+?_strlen 3E 0 BANK0 1 cstackBANK0 main.o
+___stackhi 0 0 ABS 0 - startup.o
+___stacklo 0 0 ABS 0 - startup.o
+_EUSART2_Deinitialize 0 0 ABS 0 - main.o
+SRAM_read_bytes@len 47 0 BANK0 1 cstackBANK0 main.o
+SPI1_ISR@dataToWrite 75 0 COMMON 1 cstackCOMMON main.o
+spi1_byte_exchange_hw@received 3F 0 BANK0 1 cstackBANK0 main.o
+_cpu6502_reset 1488 0 CODE 0 text8 main.o
+_SPI1_BufferExchange 0 0 ABS 0 - main.o
+__end_of_EUSART2_IsRxReady 15B0 0 CODE 0 text85 main.o
+_SPI1_IsRxReady 0 0 ABS 0 - main.o
+_PIN_MANAGER_Initialize B7C 0 CODE 0 text11 main.o
+__Lstringtext10 0 0 ABS 0 stringtext10 -
+__Lstringtext11 0 0 ABS 0 stringtext11 -
+__Lstringtext12 0 0 ABS 0 stringtext12 -
+__Lstringtext13 0 0 ABS 0 stringtext13 -
+__Lstringtext14 0 0 ABS 0 stringtext14 -
+__Lstringtext15 0 0 ABS 0 stringtext15 -
+__Lstringtext16 0 0 ABS 0 stringtext16 -
+__Lstringtext17 0 0 ABS 0 stringtext17 -
+__Lstringtext18 0 0 ABS 0 stringtext18 -
+__Lstringtext19 0 0 ABS 0 stringtext19 -
+__Lstringtext20 0 0 ABS 0 stringtext20 -
+__Lstringtext21 0 0 ABS 0 stringtext21 -
+__Lstringtext22 0 0 ABS 0 stringtext22 -
+__Lstringtext23 0 0 ABS 0 stringtext23 -
+__Lstringtext24 0 0 ABS 0 stringtext24 -
+__Lstringtext25 0 0 ABS 0 stringtext25 -
+__Lstringtext26 0 0 ABS 0 stringtext26 -
+__Lstringtext27 0 0 ABS 0 stringtext27 -
+__Lstringtext28 0 0 ABS 0 stringtext28 -
+__Lstringtext29 0 0 ABS 0 stringtext29 -
+__Lstringtext30 0 0 ABS 0 stringtext30 -
+__Lstringtext31 0 0 ABS 0 stringtext31 -
+__Lstringtext32 0 0 ABS 0 stringtext32 -
+__Lstringtext33 0 0 ABS 0 stringtext33 -
+__Lstringtext34 0 0 ABS 0 stringtext34 -
+__Lstringtext35 0 0 ABS 0 stringtext35 -
+_EUSART2_ErrorGet 0 0 ABS 0 - main.o
+_I2C2_BusReset 14A2 0 CODE 0 text80 main.o
+_SSP2CON1bits 19A 0 ABS 0 - main.o
+start_initialization D2 0 CODE 0 cinit main.o
+_SSP2CON2bits 19B 0 ABS 0 - main.o
+_ODCONA 1F3A 0 ABS 0 - main.o
+_ODCONB 1F45 0 ABS 0 - main.o
+_ODCONC 1F50 0 ABS 0 - main.o
+_ODCOND 1F5B 0 ABS 0 - main.o
+_ODCONE 1F66 0 ABS 0 - main.o
+_ODCONF 1E52 0 ABS 0 - main.o
+_EUSART2_TransmitEnable 0 0 ABS 0 - main.o
+_OSCFRQ 893 0 ABS 0 - main.o
+main@nbytes_523 E5 0 BANK1 1 cstackBANK1 main.o
+_message_ready 3C 0 BANK0 1 bssBANK0 main.o
+putch_hex@byte 42 0 BANK0 1 cstackBANK0 main.o
+_TRISAbits 12 0 ABS 0 - main.o
+_TRISBbits 13 0 ABS 0 - main.o
+_TRISDbits 15 0 ABS 0 - main.o
+_I2C2_EVENT_ERROR 150A 0 CODE 0 text60 main.o
+_eusart2RxBuffer B0 0 BANK1 1 bssBANK1 main.o
+_EUSART2_TxCompleteInterruptHandler C4 0 BANK1 1 bssBANK1 main.o
+_I2C2_EVENT_RESET 1554 0 CODE 0 text58 main.o
+_I2C2_EVENT_RX 1B60 0 CODE 0 text62 main.o
+_I2C2_EVENT_TX 1A46 0 CODE 0 text66 main.o
+__end_of_I2C2_ErrorEventHandler 18E8 0 CODE 0 text57 main.o
+_EUSART2_OverrunErrorCallbackRegister 1628 0 CODE 0 text18 main.o
+_RB0PPS 1F18 0 ABS 0 - main.o
+_RB2PPS 1F1A 0 ABS 0 - main.o
+_RB3PPS 1F1B 0 ABS 0 - main.o
+_RB4PPS 1F1C 0 ABS 0 - main.o
+_RB5PPS 1F1D 0 ABS 0 - main.o
+_RC2REG A19 0 ABS 0 - main.o
+_RC2STA A1D 0 ABS 0 - main.o
+__end_of_EUSART2_DefaultFramingErrorCallback 1450 0 CODE 0 text87 main.o
+_cmd_buffer 120 0 BANK2 1 bssBANK2 main.o
+_I2C2_IsRxBufFull 14BA 0 CODE 0 text72 main.o
+__end_of_SYSTEM_Initialize 1736 0 CODE 0 text10 main.o
+SRAM_write@addr 43 0 BANK0 1 cstackBANK0 main.o
+SRAM_write@data 45 0 BANK0 1 cstackBANK0 main.o
+_I2C2_RestartDisable 1470 0 CODE 0 text69 main.o
+clear_ram0 153A 0 CODE 0 clrtext main.o
+__pcstackBANK0 3E 0 BANK0 1 cstackBANK0 main.o
+__pcstackBANK1 CE 0 BANK1 1 cstackBANK1 main.o
+_rx_index 3D 0 BANK0 1 bssBANK0 main.o
+__end_of_SRAM_write_bytes 2000 0 CODE 0 text21 main.o
+_SRAM_set_address 17E2 0 CODE 0 text25 main.o
+__end_of_SRAM_init 1968 0 CODE 0 text27 main.o
+__end_of_SRAM_read 1AFC 0 CODE 0 text24 main.o
+_I2C2_DataReceive 1464 0 CODE 0 text73 main.o
+_TX2REG A1A 0 ABS 0 - main.o
+_TX2STA A1E 0 ABS 0 - main.o
+_I2C2_EVENT_IDLE 14CA 0 CODE 0 text65 main.o
+_I2C2_EVENT_NACK 14FE 0 CODE 0 text61 main.o
+_I2C2_EVENT_STOP 158E 0 CODE 0 text59 main.o
+_eusart2TxBufferRemaining 39 0 BANK0 1 bssBANK0 main.o
+_I2C2_EVENT_SEND_WR_ADDR 1546 0 CODE 0 text63 main.o
+EUSART2_Read@tempRxTail 75 0 COMMON 1 cstackCOMMON main.o
+_hex2val 1C54 0 CODE 0 text5 main.o
+__end_of_EUSART2_DefaultOverrunErrorCallback 14A2 0 CODE 0 text86 main.o
+__end_of_I2C2_EVENT_SEND_WR_ADDR 1554 0 CODE 0 text63 main.o
+EUSART2_Write@txData 3E 0 BANK0 1 cstackBANK0 main.o
+_I2C2_WriteRead 0 0 ABS 0 - main.o
+___int_sp 0 0 STACK 2 stack startup.o
+__end_of_putch_hex 19AC 0 CODE 0 text33 main.o
+_SPI1_BufferWrite 0 0 ABS 0 - main.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 146 0 CODE 0 cinit -
+_INT_DefaultInterruptHandler 1450 0 CODE 0 text50 main.o
+__end_of_strcpy 178A 0 CODE 0 text2 main.o
+__end_of_strlen 17E2 0 CODE 0 text1 main.o
+__Hidloc 10008 0 IDLOC 5 idloc -
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hsfr32 0 0 ABS 0 sfr32 -
+__Hsfr33 0 0 ABS 0 sfr33 -
+__Hsfr34 0 0 ABS 0 sfr34 -
+__Hsfr35 0 0 ABS 0 sfr35 -
+__Hsfr36 0 0 ABS 0 sfr36 -
+__Hsfr37 0 0 ABS 0 sfr37 -
+__Hsfr38 0 0 ABS 0 sfr38 -
+__Hsfr39 0 0 ABS 0 sfr39 -
+__Hsfr40 0 0 ABS 0 sfr40 -
+__Hsfr41 0 0 ABS 0 sfr41 -
+__Hsfr42 0 0 ABS 0 sfr42 -
+__Hsfr43 0 0 ABS 0 sfr43 -
+__Hsfr44 0 0 ABS 0 sfr44 -
+__Hsfr45 0 0 ABS 0 sfr45 -
+__Hsfr46 0 0 ABS 0 sfr46 -
+__Hsfr47 0 0 ABS 0 sfr47 -
+__Hsfr48 0 0 ABS 0 sfr48 -
+__Hsfr49 0 0 ABS 0 sfr49 -
+__Hsfr50 0 0 ABS 0 sfr50 -
+__Hsfr51 0 0 ABS 0 sfr51 -
+__Hsfr52 0 0 ABS 0 sfr52 -
+__Hsfr53 0 0 ABS 0 sfr53 -
+__Hsfr54 0 0 ABS 0 sfr54 -
+__Hsfr55 0 0 ABS 0 sfr55 -
+__Hsfr56 0 0 ABS 0 sfr56 -
+__Hsfr57 0 0 ABS 0 sfr57 -
+__Hsfr58 0 0 ABS 0 sfr58 -
+__Hsfr59 0 0 ABS 0 sfr59 -
+__Hsfr60 0 0 ABS 0 sfr60 -
+__Hsfr61 0 0 ABS 0 sfr61 -
+__Hsfr62 0 0 ABS 0 sfr62 -
+__Hsfr63 0 0 ABS 0 sfr63 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbank32 0 0 BANK32 1 bank32 -
+__Hbank33 0 0 BANK33 1 bank33 -
+__Hbank34 0 0 BANK34 1 bank34 -
+__Hbank35 0 0 BANK35 1 bank35 -
+__Hbank36 0 0 BANK36 1 bank36 -
+__Hbank37 0 0 BANK37 1 bank37 -
+__Hbank38 0 0 BANK38 1 bank38 -
+__Hbank39 0 0 BANK39 1 bank39 -
+__Hbank40 0 0 BANK40 1 bank40 -
+__Hbank41 0 0 BANK41 1 bank41 -
+__Hbank42 0 0 BANK42 1 bank42 -
+__Hbank43 0 0 BANK43 1 bank43 -
+__Hbank44 0 0 BANK44 1 bank44 -
+__Hbank45 0 0 BANK45 1 bank45 -
+__Hbank46 0 0 BANK46 1 bank46 -
+__Hbank47 0 0 BANK47 1 bank47 -
+__Hbank48 0 0 BANK48 1 bank48 -
+__Hbank49 0 0 BANK49 1 bank49 -
+__Hbank50 0 0 BANK50 1 bank50 -
+__Hbank51 0 0 BANK51 1 bank51 -
+__Hbank52 0 0 BANK52 1 bank52 -
+__Hbank53 0 0 BANK53 1 bank53 -
+__Hbank54 0 0 BANK54 1 bank54 -
+__Hbank55 0 0 BANK55 1 bank55 -
+__Hbank56 0 0 BANK56 1 bank56 -
+__Hbank57 0 0 BANK57 1 bank57 -
+__Hbank58 0 0 BANK58 1 bank58 -
+__Hbank59 0 0 BANK59 1 bank59 -
+__Hbank60 0 0 BANK60 1 bank60 -
+__Hbank61 0 0 BANK61 1 bank61 -
+__Hbank62 0 0 BANK62 1 bank62 -
+__Hbank63 0 0 BANK63 1 bank63 -
+EUSART2_Write@tempTxHead 3F 0 BANK0 1 cstackBANK0 main.o
+_I2C2_ERROR_ISR 14D2 0 CODE 0 text56 main.o
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+_BAUD2CON A1F 0 ABS 0 - main.o
+_SRAM_init 1928 0 CODE 0 text27 main.o
+_SRAM_read 1AA0 0 CODE 0 text24 main.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10018 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit D2 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+_IO_RA5_ISR 1690 0 CODE 0 text46 main.o
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lsfr32 0 0 ABS 0 sfr32 -
+__Lsfr33 0 0 ABS 0 sfr33 -
+__Lsfr34 0 0 ABS 0 sfr34 -
+__Lsfr35 0 0 ABS 0 sfr35 -
+__Lsfr36 0 0 ABS 0 sfr36 -
+__Lsfr37 0 0 ABS 0 sfr37 -
+__Lsfr38 0 0 ABS 0 sfr38 -
+__Lsfr39 0 0 ABS 0 sfr39 -
+__Lsfr40 0 0 ABS 0 sfr40 -
+__Lsfr41 0 0 ABS 0 sfr41 -
+__Lsfr42 0 0 ABS 0 sfr42 -
+__Lsfr43 0 0 ABS 0 sfr43 -
+__Lsfr44 0 0 ABS 0 sfr44 -
+__Lsfr45 0 0 ABS 0 sfr45 -
+__Lsfr46 0 0 ABS 0 sfr46 -
+__Lsfr47 0 0 ABS 0 sfr47 -
+__Lsfr48 0 0 ABS 0 sfr48 -
+__Lsfr49 0 0 ABS 0 sfr49 -
+__Lsfr50 0 0 ABS 0 sfr50 -
+__Lsfr51 0 0 ABS 0 sfr51 -
+__Lsfr52 0 0 ABS 0 sfr52 -
+__Lsfr53 0 0 ABS 0 sfr53 -
+__Lsfr54 0 0 ABS 0 sfr54 -
+__Lsfr55 0 0 ABS 0 sfr55 -
+__Lsfr56 0 0 ABS 0 sfr56 -
+__Lsfr57 0 0 ABS 0 sfr57 -
+__Lsfr58 0 0 ABS 0 sfr58 -
+__Lsfr59 0 0 ABS 0 sfr59 -
+__Lsfr60 0 0 ABS 0 sfr60 -
+__Lsfr61 0 0 ABS 0 sfr61 -
+__Lsfr62 0 0 ABS 0 sfr62 -
+__Lsfr63 0 0 ABS 0 sfr63 -
+__Lstack 0 0 STACK 2 stack -
+hexstr_to_uint@str 41 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_uint@val 48 0 BANK0 1 cstackBANK0 main.o
+_spi1_descriptor 70 0 COMMON 1 bssCOMMON main.o
+_putch_hex 1968 0 CODE 0 text33 main.o
+_INTCONbits B 0 ABS 0 - main.o
+_INTERRUPT_Initialize 165A 0 CODE 0 text13 main.o
+_EUSART2_FramingErrorCallbackRegister 1610 0 CODE 0 text19 main.o
+I2C2_EVENT_NACK@retEventState 75 0 COMMON 1 cstackCOMMON main.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit CE 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Hsivt CE 0 CODE 0 sivt -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit CE 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Lsivt CE 0 CODE 0 sivt -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 209A 0 STRCODE 0 stringtext1 main.o
+__pstringtext2 21B6 0 STRCODE 0 stringtext2 main.o
+__pstringtext3 21EE 0 STRCODE 0 stringtext3 main.o
+__pstringtext4 2250 0 STRCODE 0 stringtext4 main.o
+__pstringtext5 22C6 0 STRCODE 0 stringtext5 main.o
+__pstringtext6 D6E 0 STRCODE 0 stringtext6 main.o
+__pstringtext7 2000 0 STRCODE 0 stringtext7 main.o
+__pstringtext8 20FA 0 STRCODE 0 stringtext8 main.o
+__pstringtext9 213A 0 STRCODE 0 stringtext9 main.o
+_SSP1CON1 190 0 ABS 0 - main.o
+_SSP1CON3 192 0 ABS 0 - main.o
+_SSP1STAT 18F 0 ABS 0 - main.o
+_SSP2CON1 19A 0 ABS 0 - main.o
+_SSP2CON2 19B 0 ABS 0 - main.o
+_SSP2CON3 19C 0 ABS 0 - main.o
+_SSP2STAT 199 0 ABS 0 - main.o
+__pstringtext10 2178 0 STRCODE 0 stringtext10 main.o
+__pstringtext11 2220 0 STRCODE 0 stringtext11 main.o
+__pstringtext12 2278 0 STRCODE 0 stringtext12 main.o
+__pstringtext13 22A0 0 STRCODE 0 stringtext13 main.o
+__pstringtext14 22EA 0 STRCODE 0 stringtext14 main.o
+__pstringtext15 230E 0 STRCODE 0 stringtext15 main.o
+__pstringtext16 2332 0 STRCODE 0 stringtext16 main.o
+__pstringtext17 2356 0 STRCODE 0 stringtext17 main.o
+__pstringtext18 237A 0 STRCODE 0 stringtext18 main.o
+__pstringtext19 239C 0 STRCODE 0 stringtext19 main.o
+__pstringtext20 23BE 0 STRCODE 0 stringtext20 main.o
+__pstringtext21 23E0 0 STRCODE 0 stringtext21 main.o
+__pstringtext22 2400 0 STRCODE 0 stringtext22 main.o
+__pstringtext23 2420 0 STRCODE 0 stringtext23 main.o
+__pstringtext24 243E 0 STRCODE 0 stringtext24 main.o
+__pstringtext25 245C 0 STRCODE 0 stringtext25 main.o
+__pstringtext26 247A 0 STRCODE 0 stringtext26 main.o
+__pstringtext27 2496 0 STRCODE 0 stringtext27 main.o
+__pstringtext28 24B2 0 STRCODE 0 stringtext28 main.o
+__pstringtext29 24CE 0 STRCODE 0 stringtext29 main.o
+__pstringtext30 24EA 0 STRCODE 0 stringtext30 main.o
+__pstringtext31 2504 0 STRCODE 0 stringtext31 main.o
+__pstringtext32 251C 0 STRCODE 0 stringtext32 main.o
+__pstringtext33 2534 0 STRCODE 0 stringtext33 main.o
+__pstringtext34 2548 0 STRCODE 0 stringtext34 main.o
+__pstringtext35 0 0 STRCODE 0 stringtext35 main.o
+___wmul 18E8 0 CODE 0 text38 main.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+_SPI1_ByteRead 0 0 ABS 0 - main.o
+I2C2_EVENT_ERROR@retEventState 75 0 COMMON 1 cstackCOMMON main.o
+_SSP2STATbits 199 0 ABS 0 - main.o
+int$flags 7E 0 ABS 0 - main.o
+__end_of_INT_ISR 152E 0 CODE 0 text48 main.o
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+main@datalen DA 0 BANK1 1 cstackBANK1 main.o
+M95_write_bytes@num_bytes 42 0 BANK0 1 cstackBANK0 main.o
+__S0 12A8 0 ABS 0 - -
+__S1 266 0 ABS 0 - -
+_SRAM_deselect 1570 0 CODE 0 text26 main.o
+__end_of_I2C2_EventHandler 1DFE 0 CODE 0 text52 main.o
+_CLOCK_Initialize 1674 0 CODE 0 text20 main.o
+EUSART2_FramingErrorCallbackRegister@callbackHandler 3E 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_IsRxReady 159E 0 CODE 0 text85 main.o
+hexstr_to_uint@i 4A 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_uint@v 46 0 BANK0 1 cstackBANK0 main.o
+SRAM_read_bytes@addr 43 0 BANK0 1 cstackBANK0 main.o
+SRAM_read_bytes@data 49 0 BANK0 1 cstackBANK0 main.o
+SRAM_read_bytes@stop 4B 0 BANK0 1 cstackBANK0 main.o
+M95_write_bytes@to_write 52 0 BANK0 1 cstackBANK0 main.o
+_SPI1_ISR 1BD4 0 CODE 0 text44 main.o
+__end_of_I2C2_NackSend 14CA 0 CODE 0 text71 main.o
+_eusart2RxLastError C8 0 BANK1 1 bssBANK1 main.o
+__end_of_I2C2_EVENT_ERROR 1516 0 CODE 0 text60 main.o
+?_hex2val 3E 0 BANK0 1 cstackBANK0 main.o
+SPI1_Open@spiConfigIndex 44 0 BANK0 1 cstackBANK0 main.o
+__end_of_I2C2_EVENT_RESET 1562 0 CODE 0 text58 main.o
+__end_of_I2C2_StatusFlagsClear 14B2 0 CODE 0 text77 main.o
+__end_of_I2C2_IsRxBufFull 14C2 0 CODE 0 text72 main.o
+__end_of_SPI1_ISR 1C54 0 CODE 0 text44 main.o
+_SYSTEM_Initialize 1710 0 CODE 0 text10 main.o
+__end_of_I2C2_ERROR_ISR 14DA 0 CODE 0 text56 main.o
+_EUSART2_TxInterruptHandler C6 0 BANK1 1 bssBANK1 main.o
+__end_of_SRAM_set_address 1810 0 CODE 0 text25 main.o
+__end_of_IO_RA5_SetInterruptHandler 15F8 0 CODE 0 text12 main.o
+__end_of_I2C2_DataReceive 146A 0 CODE 0 text73 main.o
+_M95_read_bytes 1EA8 0 CODE 0 text29 main.o
+__Lintentry 8 0 CODE 0 intentry -
+__end_of_I2C2_RestartDisable 1476 0 CODE 0 text69 main.o
+M95_write_bytes@remaining 4E 0 BANK0 1 cstackBANK0 main.o
+strcpy@d 40 0 BANK0 1 cstackBANK0 main.o
+reset_vec 0 0 CODE 0 reset_vec startup.o
+strlen@a 40 0 BANK0 1 cstackBANK0 main.o
+strlen@s 3E 0 BANK0 1 cstackBANK0 main.o
+M95_write_bytes@buf 44 0 BANK0 1 cstackBANK0 main.o
+__end_of_cpu6502_reset 148E 0 CODE 0 text8 main.o
+__pdataBANK1 EB 0 BANK1 1 dataBANK1 main.o
+_I2C2_StatusFlagsClear 14AA 0 CODE 0 text77 main.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+__LbssBANK2 0 0 ABS 0 bssBANK2 -
+__LbssBANK3 0 0 ABS 0 bssBANK3 -
+__LbssBANK4 0 0 ABS 0 bssBANK4 -
+__end_of_IO_RA5_ISR 16AE 0 CODE 0 text46 main.o
+_EUSART2_AutoBaudQuery 0 0 ABS 0 - main.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+__Lstringtext4 0 0 ABS 0 stringtext4 -
+__Lstringtext5 0 0 ABS 0 stringtext5 -
+__Lstringtext6 0 0 ABS 0 stringtext6 -
+__Lstringtext7 0 0 ABS 0 stringtext7 -
+__Lstringtext8 0 0 ABS 0 stringtext8 -
+__Lstringtext9 0 0 ABS 0 stringtext9 -
+_INT_InterruptHandler 2E 0 BANK0 1 bssBANK0 main.o
+__end_of_I2C2_BusReset 14AA 0 CODE 0 text80 main.o
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry main.o
+_IOCAFbits 1F3F 0 ABS 0 - main.o
+hexstr_to_uint@digits 42 0 BANK0 1 cstackBANK0 main.o
+_PIE0bits 716 0 ABS 0 - main.o
+_PIE3bits 719 0 ABS 0 - main.o
+_SPI1_Deinitialize 0 0 ABS 0 - main.o
+spi1_byte_exchange_hw@data 3E 0 BANK0 1 cstackBANK0 main.o
+M95_write_bytes@i 4C 0 BANK0 1 cstackBANK0 main.o
+SRAM_write_bytes@addr 43 0 BANK0 1 cstackBANK0 main.o
+SRAM_write_bytes@data 49 0 BANK0 1 cstackBANK0 main.o
+SRAM_write_bytes@stop 4B 0 BANK0 1 cstackBANK0 main.o
+I2C2_EVENT_RX@retEventState 75 0 COMMON 1 cstackCOMMON main.o
+_eusart2RxStatusBuffer A0 0 BANK1 1 bssBANK1 main.o
+__ptext10 1710 0 CODE 0 text10 main.o
+__ptext11 B7C 0 CODE 0 text11 main.o
+__ptext12 15E6 0 CODE 0 text12 main.o
+__ptext13 165A 0 CODE 0 text13 main.o
+__ptext14 152E 0 CODE 0 text14 main.o
+__ptext15 16AE 0 CODE 0 text15 main.o
+__ptext16 14E2 0 CODE 0 text16 main.o
+__ptext17 F92 0 CODE 0 text17 main.o
+__ptext18 1628 0 CODE 0 text18 main.o
+__ptext19 1610 0 CODE 0 text19 main.o
+__ptext20 1674 0 CODE 0 text20 main.o
+__ptext21 1F54 0 CODE 0 text21 main.o
+__ptext22 19F4 0 CODE 0 text22 main.o
+__ptext23 1DFE 0 CODE 0 text23 main.o
+__ptext24 1AA0 0 CODE 0 text24 main.o
+__ptext25 17E2 0 CODE 0 text25 main.o
+__ptext26 1570 0 CODE 0 text26 main.o
+__ptext27 1928 0 CODE 0 text27 main.o
+__ptext28 90C 0 CODE 0 text28 main.o
+__ptext29 1EA8 0 CODE 0 text29 main.o
+__ptext30 EE4 0 CODE 0 text30 main.o
+__ptext31 1810 0 CODE 0 text31 main.o
+__ptext32 178A 0 CODE 0 text32 main.o
+__ptext33 1968 0 CODE 0 text33 main.o
+__ptext34 16EE 0 CODE 0 text34 main.o
+__ptext35 19AC 0 CODE 0 text35 main.o
+__ptext36 15D4 0 CODE 0 text36 main.o
+__ptext37 C7A 0 CODE 0 text37 main.o
+__ptext38 18E8 0 CODE 0 text38 main.o
+__ptext39 16CC 0 CODE 0 text39 main.o
+__ptext40 15C2 0 CODE 0 text40 main.o
+__ptext41 15F8 0 CODE 0 text41 main.o
+__ptext42 147C 0 CODE 0 text42 main.o
+__ptext44 1BD4 0 CODE 0 text44 main.o
+__ptext45 15B0 0 CODE 0 text45 main.o
+__ptext46 1690 0 CODE 0 text46 main.o
+__ptext47 FFE 0 CODE 0 text47 main.o
+__ptext48 1522 0 CODE 0 text48 main.o
+__ptext49 1640 0 CODE 0 text49 main.o
+__ptext50 1450 0 CODE 0 text50 main.o
+__ptext51 14DA 0 CODE 0 text51 main.o
+__ptext52 1D64 0 CODE 0 text52 main.o
+__ptext53 1516 0 CODE 0 text53 main.o
+__ptext54 14F4 0 CODE 0 text54 main.o
+__ptext55 1562 0 CODE 0 text55 main.o
+__ptext56 14D2 0 CODE 0 text56 main.o
+__ptext57 18AE 0 CODE 0 text57 main.o
+__ptext58 1554 0 CODE 0 text58 main.o
+__ptext59 158E 0 CODE 0 text59 main.o
+__ptext60 150A 0 CODE 0 text60 main.o
+__ptext61 14FE 0 CODE 0 text61 main.o
+__ptext62 1B60 0 CODE 0 text62 main.o
+__ptext63 1546 0 CODE 0 text63 main.o
+__ptext64 157E 0 CODE 0 text64 main.o
+__ptext65 14CA 0 CODE 0 text65 main.o
+__ptext66 1A46 0 CODE 0 text66 main.o
+__ptext67 1476 0 CODE 0 text67 main.o
+__ptext68 14EA 0 CODE 0 text68 main.o
+__ptext69 1470 0 CODE 0 text69 main.o
+__ptext70 146A 0 CODE 0 text70 main.o
+__ptext71 14C2 0 CODE 0 text71 main.o
+__ptext72 14BA 0 CODE 0 text72 main.o
+__ptext73 1464 0 CODE 0 text73 main.o
+__ptext74 14B2 0 CODE 0 text74 main.o
+__ptext75 145E 0 CODE 0 text75 main.o
+__ptext76 1736 0 CODE 0 text76 main.o
+__ptext77 14AA 0 CODE 0 text77 main.o
+__ptext78 1458 0 CODE 0 text78 main.o
+__ptext79 1452 0 CODE 0 text79 main.o
+__ptext80 14A2 0 CODE 0 text80 main.o
+__ptext81 1878 0 CODE 0 text81 main.o
+__ptext82 E32 0 CODE 0 text82 main.o
+__ptext83 1AFC 0 CODE 0 text83 main.o
+__ptext84 1842 0 CODE 0 text84 main.o
+__ptext85 159E 0 CODE 0 text85 main.o
+__ptext86 149A 0 CODE 0 text86 main.o
+__ptext87 144E 0 CODE 0 text87 main.o
+__end_of_PIN_MANAGER_Initialize C7A 0 CODE 0 text11 main.o
+__end_of_I2C2_EVENT_RX 1BD4 0 CODE 0 text62 main.o
+__end_of_I2C2_EVENT_TX 1AA0 0 CODE 0 text66 main.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__Lbank32 0 0 BANK32 1 bank32 -
+__Lbank33 0 0 BANK33 1 bank33 -
+__Lbank34 0 0 BANK34 1 bank34 -
+__Lbank35 0 0 BANK35 1 bank35 -
+__Lbank36 0 0 BANK36 1 bank36 -
+__Lbank37 0 0 BANK37 1 bank37 -
+__Lbank38 0 0 BANK38 1 bank38 -
+__Lbank39 0 0 BANK39 1 bank39 -
+__Lbank40 0 0 BANK40 1 bank40 -
+__Lbank41 0 0 BANK41 1 bank41 -
+__Lbank42 0 0 BANK42 1 bank42 -
+__Lbank43 0 0 BANK43 1 bank43 -
+__Lbank44 0 0 BANK44 1 bank44 -
+__Lbank45 0 0 BANK45 1 bank45 -
+__Lbank46 0 0 BANK46 1 bank46 -
+__Lbank47 0 0 BANK47 1 bank47 -
+__Lbank48 0 0 BANK48 1 bank48 -
+__Lbank49 0 0 BANK49 1 bank49 -
+__Lbank50 0 0 BANK50 1 bank50 -
+__Lbank51 0 0 BANK51 1 bank51 -
+__Lbank52 0 0 BANK52 1 bank52 -
+__Lbank53 0 0 BANK53 1 bank53 -
+__Lbank54 0 0 BANK54 1 bank54 -
+__Lbank55 0 0 BANK55 1 bank55 -
+__Lbank56 0 0 BANK56 1 bank56 -
+__Lbank57 0 0 BANK57 1 bank57 -
+__Lbank58 0 0 BANK58 1 bank58 -
+__Lbank59 0 0 BANK59 1 bank59 -
+__Lbank60 0 0 BANK60 1 bank60 -
+__Lbank61 0 0 BANK61 1 bank61 -
+__Lbank62 0 0 BANK62 1 bank62 -
+__Lbank63 0 0 BANK63 1 bank63 -
+__pmaintext 146 0 CODE 0 maintext main.o
+__Lbigram 0 0 ABS 0 bigram -
+__end_of_I2C2_IsAddr 1570 0 CODE 0 text55 main.o
+__end_of_I2C2_IsData 14FE 0 CODE 0 text54 main.o
+__end_of_I2C2_IsNack 1522 0 CODE 0 text53 main.o
+_onUartInput 1AFC 0 CODE 0 text83 main.o
+_I2C2_ErrorInterruptClear 1452 0 CODE 0 text79 main.o
+_EUSART2_RxCompleteCallbackRegister 15F8 0 CODE 0 text41 main.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__end_of_SPI1_RxCompleteCallbackRegister 15D4 0 CODE 0 text40 main.o
+___wmul@multiplier 3E 0 BANK0 1 cstackBANK0 main.o
+_SPI1_ByteExchange 0 0 ABS 0 - main.o
+_LATAbits 18 0 ABS 0 - main.o
+_LATDbits 1B 0 ABS 0 - main.o
+__end_of_I2C2_Host 2278 0 STRCODE 0 stringtext4 main.o
+_hex_char D6E 0 STRCODE 0 stringtext6 main.o
+M95_write_bytes@status 48 0 BANK0 1 cstackBANK0 main.o
+main@addr CE 0 BANK1 1 cstackBANK1 main.o
+?_SRAM_read_bytes 43 0 BANK0 1 cstackBANK0 main.o
+main@bytes D0 0 BANK1 1 cstackBANK1 main.o
+_EUSART2_Read 1842 0 CODE 0 text84 main.o
+main@i_527 E1 0 BANK1 1 cstackBANK1 main.o
+_strcpy 1760 0 CODE 0 text2 main.o
+_strlen 17B6 0 CODE 0 text1 main.o
+_TX2STAbits A1E 0 ABS 0 - main.o
+__end_of_M95_read_bytes 1F54 0 CODE 0 text29 main.o
+__end_of_CLOCK_Initialize 1690 0 CODE 0 text20 main.o
+__end_of_hex_char D90 0 STRCODE 0 stringtext6 main.o
+_I2C2_StopSend 145E 0 CODE 0 text75 main.o
+_I2C2_EventHandler 1D64 0 CODE 0 text52 main.o
+__end_of_SPI1_Host 21EE 0 STRCODE 0 stringtext2 main.o
+__end_of_SPI1_Open D6E 0 CODE 0 text37 main.o
+SRAM_read_bytes@addri 4D 0 BANK0 1 cstackBANK0 main.o
+_BAUD2CONbits A1F 0 ABS 0 - main.o
+__end_of_SRAM_read_bytes 1EA8 0 CODE 0 text23 main.o
+_EUSART2_RxInterruptHandler C2 0 BANK1 1 bssBANK1 main.o
+_SSP1CLKPPS 1EC5 0 ABS 0 - main.o
+?_SRAM_write_bytes 43 0 BANK0 1 cstackBANK0 main.o
+_OSCCON1 88D 0 ABS 0 - main.o
+_OSCCON3 88F 0 ABS 0 - main.o
+_OSCTUNE 892 0 ABS 0 - main.o
+_SSP1DATPPS 1EC6 0 ABS 0 - main.o
+M95_write_bytes@space_in_page 4A 0 BANK0 1 cstackBANK0 main.o
+?_M95_read_bytes 40 0 BANK0 1 cstackBANK0 main.o
+strcpy@dest 3E 0 BANK0 1 cstackBANK0 main.o
+_I2C2_Read 0 0 ABS 0 - main.o
+I2C2_EVENT_TX@retEventState 76 0 COMMON 1 cstackCOMMON main.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON main.o
+main@retval_516 DC 0 BANK1 1 cstackBANK1 main.o
+_EUSART2_Write 19AC 0 CODE 0 text35 main.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+_SPI1_ByteWrite 0 0 ABS 0 - main.o
+_PIR0bits 70C 0 ABS 0 - main.o
+_PIR3bits 70F 0 ABS 0 - main.o
+__Lend_init CE 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+EUSART2_OverrunErrorCallbackRegister@callbackHandler 3E 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_bytes@len 42 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_bytes@out 44 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_bytes@str 41 0 BANK0 1 cstackBANK0 main.o
+_hexstr_to_uint 1CDA 0 CODE 0 text3 main.o
+end_of_initialization 13E 0 CODE 0 cinit main.o
+_SPI1_Open C7A 0 CODE 0 text37 main.o
+M95_read_bytes@buf 44 0 BANK0 1 cstackBANK0 main.o
+__Hintentry CE 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+_eeprom_sram_io_buffer 1A0 0 BANK3 1 bssBANK3 main.o
+_I2C2_EVENT_SEND_RD_ADDR 157E 0 CODE 0 text64 main.o
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__end_of_I2C2_RestartEnable 147C 0 CODE 0 text67 main.o
+_INT_SetInterruptHandler 152E 0 CODE 0 text14 main.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__HbssBANK2 0 0 ABS 0 bssBANK2 -
+__HbssBANK3 0 0 ABS 0 bssBANK3 -
+__HbssBANK4 0 0 ABS 0 bssBANK4 -
+__end_of_I2C2_EVENT_SEND_RD_ADDR 158E 0 CODE 0 text64 main.o
+__end_of_SRAM_deselect 157E 0 CODE 0 text26 main.o
+_EUSART2_FramingErrorHandler 32 0 BANK0 1 bssBANK0 main.o
+M95_write_bytes@addr 40 0 BANK0 1 cstackBANK0 main.o
+M95_write_bytes@data 49 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_OverrunErrorHandler 30 0 BANK0 1 bssBANK0 main.o
+__end_of_INT_SetInterruptHandler 153A 0 CODE 0 text14 main.o
+__end_of_uart_putc 1710 0 CODE 0 text34 main.o
+__end_of_uart_puts 1842 0 CODE 0 text31 main.o
+__ptext1 17B6 0 CODE 0 text1 main.o
+__ptext2 1760 0 CODE 0 text2 main.o
+__ptext3 1CDA 0 CODE 0 text3 main.o
+__ptext4 A78 0 CODE 0 text4 main.o
+__ptext5 1C54 0 CODE 0 text5 main.o
+__ptext6 1494 0 CODE 0 text6 main.o
+__ptext7 148E 0 CODE 0 text7 main.o
+__ptext8 1488 0 CODE 0 text8 main.o
+__ptext9 1482 0 CODE 0 text9 main.o
+__end_of_I2C2_DataTransmit 14F4 0 CODE 0 text68 main.o
+EUSART2_Read@readValue 76 0 COMMON 1 cstackCOMMON main.o
+__end_of_IO_RA5_DefaultInterruptHandler 1000 0 CODE 0 text47 main.o
+hexstr_to_bytes@hi 4A 0 BANK0 1 cstackBANK0 main.o
+hexstr_to_bytes@lo 4C 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_DefaultFramingErrorCallback 144E 0 CODE 0 text87 main.o
+_RX2DTPPS 1ECD 0 ABS 0 - main.o
+__end_of_EUSART2_ReceiveInterruptEnable 1482 0 CODE 0 text42 main.o
+_SRAM_read_bytes 1DFE 0 CODE 0 text23 main.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+main@nbytes E3 0 BANK1 1 cstackBANK1 main.o
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+main@datalen_511 E7 0 BANK1 1 cstackBANK1 main.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of_EUSART2_Read 1878 0 CODE 0 text84 main.o
+_SPI1_RxCompleteCallback CC 0 BANK1 1 bssBANK1 main.o
+?_hexstr_to_bytes 41 0 BANK0 1 cstackBANK0 main.o
+_rx_buffer 220 0 BANK4 1 bssBANK4 main.o
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+__Hstringtext4 0 0 ABS 0 stringtext4 -
+__Hstringtext5 0 0 ABS 0 stringtext5 -
+__Hstringtext6 0 0 ABS 0 stringtext6 -
+__Hstringtext7 0 0 ABS 0 stringtext7 -
+__Hstringtext8 0 0 ABS 0 stringtext8 -
+__Hstringtext9 0 0 ABS 0 stringtext9 -
+IO_RA5_SetInterruptHandler@InterruptHandler 3E 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_DefaultOverrunErrorCallback 149A 0 CODE 0 text86 main.o
+_uart_putc 16EE 0 CODE 0 text34 main.o
+_uart_puts 1810 0 CODE 0 text31 main.o
+_SLRCONA 1F3B 0 ABS 0 - main.o
+_SLRCONB 1F46 0 ABS 0 - main.o
+_SLRCONC 1F51 0 ABS 0 - main.o
+_SLRCOND 1F5C 0 ABS 0 - main.o
+_SLRCONE 1F67 0 ABS 0 - main.o
+_SLRCONF 1E53 0 ABS 0 - main.o
+__end_of_cpu6502_unreset 149A 0 CODE 0 text6 main.o
+___heap_hi 0 0 ABS 0 - startup.o
+___heap_lo 0 0 ABS 0 - startup.o
+main@bytes_515 D6 0 BANK1 1 cstackBANK1 main.o
+_I2C2_Deinitialize 0 0 ABS 0 - main.o
+strcpy@src 3F 0 BANK0 1 cstackBANK0 main.o
+_I2C2_RestartEnable 1476 0 CODE 0 text67 main.o
+__end_of__initialization 13E 0 CODE 0 cinit main.o
+main@retval DE 0 BANK1 1 cstackBANK1 main.o
+__end_of_hexstr_to_bytes B7C 0 CODE 0 text4 main.o
+_INT_ISR 1522 0 CODE 0 text48 main.o
+hexstr_to_bytes@bytes 4E 0 BANK0 1 cstackBANK0 main.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__end_of_hexstr_to_uint 1D64 0 CODE 0 text3 main.o
+_I2C2_AckSend 14B2 0 CODE 0 text74 main.o
+__pidataBANK1 4 0 CODE 0 idataBANK1 main.o
+_SP2BRGH A1C 0 ABS 0 - main.o
+_SP2BRGL A1B 0 ABS 0 - main.o
+main@addr_502 D2 0 BANK1 1 cstackBANK1 main.o
+main@addr_510 D4 0 BANK1 1 cstackBANK1 main.o
+main@addr_522 D8 0 BANK1 1 cstackBANK1 main.o
+_eusart2RxCount 36 0 BANK0 1 bssBANK0 main.o
+__end_of_EUSART2_RxCompleteCallbackRegister 1610 0 CODE 0 text41 main.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_SSP1CON1bits 190 0 ABS 0 - main.o
+EUSART2_ReceiveISR@regValue 78 0 COMMON 1 cstackCOMMON main.o
+SRAM_write_bytes@len 47 0 BANK0 1 cstackBANK0 main.o
+INT_SetInterruptHandler@InterruptHandler 3E 0 BANK0 1 cstackBANK0 main.o
+M95_write_bytes@current_addr 50 0 BANK0 1 cstackBANK0 main.o
+?_hexstr_to_uint 41 0 BANK0 1 cstackBANK0 main.o
+__pcstackCOMMON 75 0 COMMON 1 cstackCOMMON main.o
+_M95_init EE4 0 CODE 0 text30 main.o
+_SSP1ADD 18D 0 ABS 0 - main.o
+_SSP1BUF 18C 0 ABS 0 - main.o
+_SSP2ADD 197 0 ABS 0 - main.o
+_SSP2BUF 196 0 ABS 0 - main.o
+__Hend_init D2 0 CODE 0 end_init -
+SRAM_read@addr 43 0 BANK0 1 cstackBANK0 main.o
+SRAM_read@data 45 0 BANK0 1 cstackBANK0 main.o
+_eusart2RxHead 38 0 BANK0 1 bssBANK0 main.o
+_eusart2RxTail 37 0 BANK0 1 bssBANK0 main.o
+__end_of_main 90C 0 CODE 0 maintext main.o
+__end_of_EUSART2_IsTxReady 15E6 0 CODE 0 text36 main.o
+hexstr_to_bytes@maxout 45 0 BANK0 1 cstackBANK0 main.o
+_SPI1_IsTxReady 0 0 ABS 0 - main.o
+__end_of_UART2 20FA 0 STRCODE 0 stringtext1 main.o
+I2C2_DataTransmit@data 75 0 COMMON 1 cstackCOMMON main.o
+__end_of_M95_init F92 0 CODE 0 text30 main.o
+SPI1_Open@returnValue 47 0 BANK0 1 cstackBANK0 main.o
+_IOCAF 1F3F 0 ABS 0 - main.o
+_IOCAN 1F3E 0 ABS 0 - main.o
+_IOCAP 1F3D 0 ABS 0 - main.o
+_IOCBF 1F4A 0 ABS 0 - main.o
+_IOCBN 1F49 0 ABS 0 - main.o
+_IOCBP 1F48 0 ABS 0 - main.o
+_IOCCF 1F55 0 ABS 0 - main.o
+_IOCCN 1F54 0 ABS 0 - main.o
+_IOCCP 1F53 0 ABS 0 - main.o
+_IOCEF 1F6B 0 ABS 0 - main.o
+_IOCEN 1F6A 0 ABS 0 - main.o
+_IOCEP 1F69 0 ABS 0 - main.o
+_OSCEN 891 0 ABS 0 - main.o
+_PORTF 11 0 ABS 0 - main.o
+_TRISA 12 0 ABS 0 - main.o
+_TRISB 13 0 ABS 0 - main.o
+_TRISC 14 0 ABS 0 - main.o
+_TRISD 15 0 ABS 0 - main.o
+_TRISE 16 0 ABS 0 - main.o
+_TRISF 17 0 ABS 0 - main.o
+_IO_RA5_SetInterruptHandler 15E6 0 CODE 0 text12 main.o
+_eusart2TxHead 3B 0 BANK0 1 bssBANK0 main.o
+_eusart2TxTail 3A 0 BANK0 1 bssBANK0 main.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+M95_write_bytes@page_offset 46 0 BANK0 1 cstackBANK0 main.o
+?_M95_write_bytes 40 0 BANK0 1 cstackBANK0 main.o
+__pintentry 8 0 CODE 0 intentry main.o
+_OSCSTATbits 890 0 ABS 0 - main.o
+_EUSART2_AutoBaudSet 0 0 ABS 0 - main.o
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__end_of_M95_write_bytes A78 0 CODE 0 text28 main.o
+__end_of_EUSART2_OverrunErrorCallbackRegister 1640 0 CODE 0 text18 main.o
+_cpu6502_unreset 1494 0 CODE 0 text6 main.o
+uart_putc@c 40 0 BANK0 1 cstackBANK0 main.o
+uart_puts@s 41 0 BANK0 1 cstackBANK0 main.o
+__end_of_I2C2_StopSend 1464 0 CODE 0 text75 main.o
+_I2C2_InterruptClear 1458 0 CODE 0 text78 main.o
+__initialization D2 0 CODE 0 cinit main.o
+_hexstr_to_bytes A78 0 CODE 0 text4 main.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 main.o
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 main.o
+__pbssBANK2 120 0 BANK2 1 bssBANK2 main.o
+__pbssBANK3 1A0 0 BANK3 1 bssBANK3 main.o
+__pbssBANK4 220 0 BANK4 1 bssBANK4 main.o
+_I2C2_DataTransmit 14EA 0 CODE 0 text68 main.o
+__end_of_INT_DefaultInterruptHandler 1452 0 CODE 0 text50 main.o
+hexstr_to_bytes@i 50 0 BANK0 1 cstackBANK0 main.o
+_EUSART2_RxCompleteInterruptHandler 34 0 BANK0 1 bssBANK0 main.o
+___wmul@product 42 0 BANK0 1 cstackBANK0 main.o
+SRAM_write_bytes@addri 4D 0 BANK0 1 cstackBANK0 main.o
+__end_of_EUSART2_Write 19F4 0 CODE 0 text35 main.o
+_SSP2CLKPPS 1EC8 0 ABS 0 - main.o
+_SSP2DATPPS 1EC9 0 ABS 0 - main.o
+___int_stack_hi 0 0 STACK 2 stack startup.o
+___int_stack_lo 0 0 STACK 2 stack startup.o
+_EUSART2_TxCompleteCallbackRegister 0 0 ABS 0 - main.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text1 0 BDB 17B6 16 2
+text2 0 BB0 1760 15 2
+text3 0 E6D 1CDA 45 2
+text5 0 E2A 1C54 43 2
+text6 0 A4A 1494 3 2
+text7 0 A47 148E 3 2
+text8 0 A44 1488 3 2
+text9 0 A41 1482 3 2
+text10 0 B88 1710 13 2
+text12 0 AF3 15E6 9 2
+text13 0 B2D 165A D 2
+text14 0 A97 152E 6 2
+text15 0 B57 16AE F 2
+text16 0 A71 14E2 4 2
+text18 0 B14 1628 C 2
+text19 0 B08 1610 C 2
+text20 0 B3A 1674 E 2
+text21 0 FAA 1F54 56 2
+text22 0 CFA 19F4 29 2
+text23 0 EFF 1DFE 55 2
+text24 0 D50 1AA0 2E 2
+text25 0 BF1 17E2 17 2
+text26 0 AB8 1570 7 2
+text27 0 C94 1928 20 2
+text29 0 F54 1EA8 56 2
+text31 0 C08 1810 19 2
+text32 0 BC5 178A 16 2
+text33 0 CB4 1968 22 2
+text34 0 B77 16EE 11 2
+text35 0 CD6 19AC 24 2
+text36 0 AEA 15D4 9 2
+text38 0 C74 18E8 20 2
+text39 0 B66 16CC 11 2
+text40 0 AE1 15C2 9 2
+text41 0 AFC 15F8 C 2
+text42 0 A3E 147C 3 2
+text44 0 DEA 1BD4 40 2
+text45 0 AD8 15B0 9 2
+text46 0 B48 1690 F 2
+text48 0 A91 1522 6 2
+text49 0 B20 1640 D 2
+text50 0 A28 1450 1 2
+text51 0 A6D 14DA 4 2
+text52 0 EB2 1D64 4D 2
+text53 0 A8B 1516 6 2
+text54 0 A7A 14F4 5 2
+text55 0 AB1 1562 7 2
+text56 0 A69 14D2 4 2
+text57 0 C57 18AE 1D 2
+text58 0 AAA 1554 7 2
+text59 0 AC7 158E 8 2
+text60 0 A85 150A 6 2
+text61 0 A7F 14FE 6 2
+text62 0 DB0 1B60 3A 2
+text63 0 AA3 1546 7 2
+text64 0 ABF 157E 8 2
+text65 0 A65 14CA 4 2
+text66 0 D23 1A46 2D 2
+text67 0 A3B 1476 3 2
+text68 0 A75 14EA 5 2
+text69 0 A38 1470 3 2
+text70 0 A35 146A 3 2
+text71 0 A61 14C2 4 2
+text72 0 A5D 14BA 4 2
+text73 0 A32 1464 3 2
+text74 0 A59 14B2 4 2
+text75 0 A2F 145E 3 2
+text76 0 B9B 1736 15 2
+text77 0 A55 14AA 4 2
+text78 0 A2C 1458 3 2
+text79 0 A29 1452 3 2
+text80 0 A51 14A2 4 2
+text81 0 C3C 1878 1B 2
+text82 0 719 E32 E7 2
+text83 0 D7E 1AFC 32 2
+text84 0 C21 1842 1B 2
+text85 0 ACF 159E 9 2
+text86 0 A4D 149A 4 2
+text87 0 A27 144E 1 2
+stringtext6 0 6B7 D6E 62 2
+stringtext7 0 1000 2000 2A8 2
+intentry 0 4 8 6B3 2
+reset_vec 0 0 0 4 2
+bssBANK0 1 20 20 35 1
+bssBANK1 1 A0 A0 4D 1
+bssBANK2 1 120 120 46 1
+bssBANK3 1 1A0 1A0 40 1
+bssBANK4 1 220 220 46 1
+clrtext 0 A9D 153A 6 2
+bssCOMMON 1 70 70 A 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
