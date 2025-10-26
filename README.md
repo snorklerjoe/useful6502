@@ -7,7 +7,9 @@ running my own operating system.
 
 *See the complete implementation plan and progress here: [Implemementation Plan](./IMPLEMENTATION_PLAN.md)*
 
-PCB assembled, blinky light on PIC is working.
+PCB assembled, PIC is able to load code for the 6502 to execute, the 6502 can read/write to the 2-port SRAM.
+
+![Photo of the current (ish) assembled PCB](./kicad_project/reworked_board.jpg)
 
 ![Main PCB rendering](./kicad_project/mainboard.png)
 ![RAM Daughterboard rendering](./kicad_project/ramboard.png)
